@@ -48,18 +48,26 @@ L3ルームでVSOC 接続　
 　　　　　　　　　　　　　　　　　　　　RD_Dev ( 730335521439 ) アカウントが選択できなくなる 
 		    
 
-5	SSO設定 (RD_Devアカウント)		RD_Dev アカウントについて SSO 設定を行う
+5	SSO設定 (RD_Devアカウント)	　RD_Dev アカウントについて SSO 設定を行う
+
 　　　　　　　　　　　　　　　　　$aws configure sso --no-browser --use-device-code
 
-6	config 確認							~/.aws/config を確認する
+6	config 確認		~/.aws/config を確認する
+
 　　　　　　　　　　　　　　　$cat ~/.aws/config
+	       
 
-7	SSO 認証									RD_Devアカウントで SSO 認証を行う
+7	SSO 認証			RD_Devアカウントで SSO 認証を行う
+
 　　　　　　　　　　　　　　　$aws sso login --no-browser --use-device-code --profile AWSAdministratorAccess-730335521439
+	       
 
-8	ダウンロード							モデルのダウンロードを行う
+8	ダウンロード		モデルのダウンロードを行う
+
                          $OBJ_KEY="share/sbint_models/reranker/sarashina2.2-0.5b-reranker-toy-0523"
+			 
                          $aws s3 sync --profile AWSAdministratorAccess-730335521439 "s3://arn:aws:s3:ap-northeast-1:730335521439:accesspoint/reimei-engine-dev-hf-models-ap/$OBJ_KEY"  "/lustre/$OBJ_KEY"
+			 
 
  コピー作業                 コピー元: /store/share/sbint_models/finetuned/release/sbint-2025-07-14/sbint-2025-07-14-70b-sft/
  　　　　　　　　　　　　　　　コピー先: /lustre/share/sbint_models/finetuned/release/sbint-2025-07-14/sbint-2025-07-14-70b-sft/
