@@ -10,14 +10,14 @@ L3ルームでVSOC 接続　
 3	VSOC環境にログイン　　デスクトップ左上の「リモートデスクトップ接続」のアイコンをクリックし、VCOSにログインする
 　　　　　　　　　　　　　　　　　接続先　10.0.50.101
 		 
-        　　　　　　　　　　　　user　prod.XXXX.XXXX@l4vsoc.sbint.local
+        　　　　　　　　　　　　user　prod.XXXX.XXXX@l4vsoc.sbint.local　
 		    
 モデルのアップロード
 1	login-node にログイン　　　Putty などのターミナルソフトを起動し、ログインノードに接続する
 
 　　　　　　　　　　　　　　　　  接続先　10.120.169.2
 		  
-                　　　　　　　 user　userXXXXX
+                　　　　　　　 user　userXXXXX　
 			
 
 2	PROXY 設定	以下のコマンドラインを実行する
