@@ -1,3 +1,6 @@
 # manual
 
-<img width="1163" height="317" alt="image" src="https://github.com/user-attachments/assets/ed40470a-8f07-472f-8f6d-51c63ecc812a" />
+L3ルームでVSOC 接続　L3 ルーム入室し、作業端末の電源を入れる
+1	作業端末の電源 ON
+2	作業端末にログイン
+3	VSOC環境にログイン
