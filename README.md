@@ -29,8 +29,10 @@ L3ルームでVSOC 接続　
 　　　　　　　　　　　　　　　　$export AWS_PROFILE=AWSAdministratorAccess-050451382758
 		
 
-3	aws コマンド存在確認					aws コマンドの存在確認
+3	aws コマンド存在確認　　　aws コマンドの存在確認
+
                            $aws --version
+			   
 
 4	ブラウザでAWSにログイン		VSOC デスクトップ上の chrome のアイコンをクリックし、ブラウザを起動し
 　　　　　　　　　　　　　　　　以下のURL にアクセスする
