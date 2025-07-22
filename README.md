@@ -10,7 +10,9 @@ L3ルームでVSOC 接続　
 3	VSOC環境にログイン　　デスクトップ左上の「リモートデスクトップ接続」のアイコンをクリックし、VCOSにログインする
 　　　　　　　　　　　　　　　　　接続先　10.0.50.101
 		 
-        　　　　　　　　　　　　user　prod.XXXX.XXXX@l4vsoc.sbint.local　
+        　　　　　　　　　　　　user　prod.XXXX.XXXX@l4vsoc.sbint.local
+
+      
 		    
 モデルのアップロード
 1	login-node にログイン　　　Putty などのターミナルソフトを起動し、ログインノードに接続する
@@ -34,12 +36,17 @@ L3ルームでVSOC 接続　
                            $aws --version
 			   
 
-4	ブラウザでAWSにログイン		VSOC デスクトップ上の chrome のアイコンをクリックし、ブラウザを起動し
-　　　　　　　　　　　　　　　　以下のURL にアクセスする
-                          https://d-95675fea1b.awsapps.com/start/#
-　　　　　　　　　　　　　　　　prod でないアカウントでログインする
-　　　　　　　　　　　　　　　　prod アカウントでログインすると、次の aws configure sso で
-　　　　　　　　　　　　　　　　RD_Dev ( 730335521439 ) アカウントが選択できなくなる 
+4	ブラウザでAWSにログイン	VSOC デスクトップ上の chrome のアイコンをクリックし、ブラウザを起動し
+　　　　　　　　　　　　　　　　　　　　以下のURL にアクセスする
+		    
+                          　　　　https://d-95675fea1b.awsapps.com/start/#
+			      
+　　　　　　　　　　　　　　　　　　　　prod でないアカウントでログインする
+		    
+　　　　　　　　　　　　　　　　　　　　prod アカウントでログインすると、次の aws configure sso で
+		    
+　　　　　　　　　　　　　　　　　　　　RD_Dev ( 730335521439 ) アカウントが選択できなくなる 
+		    
 
 5	SSO設定 (RD_Devアカウント)		RD_Dev アカウントについて SSO 設定を行う
 　　　　　　　　　　　　　　　　　$aws configure sso --no-browser --use-device-code
