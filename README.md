@@ -13,9 +13,11 @@
    - Git Bash を起動
 2. PROXY 設定
    - 以下のコマンドラインを実行する  
-     `export HTTPS_PROXY=http://10.0.20.11:8080`  
-     `export https_proxy=http://10.0.20.11:8080`  
-     `export AWS_PROFILE=AWSAdministratorAccess-050451382758`
+	```
+ 	export HTTPS_PROXY=http://10.0.20.11:8080
+	export https_proxy=http://10.0.20.11:8080
+	export AWS_PROFILE=AWSAdministratorAccess-050451382758
+ 	```
 3. gitの削除(※ある場合)
    - 以下のコマンドラインを実行する  
 	`rm -rf reimei_RAG/terraform/environments_ray/prod`
@@ -23,20 +25,14 @@
    - 以下のコマンドラインを実行する    
    	`cd reimei_RAG/terraform/environments_ray/prod`  
    	`git clone https://github.com/sbintuitions/reimei_RAG.git`
-4. SSO設定 (RD_Devアカウント)
-    - RD_Dev アカウントについて SSO 設定を行う  
+4. SSO設定
+    - 以下のコマンドラインを実行する  
       `$aws configure sso`
 1. Service_Prod のアカウントを選択する
-2. 
-
-
-
 
 7. モデルの確認
-    -
+    - 以下のコマンドラインを実行する
    	`ls -l`
-      `$OBJ_KEY="share/sbint_models/reranker/sarashina2.2-0.5b-reranker-toy-0523"`  
-      `$aws s3 sync --profile AWSAdministratorAccess-730335521439 "s3://arn:aws:s3:ap-northeast-1:730335521439:accesspoint/reimei-engine-dev-hf-models-ap/$OBJ_KEY"  "/lustre/$OBJ_KEY"`
 9. コピー作業
     - 以下のコマンドラインを実行する  
       `$cp -a /store/share/sbint_models/finetuned/release/sbint-2025-07-14/sbint-2025-07-14-70b-sft/ /lustre/share/sbint_models/finetuned/release/`
