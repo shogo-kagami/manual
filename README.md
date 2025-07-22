@@ -15,9 +15,9 @@
    `user　userXXXXX`
 2. PROXY 設定
    - 以下のコマンドラインを実行する  
-     `$export HTTPS_PROXY=http://10.0.20.11:8080`  
-     `$export https_proxy=http://10.0.20.11:8080`  
-     `$export AWS_PROFILE=AWSAdministratorAccess-050451382758`
+     `export HTTPS_PROXY=http://10.0.20.11:8080`  
+     `export https_proxy=http://10.0.20.11:8080`  
+     `export AWS_PROFILE=AWSAdministratorAccess-050451382758`
 3. ブラウザでAWSにログイン
    - VSOC デスクトップ上の chrome のアイコンをクリックし、ブラウザを起動し  
 以下のURL にアクセスする  
