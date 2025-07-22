@@ -10,14 +10,19 @@
 		    
 ### モデルのアップロード
 1. login-node にログイン
-   - Putty などのターミナルソフトを起動し、ログインノードに接続する  
-   `接続先　10.120.169.2`  
-   `user　userXXXXX`
+   - Git Bash を起動
 2. PROXY 設定
    - 以下のコマンドラインを実行する  
      `export HTTPS_PROXY=http://10.0.20.11:8080`  
      `export https_proxy=http://10.0.20.11:8080`  
      `export AWS_PROFILE=AWSAdministratorAccess-050451382758`
+3. Gitの削除(※ある場合)
+   - 以下のコマンドラインを実行する  
+	`rm -rf reimei_RAG/terraform/environments_ray/prod`
+5. GitCloneを実施
+   - 以下のコマンドラインを実行する    
+   	`cd reimei_RAG/terraform/environments_ray/prod`  
+   	`git clone https://github.com/sbintuitions/reimei_RAG.git`
 3. ブラウザでAWSにログイン
    - VSOC デスクトップ上の chrome のアイコンをクリックし、ブラウザを起動し  
 以下のURL にアクセスする  
