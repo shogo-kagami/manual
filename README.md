@@ -20,24 +20,28 @@
  	```
 3. gitの削除(※ある場合)
    - 以下のコマンドラインを実行する  
-	`rm -rf reimei_RAG/terraform/environments_ray/prod`
+	```
+	rm -rf reimei_RAG/terraform/environments_ray/prod
+ 	```
 5. gitCloneを実施
    - 以下のコマンドラインを実行する    
-   	`cd reimei_RAG/terraform/environments_ray/prod`  
-   	`git clone https://github.com/sbintuitions/reimei_RAG.git`
+	```
+	cd reimei_RAG/terraform/environments_ray/prod
+   	git clone https://github.com/sbintuitions/reimei_RAG.git
+ 	```
 4. SSO設定
     - 以下のコマンドラインを実行する  
-      `$aws configure sso`
+      `aws configure sso`
 1. Service_Prod のアカウントを選択する
 
 7. モデルの確認
-    - 以下のコマンドラインを実行する
+    - 以下のコマンドラインを実行する  
    	`ls -l`
 9. コピー作業
     - 以下のコマンドラインを実行する  
-      `$cp -a /store/share/sbint_models/finetuned/release/sbint-2025-07-14/sbint-2025-07-14-70b-sft/ /lustre/share/sbint_models/finetuned/release/`
+   	`cp -a /store/share/sbint_models/finetuned/release/sbint-2025-07-14/sbint-2025-07-14-70b-sft/ /lustre/share/sbint_models/finetuned/release/`
 10. checksum 確認
     - 事前に共有された checksum と比較し、同じであることを確認する
-      `$find /lustre/share/sbint_models/finetuned/release/sbint-2025-07-14/sbint-2025-07-14-70b-sft/ -type f -exec md5sum {} \; | sort -k 2 | md5sum`
+      `find /lustre/share/sbint_models/finetuned/release/sbint-2025-07-14/sbint-2025-07-14-70b-sft/ -type f -exec md5sum {} \; | sort -k 2 | md5sum`
 11. ログアウト
 12. AWSからサインアウトし、ブラウザを閉じる(VSOC)
