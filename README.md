@@ -14,13 +14,20 @@ L3ルームでVSOC 接続　
 		    
 モデルのアップロード
 1	login-node にログイン　　　Putty などのターミナルソフトを起動し、ログインノードに接続する
-　　　　　　　　　　　　　　　　  接続先　10.120.169.2
-                　　　　　　　 user　userXXXXX
 
-2	PROXY 設定									以下のコマンドラインを実行する
+　　　　　　　　　　　　　　　　  接続先　10.120.169.2
+		  
+                　　　　　　　 user　userXXXXX
+			
+
+2	PROXY 設定	以下のコマンドラインを実行する
+
 　　　　　　　　　　　　　　　　$export HTTPS_PROXY=http://10.0.20.11:8080
+		
 　　　　　　　　　　　　　　　　$export https_proxy=http://10.0.20.11:8080
+		
 　　　　　　　　　　　　　　　　$export AWS_PROFILE=AWSAdministratorAccess-050451382758
+		
 
 3	aws コマンド存在確認					aws コマンドの存在確認
                            $aws --version
