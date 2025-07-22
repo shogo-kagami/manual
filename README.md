@@ -5,11 +5,11 @@ L3ルームでVSOC 接続　
 1	作業端末の電源 ON　　L3 ルーム入室し、作業端末の電源を入れる
 
 2	作業端末にログイン　　GUIで作業端末にログインする
-　　　　　　　　　　　　　user SBINT
+　　　　　　　　　　　　　　　　　user SBINT
 
 3	VSOC環境にログイン　　デスクトップ左上の「リモートデスクトップ接続」のアイコンをクリックし、VCOSにログインする
-　　　　　　　　　　　　　　接続先　10.0.50.101
-        　　　　　　　　　user　prod.XXXX.XXXX@l4vsoc.sbint.local
+　　　　　　　　　　　　　　　　　接続先　10.0.50.101
+        　　　　　　　　　　　　user　prod.XXXX.XXXX@l4vsoc.sbint.local
 
 モデルのアップロード
 1	login-node にログイン　　　Putty などのターミナルソフトを起動し、ログインノードに接続する
