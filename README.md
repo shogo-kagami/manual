@@ -40,8 +40,7 @@
       `$aws s3 sync --profile AWSAdministratorAccess-730335521439 "s3://arn:aws:s3:ap-northeast-1:730335521439:accesspoint/reimei-engine-dev-hf-models-ap/$OBJ_KEY"  "/lustre/$OBJ_KEY"`
 8. コピー作業
     - 以下のコマンドラインを実行する  
-      `$cp -r /store/share/sbint_models/finetuned/release/sbint-2025-07-14/sbint-2025-07-14-70b-sft/`  
-      `$/lustre/share/sbint_models/finetuned/release/`
+      `$cp -a -p /store/share/sbint_models/finetuned/release/sbint-2025-07-14/sbint-2025-07-14-70b-sft/ /lustre/share/sbint_models/finetuned/release/`
 9. checksum 確認
     - 事前に共有された checksum と比較し、同じであることを確認する
       `$find /lustre/share/sbint_models/finetuned/release/sbint-2025-07-14/sbint-2025-07-14-70b-sft/ -type f -exec md5sum {} \; | sort -k 2 | md5sum`
