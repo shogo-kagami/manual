@@ -10,9 +10,9 @@
 		    
 ### モデルのアップロード
 1. login-node にログイン
-   - Git Bash を起動
+- Git Bash を起動
 2. PROXY 設定
-   - 以下のコマンドラインを実行する  
+- 以下のコマンドラインを実行する  
 	```
  	export HTTPS_PROXY=http://10.0.20.11:8080
 	export https_proxy=http://10.0.20.11:8080
