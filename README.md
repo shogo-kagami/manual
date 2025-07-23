@@ -35,6 +35,7 @@
 
 	> L3ルームにてデータ取り込みを行う場合、VSOCアカウントを選択する  
 	> 事前に**pj_商用作業申請**チャンネルにて申請が必要
+ > s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-9coxiz/250723_shogo_kagami_9coxiz/
 
 1. Service_Prod のアカウントを選択する  
 
