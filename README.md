@@ -1,7 +1,8 @@
 # モデルのアップロード（Prd環境）(暫定版) 
 ### データ持ち込み
-事前に申請してAWS CLIで以下のコマンドラインを実行する
-	`aws configure sso`
+事前に申請してAWS CLIで以下のコマンドラインを実行する  
+
+	aws configure sso
 ```
 SSO start URL [None]: https://d-95675fea1b.awsapps.com/start
 SSO region [None]: ap-northeast-1
@@ -11,9 +12,10 @@ CLI default output format (json if not specified) [None]: json<ENTER>
 Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}<ENTER>
 ```
 
-`export AWS_PROFILE={任意のprofile名を入力}`
+	export AWS_PROFILE={任意のprofile名を入力}
 
 以下コマンドラインで中身を確認できる　　
+
 `aws s3 ls s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l2-upload-9coxiz/250723_shogo_kagami_9coxiz/`
 
 ### L3ルームでVSOC 接続
