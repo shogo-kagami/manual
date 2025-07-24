@@ -70,5 +70,11 @@ Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
 1. checksum 確認
     - 事前に共有された checksum と比較し、同じであることを確認する  
       `find /lustre/share/sbint_models/finetuned/release/sbint-2025-07-14/sbint-2025-07-14-70b-sft/ -type f -exec md5sum {} \; | sort -k 2 | md5sum`
+1. terraform 初期化
+   - 以下のコマンドラインを実行する  
+     `terraform init`
+1. 変更内容のプレビュー
+   - 以下のコマンドラインを実行する  
+     `terraform plan`
 1. ログアウト
 1. AWSからサインアウトし、ブラウザを閉じる(VSOC)
