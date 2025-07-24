@@ -12,20 +12,16 @@ Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
 ```
 - 以下を実行すると、この後aws cli を実行する際に --profileを指定する必要がなくなる  
 	`export AWS_PROFILE=VSOC`
-
 - 以下コマンドラインで中身を確認できる  
 	`aws s3 ls s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l2-upload-******/YYMMDD_shogo_kagami_******/`
-
 - cp コマンドでコピーする  
   	`aws s3 cp [コピー元(~/Downloads/)] [コピー先]`
   > s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l2-upload-o6te8x/250724_shogo_kagami_o6te8x/
   > s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-o6te8x/250724_shogo_kagami_o6te8x/
-
 - L3ルームへの端末にデータを持ち込む  
   以下のコマンドラインを実行する  
   `aws s3 sync s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-******/YYMMDD_shogo_kagami_******/ ./`
-
-- カレントディレクトリを探しそこに持込物があるか確認する
+- カレントディレクトリを探しそこに持込物があるか確認する  
   `cd`
 
 ### L3ルームでVSOC 接続
@@ -46,6 +42,11 @@ Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
 	export https_proxy=http://10.0.20.11:8080
 	export AWS_PROFILE=AWSAdministratorAccess-050451382758
  	```
+1. ブラウザでAWSにログイン(VSOC)
+   - VSOC デスクトップ上の chrome のアイコンをクリックし、ブラウザを起動し  
+     以下のURL にアクセスする  
+     `https://d-95675fea1b.awsapps.com/start/#`  
+     > prod アカウントでログインすること
 1. gitの削除(※gitがある場合)
    - 以下のコマンドラインを実行する  
 	```
@@ -60,11 +61,10 @@ Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
 1. SSO設定
     - 以下のコマンドラインを実行する  
       `aws configure sso`
+		> L3ルームにてデータ取り込みを行う場合、VSOCアカウントを選択する
 
-	> L3ルームにてデータ取り込みを行う場合、VSOCアカウントを選択する
-
-1. Service_Prod のアカウントを選択する  
-
+1. Service_Prod のアカウントを選択する
+   	> config 確認:`cat ~/.aws/config`
 1. SSO 認証
    - Service_Prod のアカウントで SSO 認証を行う  
      `aws sso login`
@@ -73,10 +73,10 @@ Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
    	`ls -l`
 1. コピー作業
     - 以下のコマンドラインを実行する  
-   	`cp -a /store/share/sbint_models/finetuned/release/sbint-****-**-**/sbint-****-**-**-70b-sft/ /lustre/share/sbint_models/finetuned/release/`
+   	`cp -a /store/share/sbint_models/finetuned/release/sbint-YYYY-MM-DD/sbint-YYYY-MM-DD-70b-sft/ /lustre/share/sbint_models/finetuned/release/`
 1. checksum 確認
     - 事前に共有された checksum と比較し、同じであることを確認する  
-      `find /lustre/share/sbint_models/finetuned/release/sbint-2025-07-14/sbint-2025-07-14-70b-sft/ -type f -exec md5sum {} \; | sort -k 2 | md5sum`
+      `find /lustre/share/sbint_models/finetuned/release/sbint-YYYY-MM-DD/sbint-YYYY-MM-DD-70b-sft/ -type f -exec md5sum {} \; | sort -k 2 | md5sum`
 1. terraform 初期化
    - 以下のコマンドラインを実行する  
      `terraform init`
@@ -84,4 +84,5 @@ Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
    - 以下のコマンドラインを実行する  
      `terraform plan`
 1. ログアウト
+   	`exit`
 1. AWSからサインアウトし、ブラウザを閉じる(VSOC)
