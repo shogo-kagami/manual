@@ -18,6 +18,8 @@ Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
 
 - cp コマンドでコピーする  
   	`aws s3 cp [コピー元(~/Downloads/)] [コピー先]`
+  > s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l2-upload-o6te8x/250724_shogo_kagami_o6te8x/
+  > s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-o6te8x/250724_shogo_kagami_o6te8x/
 
 ### L3ルームでVSOC 接続
 1. 作業端末の電源 ON
@@ -52,9 +54,7 @@ Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
     - 以下のコマンドラインを実行する  
       `aws configure sso`
 
-	> L3ルームにてデータ取り込みを行う場合、VSOCアカウントを選択する  
-
- 	> s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-9coxiz/250723_shogo_kagami_9coxiz/
+	> L3ルームにてデータ取り込みを行う場合、VSOCアカウントを選択する
 
 1. Service_Prod のアカウントを選択する  
 
