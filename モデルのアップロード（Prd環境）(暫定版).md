@@ -14,10 +14,10 @@ Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
 	`export AWS_PROFILE={任意のprofile名を入力}`
 
 - 以下コマンドラインで中身を確認できる  
-	`aws s3 ls s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l2-upload-9coxiz/250723_shogo_kagami_9coxiz/`
+	`aws s3 ls s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l2-upload-******/YYMMDD_shogo_kagami_******/`
 
 - cp コマンドでコピーする  
-  	`aws s3 cp [コピー元(~/Downloads/)] [コピー先(s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l2-upload...)]`
+  	`aws s3 cp [コピー元(~/Downloads/)] [コピー先]`
 
 ### L3ルームでVSOC 接続
 1. 作業端末の電源 ON
