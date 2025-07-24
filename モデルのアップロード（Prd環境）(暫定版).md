@@ -1,6 +1,6 @@
 # モデルのアップロード（Prd環境）(暫定版) 
 ### データ持ち込み
-- 事前に申請してAWS CLIで以下のコマンドラインを実行する  
+- 事前に持込申請して承認されたらAWS CLIで以下のコマンドラインを実行し、VCOSアカウントを選択する  
 `aws configure sso`
 ```
 SSO start URL [None]: https://d-95675fea1b.awsapps.com/start
@@ -11,7 +11,7 @@ CLI default output format (json if not specified) [None]: json
 Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
 ```
 - 以下を実行すると、この後aws cli を実行する際に --profileを指定する必要がなくなる  
-	`export AWS_PROFILE={任意のprofile名を入力}`
+	`export AWS_PROFILE=VSOC`
 
 - 以下コマンドラインで中身を確認できる  
 	`aws s3 ls s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l2-upload-******/YYMMDD_shogo_kagami_******/`
@@ -20,6 +20,13 @@ Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
   	`aws s3 cp [コピー元(~/Downloads/)] [コピー先]`
   > s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l2-upload-o6te8x/250724_shogo_kagami_o6te8x/
   > s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-o6te8x/250724_shogo_kagami_o6te8x/
+
+- L3ルームへの端末にデータを持ち込む  
+  以下のコマンドラインを実行する  
+  `aws s3 sync s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-******/YYMMDD_shogo_kagami_******/ ./`
+
+- カレントディレクトリを探しそこに持込物があるか確認する
+  `cd`
 
 ### L3ルームでVSOC 接続
 1. 作業端末の電源 ON
