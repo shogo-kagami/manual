@@ -26,7 +26,7 @@ Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
   以下のコマンドラインを実行する  
   `aws s3 sync s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-******/YYMMDD_shogo_kagami_******/ ./`
 
-- カレントディレクトリを探しそこに持込物があるか確認する  
+- コピー先のカレントディレクトリを探しそこに持込物があるか確認する  
   `cd`
 
 ### L3ルームでVSOC 接続
@@ -88,6 +88,6 @@ Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
 1. 変更内容のプレビュー
    - 以下のコマンドラインを実行する  
      `terraform plan`
-1. ログアウト
-   	`exit`
+1. ログアウト  
+   		`exit`
 1. AWSからサインアウトし、ブラウザを閉じる(VSOC)
