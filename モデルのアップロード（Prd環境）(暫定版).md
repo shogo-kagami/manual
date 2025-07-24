@@ -10,17 +10,22 @@ Default client Region [None]: ap-northeast-1
 CLI default output format (json if not specified) [None]: json
 Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
 ```
+
 - 以下を実行すると、この後aws cli を実行する際に --profileを指定する必要がなくなる  
 	`export AWS_PROFILE=VSOC`
+
 - 以下コマンドラインで中身を確認できる  
 	`aws s3 ls s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l2-upload-******/YYMMDD_shogo_kagami_******/`
+
 - cp コマンドでコピーする  
   	`aws s3 cp [コピー元(~/Downloads/)] [コピー先]`
   > s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l2-upload-o6te8x/250724_shogo_kagami_o6te8x/
   > s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-o6te8x/250724_shogo_kagami_o6te8x/
+
 - L3ルームへの端末にデータを持ち込む  
   以下のコマンドラインを実行する  
   `aws s3 sync s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-******/YYMMDD_shogo_kagami_******/ ./`
+
 - カレントディレクトリを探しそこに持込物があるか確認する  
   `cd`
 
@@ -64,7 +69,7 @@ Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
 		> L3ルームにてデータ取り込みを行う場合、VSOCアカウントを選択する
 
 1. Service_Prod のアカウントを選択する
-   	> config 確認:`cat ~/.aws/config`
+   		> config 確認:`cat ~/.aws/config`
 1. SSO 認証
    - Service_Prod のアカウントで SSO 認証を行う  
      `aws sso login`
