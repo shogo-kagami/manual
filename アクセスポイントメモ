@@ -3,3 +3,5 @@
 
 持出
 L4アップロードURL: s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-upload-bkgg32/250725_shogo_kagami_bkgg32/
+
+/lustre/tools/PutDataToAWS/SBintTools.tar
