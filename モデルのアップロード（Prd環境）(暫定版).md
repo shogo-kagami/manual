@@ -4,7 +4,7 @@
 - 事前に持込申請して承認されたらAWS CLIで以下のコマンドラインを実行し、VCOSアカウントを選択する  
 `aws configure sso`
 ```
-SSO start URL [None]: https://d-95675fea1b.awsapps.com/start#
+SSO start URL [None]: https://d-95675fea1b.awsapps.com/start/#
 SSO region [None]: ap-northeast-1
 SSO registration scopes [None]: sso:account:access
 Default client Region [None]: ap-northeast-1
