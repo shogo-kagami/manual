@@ -1,9 +1,10 @@
 # モデルのアップロード（Prd環境）(暫定版) 
-### データ持ち込み
+
+## データ持ち込み
 - 事前に持込申請して承認されたらAWS CLIで以下のコマンドラインを実行し、VCOSアカウントを選択する  
 `aws configure sso`
 ```
-SSO start URL [None]: https://d-95675fea1b.awsapps.com/start
+SSO start URL [None]: https://d-95675fea1b.awsapps.com/start#
 SSO region [None]: ap-northeast-1
 SSO registration scopes [None]: sso:account:access
 Default client Region [None]: ap-northeast-1
@@ -14,22 +15,19 @@ Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
 - 以下を実行すると、この後aws cli を実行する際に --profileを指定する必要がなくなる  
 	`export AWS_PROFILE=VSOC`
 
-- 以下コマンドラインで中身を確認できる  
-	`aws s3 ls s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l2-upload-******/YYMMDD_shogo_kagami_******/`
-
 - cp コマンドでコピーする  
   	`aws s3 cp [コピー元(~/Downloads/)] [コピー先]`
-  > s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l2-upload-o6te8x/250724_shogo_kagami_o6te8x/
-  > s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-o6te8x/250724_shogo_kagami_o6te8x/
+  	- 以下コマンドラインで中身を確認できる  
+	`aws s3 ls s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l2-upload-******/YYMMDD_shogo_kagami_******/`
 
-- L3ルームへの端末にデータを持ち込む  
-  以下のコマンドラインを実行する  
+### L3ルームへの端末にデータを持ち込む
+- 以下のコマンドラインを実行する  
   `aws s3 sync s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-******/YYMMDD_shogo_kagami_******/ ./`
 
 - コピー先のカレントディレクトリを探しそこに持込物があるか確認する  
   `cd`
 
-### L3ルームでVSOC 接続
+## L3ルームでVSOC 接続
 1. 作業端末の電源 ON
    - L3 ルーム入室し、作業端末の電源を入れる
 1. 作業端末にログイン
@@ -37,7 +35,7 @@ Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
 1. VSOC環境にログイン
    - デスクトップ左上の「リモートデスクトップ接続」のアイコンをクリックし、VCOSにログインする
 
-### モデルのアップロード
+## モデルのアップロード
 1. login-node にログイン
 	- Git Bash を起動する
 1. PROXY 設定
