@@ -13,6 +13,8 @@ Profile name [123456789011_ReadOnly]: {任意のprofile名を入力}
 - 以下を実行すると、この後aws cli を実行する際に --profileを指定する必要がなくなる  
 	`export AWS_PROFILE=VSOC`
 
+- aws sso login
+
 - cp コマンドでコピーする  
   	`aws s3 cp [コピー元(~/Downloads/)] [コピー先]`
   	- 以下コマンドラインで中身を確認できる  
