@@ -1,0 +1,14 @@
+・AWSアクセスポータルにログイン
+  https://d-95675fea1b.awsapps.com/start/#
+
+・Service_Monitoringを選択
+
+・CloudWatch＞ログ＞ログのインサイトでログを確認する
+  以下3つの保存されたクエリが対象
+  ・報告用ERROR検索(app-router) - CWLI
+  ・報告用ERROR検索(backend) - CWLI
+  ・報告用ERROR検索(conversation-history) - CWLI
+
+・期間は前日の18時〜当日の9時、9時〜18時までの1時間区切りが対象
+
+・クエリの実行
