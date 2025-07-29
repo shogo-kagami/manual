@@ -1,16 +1,9 @@
 ＜持込＞
+L2ダウンロードアクセスポイントURL:
 
 
 ＜持出＞
-L4アップロードURL: s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-upload-uxvk3w/250728_shogo_kagami_uxvk3w/
+L4アップロードアクセスポイントURL:
 
-＜対象ファイル＞
-/lustre/applications/reimei-engine-llm-serve/run_worker.slurm
 
-Puttyでファイルの存在を確認
-ls -l /lustre/tools/PutDataToAWS/SBintTools.tar
-
-WinSCPでRDPにファイルを持ち出す
-
-$ aws s3 cp /lustre/tools/PutDataToAWS/SBintTools.tar s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-upload-bkgg32/250725_shogo_kagami_bkgg32/
-$ aws s3 cp ~/Documents/SBintTools.tar s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-upload-bkgg32/250725_shogo_kagami_bkgg32/
+＜対象ファイルディレクトリ＞
