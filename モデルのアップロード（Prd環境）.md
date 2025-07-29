@@ -12,7 +12,7 @@
 
 1. ファイル存在確認
    - モデルの確認  
-   	`ls -l /store/share/~`  
+   	`ls -l`
 
 1. コピー作業
     - 以下のコマンドラインを実行する  
@@ -20,7 +20,7 @@
 
 1. checksum 確認
     - 事前に共有された checksum と比較し、同じであることを確認する  
-      `find /lustre/share/sbint_models/finetuned/release/sbint-YYYY-MM-DD/sbint-YYYY-MM-DD-70b-sft/ -type f -exec md5sum {} \; | sort -k 2 | md5sum`
+      `find [コピー先ファイルパス] -type f -exec md5sum {} \; | sort -k 2 | md5sum`
 
 1. ログアウト  
 	   `exit`
