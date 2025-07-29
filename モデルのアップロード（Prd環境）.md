@@ -23,6 +23,6 @@
       `find /lustre/share/sbint_models/finetuned/release/sbint-YYYY-MM-DD/sbint-YYYY-MM-DD-70b-sft/ -type f -exec md5sum {} \; | sort -k 2 | md5sum`
 
 1. ログアウト  
-   		`exit`
+	   `exit`
    
 1. AWSからサインアウトし、ブラウザを閉じる(VSOC)
