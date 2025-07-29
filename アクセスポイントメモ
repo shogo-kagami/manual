@@ -4,6 +4,6 @@ L2ダウンロードアクセスポイントURL:
 
 ＜持出＞
 L4アップロードアクセスポイントURL:
-
+s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-jnvcsr/250729_shogo_kagami_jnvcsr/
 
 ＜対象ファイルディレクトリ＞
