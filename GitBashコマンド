@@ -7,3 +7,5 @@ echo 'export HISTTIMEFORMAT="%F %T "' >> ~/.bashrc
 source ~/.bashrc
 
 $ date "+%m/%d/%Y %H:%M"
+
+time ls -l /　←頭にtimeを入れる
