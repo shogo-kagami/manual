@@ -1,0 +1,5 @@
+タイムスタンプ
+~/.bashrc
+HISTTIMEFORMAT="%F %T "
+
+echo 'export HISTTIMEFORMAT="%F %T "' >> ~/.bashrc
