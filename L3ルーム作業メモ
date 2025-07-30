@@ -1,0 +1,17 @@
+＜持込＞
+L2ダウンロードアクセスポイントURL:
+
+
+＜持出＞
+L4アップロードアクセスポイントURL:
+s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-jnvcsr/250729_shogo_kagami_jnvcsr/
+
+＜対象ファイルディレクトリ＞
+
+
+＜その他＞
+マウントパス: /store/share
+移送元: /store/share/lustre/teams/text_embeddings/experiments/model_merge/sarashina2.2-1B/test_merge_PROTO_sarashina2.2-1B__multistage_20250610_stg1_v1__stg2_base1_gecko_all_forbes_cl_classsification_base2_gecko_ruri-v3-ft_jsnli_nq_nu-mnli_mr-tydi
+移送先 (コピー元からマウントパスを除外したパス) : /lustre/teams/text_embeddings/experiments/model_merge/sarashina2.2-1B/test_merge_PROTO_sarashina2.2-1B__multistage_20250610_stg1_v1__stg2_base1_gecko_all_forbes_cl_classsification_base2_gecko_ruri-v3-ft_jsnli_nq_nu-mnli_mr-tydi
+checksum: 88f47437c089b2da7eadada41d28976e
+（ちなみにマウントパスは明日7/30午前に /store/.sysonly_okeFBsTh  に変更予定とのことです）
