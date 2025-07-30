@@ -26,3 +26,6 @@ total 0
 drwxrwx--- 3 user02998 group002 0 Jul 25 19:33 lustre
 drwxr-xr-x 3 user02023 group002 0 Jul 17 15:36 sbint_models
 drwxrwxr-x 3 user02023 group002 0 Jul 10 12:55 zz_test
+
+df -h
+ls -la /store
