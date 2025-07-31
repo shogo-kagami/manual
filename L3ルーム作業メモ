@@ -4,49 +4,10 @@ L2ダウンロードアクセスポイントURL:
 
 ＜持出＞
 L4アップロードアクセスポイントURL:
-s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-jnvcsr/250729_shogo_kagami_jnvcsr/
+
 
 ＜対象ファイルディレクトリ＞
 
 
 ＜その他＞
-マウントパス: /store/share
-移送元: /store/share/lustre/teams/text_embeddings/experiments/model_merge/sarashina2.2-1B/test_merge_PROTO_sarashina2.2-1B__multistage_20250610_stg1_v1__stg2_base1_gecko_all_forbes_cl_classsification_base2_gecko_ruri-v3-ft_jsnli_nq_nu-mnli_mr-tydi
-移送先 (コピー元からマウントパスを除外したパス) : /lustre/teams/text_embeddings/experiments/model_merge/sarashina2.2-1B/test_merge_PROTO_sarashina2.2-1B__multistage_20250610_stg1_v1__stg2_base1_gecko_all_forbes_cl_classsification_base2_gecko_ruri-v3-ft_jsnli_nq_nu-mnli_mr-tydi
-checksum: 88f47437c089b2da7eadada41d28976e
-（ちなみにマウントパスは明日7/30午前に /store/.sysonly_okeFBsTh  に変更予定とのことです）
-
-
-user21006@srpv01502:~$ ls -l /store/.sysonly_okeFBsTh/lustre/
-ls: cannot open directory '/store/.sysonly_okeFBsTh/lustre/': Permission denied
-
-
-user21006@srpv01502:~$ ls -l /store/.sysonly_okeFBsTh/
-total 0
-drwxrwx--- 3 user02998 group002 0 Jul 25 19:33 lustre
-drwxr-xr-x 3 user02023 group002 0 Jul 17 15:36 sbint_models
-drwxrwxr-x 3 user02023 group002 0 Jul 10 12:55 zz_test
-
-df -h
-user21006@srpv01502:~$ df -h
-Filesystem                                    Size  Used Avail Use% Mounted on
-tmpfs                                         7.9G  1.3M  7.9G   1% /run
-/dev/sda2                                     100G   21G   80G  21% /
-none                                          7.9G     0  7.9G   0% /dev/shm
-tmpfs                                         5.0M     0  5.0M   0% /run/lock
-/dev/sda1                                     100M     0  100M   0% /boot/efi
-srhome-fs1.cm.cluster:/ifs/nfs/infragroup     172T   21T  144T  13% /infragroup
-srhome-fs1.cm.cluster:/ifs/nfs/home/group021  172T   21T  144T  13% /home
-srhome-fs1.cm.cluster:/ifs/nfs/cm_shared      172T   21T  144T  13% /cm/shared
-10.120.112.82:/lustre/tenant021               200T  792G  200T   1% /lustre
-tmpfs                                         1.6G  4.0K  1.6G   1% /run/user/14               066
-10.120.112.86:/sbint-share                     10T  266G  9.8T   3% /store/.syso               nly_okeFBsTh
-tmpfs                                         1.6G  4.0K  1.6G   1% /run/user/14               070
-
-ls -la /store
-user21006@srpv01502:~$ ls -la /store
-total 4
-drwxr-xr-x  3 root      root       31 Jul 30 10:35 .
-drwxr-xr-x 27 root      root     4096 Jul 10 10:54 ..
-drwxrwxr-x  5 user02023 group905    0 Jul 29 13:03 .sysonly_okeFBsTh
 
