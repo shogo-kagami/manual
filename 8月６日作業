@@ -2,7 +2,7 @@
 L3ルームに入室し、白河DGX ログインノードに user21020 でSSHログイン
   X6{nb[#{7IJY4B
 以下を実行（指定したノードの slurm job を停止）
-scancel -w srdgx00014,srdgx00016,srdgx00017,srdgx00021,srdgx00024,srdgx00028,srdgx00030,srdgx00032
+scancel -w srdgx00017,srdgx00004,srdgx00008,srdgx00026
 squeue -p 021-partition --me を実行し、cronjobにより5分程度で停止したnodeのslurm jobが復活することを確認
  USERSTがCGからRになれば上がっている状態である。
 　JOBIDは起動順になっている。
