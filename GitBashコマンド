@@ -12,3 +12,8 @@ time ls -l /　←頭にtimeを入れる
 history 過去に何を入力したか見えるがログとしては使えない
 
 git log	ログを出力する
+
+
+DATETIME=`date +%Y%m%d%H%M%S`
+
+history > ~/log/bash_history/$DATETIME
