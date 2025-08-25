@@ -31,3 +31,4 @@ find /lustre/container_cache/reimei_engine/llm-serve-gpu:20250801-2 -type f -exe
 
 /lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20250801-2.sqsh
 
+cp -p /lustre/applications/reimei-engine-llm-serve/run_worker.slurm /lustre/applications/reimei-engine-llm-serve/run_worker.slurm.20250825
