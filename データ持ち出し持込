@@ -19,7 +19,7 @@ $	export AWS_PROFILE=VSOC
 
 $	aws sso login
 
-$	aws s3 cp [コピー元(L4アクセスポイント)] [コピー先]
+$	aws s3 sync [コピー元(L4アクセスポイント)] [コピー先] --profile SBintVsocDataTransfer-060795933614
 
 
 2006574a4e45b80d890451c1813de537
