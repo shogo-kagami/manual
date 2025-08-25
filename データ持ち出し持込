@@ -22,6 +22,4 @@ $	aws sso login
 $	aws s3 cp [コピー元(L4アクセスポイント)] [コピー先]
 
 
-[WinError 5] アクセスが拒否されま した。
-
-rsync
+2006574a4e45b80d890451c1813de537
