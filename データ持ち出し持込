@@ -1,4 +1,4 @@
-L4
+	L4
   s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-qrnn5m/250825_shogo_kagami_qrnn5m/
 
 
@@ -28,3 +28,6 @@ $	aws s3 cp [コピー元(L4アクセスポイント)] [コピー先]
 ls -ld /lustre/container_cache/reimei_engine/llm-serve-gpu:20250801-2
 
 find /lustre/container_cache/reimei_engine/llm-serve-gpu:20250801-2 -type f -exec md5sum {} \; | sort -k 2 | md5sum
+
+/lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20250801-2.sqsh
+
