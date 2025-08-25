@@ -24,4 +24,4 @@ $	aws s3 cp [コピー元(L4アクセスポイント)] [コピー先]
 
 [WinError 5] アクセスが拒否されま した。
 
-rsysc
+rsync
