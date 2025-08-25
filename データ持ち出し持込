@@ -23,3 +23,8 @@ $	aws s3 cp [コピー元(L4アクセスポイント)] [コピー先]
 
 
 2006574a4e45b80d890451c1813de537
+
+
+ls -ld /lustre/container_cache/reimei_engine/llm-serve-gpu:20250801-2
+
+find /lustre/container_cache/reimei_engine/llm-serve-gpu:20250801-2 -type f -exec md5sum {} \; | sort -k 2 | md5sum
