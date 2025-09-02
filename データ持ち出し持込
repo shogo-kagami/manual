@@ -34,3 +34,10 @@ find /lustre/container_cache/reimei_engine/llm-serve-gpu:20250801-2 -type f -exe
 /lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20250801-2.sqsh
 
 cp -p /lustre/applications/reimei-engine-llm-serve/run_worker.slurm /lustre/applications/reimei-engine-llm-serve/run_worker.slurm.20250825
+
+
+image tag
+20250901-1, latest, de12a9f6f6563b6df27f70a493c6b18bcd5a0e84
+20250801-2, f23b12cbb8fe8d1bc3c1a14eaebbd29562dead7f
+20250801-1, 0109a5ea0bfd669eab2da2457598ee17faa77eb2
+20250729-2, f303898d6951d362bd01f689c037cab838e49c47
