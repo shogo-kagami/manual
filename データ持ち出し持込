@@ -49,11 +49,11 @@ cde01d525205d748846913c32babb5f9e35d459b
 
 
 This Node can only connect to the Internet via SoftBank Proxy Server.
-The default proxy settings are set in an environment variable by the system admi                                        nistrator.
+The default proxy settings are set in an environment variable by the system administrator.
 If you want to disable the proxy settings, do one or both of the following.
-  1) Execute the following command to unset the current environment variable set                                        ting for proxy.
+  1) Execute the following command to unset the current environment variable setting for proxy.
      source ~/sbai-env-script/unset-proxy.sh
-  2) Add the following command line to the user profile(~/.bashrc or ~/.zshrc) t                                        o automatically unset the environment variable setting for proxy.
+  2) Add the following command line to the user profile(~/.bashrc or ~/.zshrc) to automatically unset the environment variable setting for proxy.
      unset http_proxy https_proxy no_proxy HTTP_PROXY HTTPS_PROXY NO_PROXY
 
-Notes: Slurm jobs inherit the environment variables at the time of execution by                                         default.
+Notes: Slurm jobs inherit the environment variables at the time of execution by default.
