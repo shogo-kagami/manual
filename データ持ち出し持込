@@ -57,3 +57,5 @@ If you want to disable the proxy settings, do one or both of the following.
      unset http_proxy https_proxy no_proxy HTTP_PROXY HTTPS_PROXY NO_PROXY
 
 Notes: Slurm jobs inherit the environment variables at the time of execution by default.
+
+hostname srpv01502
