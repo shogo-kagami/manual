@@ -1,0 +1,279 @@
+[2025/09/05 12:16:39] INFO : Start : Fri Sep  5 12:16:39 PM JST 2025
+[2025/09/05 12:16:39] DEBUG :      DATE_CURRENT = 2025-09-05T12:16:39+09:00
+[2025/09/05 12:16:39] DEBUG :     MyOwnHostname = srpv01502
+[2025/09/05 12:16:39] DEBUG :            MyName = AutoCopy.sh
+[2025/09/05 12:16:39] DEBUG :          BASE_DIR = /lustre/tools/AdminTools
+[2025/09/05 12:16:39] DEBUG :          CONF_DIR = /lustre/tools/AdminTools/config
+[2025/09/05 12:16:39] DEBUG :  DESTINATION_LIST = /lustre/tools/AdminTools/config/conf_dst_list.txt
+[2025/09/05 12:16:39] DEBUG :           MOD_DIR = /lustre/tools/AdminTools/mod
+[2025/09/05 12:16:39] DEBUG :           VAR_DIR = /lustre/tools/AdminTools/var
+[2025/09/05 12:16:39] DEBUG :           HISTORY = /lustre/tools/AdminTools/var/History.csv
+[2025/09/05 12:16:39] DEBUG :           LOG_DIR = /lustre/tools/AdminTools/log
+[2025/09/05 12:16:39] DEBUG :          LOG_FILE = /lustre/tools/AdminTools/log/srpv01502_AutoCopy.sh.log
+[2025/09/05 12:16:39] DEBUG :           TMP_DIR = /lustre/tools/AdminTools/tmp
+[2025/09/05 12:16:39] DEBUG :      RSNC_SYS_DIR = /store/.sysonly_okeFBsTh/lustre/share/ReleaseCandidate/cksum_transfer
+[2025/09/05 12:16:39] DEBUG : fNodeChecker() : IN
+[2025/09/05 12:16:39] DEBUG : fNodeChecker() : node = srpv01502
+[2025/09/05 12:16:39] DEBUG : fNodeChecker() : srpv01502 == srpv01502
+[2025/09/05 12:16:39] DEBUG : fNodeChecker() : RETURN 0
+[2025/09/05 12:16:39] DEBUG : fFsReadOnlyChecker() : IN
+[2025/09/05 12:16:39] DEBUG : fFsReadOnlyChecker() : conf_FS_TYPE = nfs
+[2025/09/05 12:16:39] DEBUG : fFsReadOnlyChecker() : conf_MNT_PREFIX = /store/.sysonly_okeFBsTh
+[2025/09/05 12:16:39] DEBUG : fFsReadOnlyChecker() : conf_W_CHK_TMP = .write_check_tmp
+[2025/09/05 12:16:39] DEBUG : fFsReadOnlyChecker() : OMIT_CHECK =
+[2025/09/05 12:16:39] DEBUG : fFsReadOnlyChecker() : 10.120.112.86:/sbint-share 10737418240 324890624 10412527616   4% /store/.sysonly_okeFBsTh
+[2025/09/05 12:16:39] DEBUG : fFsReadOnlyChecker() : touch /store/.sysonly_okeFBsTh/.write_check_tmp
+[2025/09/05 12:16:39] DEBUG : fFsReadOnlyChecker() : RETURN 0
+[2025/09/05 12:16:39] DEBUG : fFsReadOnlyChecker() : RETURN : True
+[2025/09/05 12:16:39] DEBUG :        OMIT_CRON_CHECK = True
+[2025/09/05 12:16:39] DEBUG :  OMIT_LOCAL_PATH_CHECK = False
+[2025/09/05 12:16:39] DEBUG :           SEND_MESSAGE = False
+[2025/09/05 12:16:39] DEBUG : rsync -r /store/.sysonly_okeFBsTh/lustre/share/ReleaseCandidate/cksum_transfer /lustre/tools/AdminTools/var
+[2025/09/05 12:16:39] DEBUG : Fast Rsync
+[2025/09/05 12:16:39] DEBUG : fImprovedRsync() : IN
+[2025/09/05 12:16:39] DEBUG : fImprovedRsync() : Type = fast
+[2025/09/05 12:16:39] DEBUG : fImprovedRsync() : OMIT_P_CHECK = False
+[2025/09/05 12:16:39] DEBUG : fImprovedRsync() : OPT =
+[2025/09/05 12:16:39] DEBUG : *************************:*********************************
+[2025/09/05 12:16:39] DEBUG : fImprovedRsync() : TIME = 2025-09-01T10:59:56+09:00
+[2025/09/05 12:16:39] DEBUG : fImprovedRsync() : TARGET = /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-70b-sft
+[2025/09/05 12:16:39] DEBUG : fImprovedRsync() : TARGET_CKSUM = 417193831941dba748b69f9622d5963e
+[2025/09/05 12:16:39] DEBUG : fImprovedRsync() : REQUEST = immediately
+[2025/09/05 12:16:39] DEBUG : fImprovedRsync() : DEST_CHECK =
+[2025/09/05 12:16:39] DEBUG : fDestinationChecker() : IN
+[2025/09/05 12:16:39] DEBUG : fDestinationChecker() : target = /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-70b-sft
+[2025/09/05 12:16:39] DEBUG : fDestinationChecker() : doutfile : /lustre/tools/AdminTools/tmp/dst_directory
+[2025/09/05 12:16:39] DEBUG : fDestinationChecker() : cat /lustre/tools/AdminTools/tmp/dst_directory
+[2025/09/05 12:16:39] DEBUG : fDestinationChecker() : /lustre/teams/
+[2025/09/05 12:16:39] DEBUG : fDestinationChecker() : /lustre/share/
+[2025/09/05 12:16:39] DEBUG : fDestinationChecker() : /lustre/container_cache/
+[2025/09/05 12:16:39] DEBUG : fDestinationChecker() : foutfile : /lustre/tools/AdminTools/tmp/dst_file
+[2025/09/05 12:16:39] DEBUG : fDestinationChecker() : cat /lustre/tools/AdminTools/tmp/dst_file
+[2025/09/05 12:16:39] DEBUG : fDestinationChecker() : does not exist : /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-70b-sft
+[2025/09/05 12:16:39] DEBUG : fDestinationChecker() : item = /lustre/share/
+[2025/09/05 12:16:39] DEBUG : fDestinationChecker() : /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-70b-sft =~ /lustre/share/
+[2025/09/05 12:16:39] INFO : fDestinationChecker() : mkdir : /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-70b-sft
+[2025/09/05 12:16:39] DEBUG : fRsync() : IN
+[2025/09/05 12:16:39] DEBUG : fRsync() : 2025-09-05T12:16:39+09:00
+[2025/09/05 12:16:39] DEBUG : fRsync() : TARGET = /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-70b-sft
+[2025/09/05 12:16:39] DEBUG : fRsync() : TARGET_ROOT = /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25
+[2025/09/05 12:16:39] INFO : Directory : /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-70b-sft
+[2025/09/05 12:38:19] INFO : Done!! : rsync -r /store/.sysonly_okeFBsTh/lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-70b-sft /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25
+[2025/09/05 12:38:19] DEBUG : fImprovedRsync() : fRsync() returns 0
+[2025/09/05 12:38:19] DEBUG : fImprovedRsync() : 2025-09-05T12:38:19+09:00,/lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-70b-sft,417193831941dba748b69f9622d5963e,completed
+[2025/09/05 12:38:19] DEBUG : fImprovedRsync() : HISTORY updated
+[2025/09/05 12:38:19] DEBUG : *************************:*********************************
+[2025/09/05 12:38:19] DEBUG : fImprovedRsync() : TIME = 2025-09-01T10:59:56+09:00
+[2025/09/05 12:38:19] DEBUG : fImprovedRsync() : TARGET = /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-7b-sft
+[2025/09/05 12:38:19] DEBUG : fImprovedRsync() : TARGET_CKSUM = 2946f5ab0b40c17f5b5a88c1e2e6687f
+[2025/09/05 12:38:19] DEBUG : fImprovedRsync() : REQUEST = immediately
+[2025/09/05 12:38:19] DEBUG : fImprovedRsync() : DEST_CHECK =
+[2025/09/05 12:38:19] DEBUG : fDestinationChecker() : IN
+[2025/09/05 12:38:19] DEBUG : fDestinationChecker() : target = /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-7b-sft
+[2025/09/05 12:38:20] DEBUG : fDestinationChecker() : doutfile : /lustre/tools/AdminTools/tmp/dst_directory
+[2025/09/05 12:38:20] DEBUG : fDestinationChecker() : cat /lustre/tools/AdminTools/tmp/dst_directory
+[2025/09/05 12:38:20] DEBUG : fDestinationChecker() : /lustre/teams/
+[2025/09/05 12:38:20] DEBUG : fDestinationChecker() : /lustre/share/
+[2025/09/05 12:38:20] DEBUG : fDestinationChecker() : /lustre/container_cache/
+[2025/09/05 12:38:20] DEBUG : fDestinationChecker() : foutfile : /lustre/tools/AdminTools/tmp/dst_file
+[2025/09/05 12:38:20] DEBUG : fDestinationChecker() : cat /lustre/tools/AdminTools/tmp/dst_file
+[2025/09/05 12:38:20] DEBUG : fDestinationChecker() : does not exist : /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-7b-sft
+[2025/09/05 12:38:20] DEBUG : fDestinationChecker() : item = /lustre/share/
+[2025/09/05 12:38:20] DEBUG : fDestinationChecker() : /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-7b-sft =~ /lustre/share/
+[2025/09/05 12:38:20] INFO : fDestinationChecker() : mkdir : /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-7b-sft
+[2025/09/05 12:38:20] DEBUG : fRsync() : IN
+[2025/09/05 12:38:20] DEBUG : fRsync() : 2025-09-05T12:38:20+09:00
+[2025/09/05 12:38:20] DEBUG : fRsync() : TARGET = /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-7b-sft
+[2025/09/05 12:38:20] DEBUG : fRsync() : TARGET_ROOT = /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25
+[2025/09/05 12:38:20] INFO : Directory : /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-7b-sft
+[2025/09/05 12:40:22] INFO : Done!! : rsync -r /store/.sysonly_okeFBsTh/lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-7b-sft /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25
+[2025/09/05 12:40:22] DEBUG : fImprovedRsync() : fRsync() returns 0
+[2025/09/05 12:40:22] DEBUG : fImprovedRsync() : 2025-09-05T12:40:22+09:00,/lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-7b-sft,2946f5ab0b40c17f5b5a88c1e2e6687f,completed
+[2025/09/05 12:40:22] DEBUG : fImprovedRsync() : HISTORY updated
+[2025/09/05 12:40:22] DEBUG : *************************:*********************************
+[2025/09/05 12:40:22] DEBUG : fImprovedRsync() : RETURN 0
+[2025/09/05 12:40:22] DEBUG : fImprovedRsync() : IN
+[2025/09/05 12:40:22] DEBUG : fImprovedRsync() : Type = regular
+[2025/09/05 12:40:22] DEBUG : fImprovedRsync() : OMIT_P_CHECK = False
+[2025/09/05 12:40:22] DEBUG : fImprovedRsync() : OPT =  -v
+[2025/09/05 12:40:22] DEBUG : *************************:*********************************
+[2025/09/05 12:40:22] DEBUG : fImprovedRsync() : TIME = 2025-09-01T10:59:57+09:00
+[2025/09/05 12:40:22] DEBUG : fImprovedRsync() : TARGET = /lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20250801-2.sqsh
+[2025/09/05 12:40:22] DEBUG : fImprovedRsync() : TARGET_CKSUM = 4db8b6e59808b80de3654689ceb90e67
+[2025/09/05 12:40:22] DEBUG : fImprovedRsync() : REQUEST =
+[2025/09/05 12:40:22] DEBUG : fImprovedRsync() : DEST_CHECK =
+[2025/09/05 12:40:22] DEBUG : fDestinationChecker() : IN
+[2025/09/05 12:40:22] DEBUG : fDestinationChecker() : target = /lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20250801-2.sqsh
+[2025/09/05 12:40:22] DEBUG : fDestinationChecker() : doutfile : /lustre/tools/AdminTools/tmp/dst_directory
+[2025/09/05 12:40:22] DEBUG : fDestinationChecker() : cat /lustre/tools/AdminTools/tmp/dst_directory
+[2025/09/05 12:40:22] DEBUG : fDestinationChecker() : /lustre/teams/
+[2025/09/05 12:40:22] DEBUG : fDestinationChecker() : /lustre/share/
+[2025/09/05 12:40:22] DEBUG : fDestinationChecker() : /lustre/container_cache/
+[2025/09/05 12:40:22] DEBUG : fDestinationChecker() : foutfile : /lustre/tools/AdminTools/tmp/dst_file
+[2025/09/05 12:40:22] DEBUG : fDestinationChecker() : cat /lustre/tools/AdminTools/tmp/dst_file
+[2025/09/05 12:40:22] INFO : fDestinationChecker() : file : /lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20250801-2.sqsh
+[2025/09/05 12:40:22] DEBUG : fDestinationChecker() : item = /lustre/container_cache/
+[2025/09/05 12:40:22] DEBUG : fDestinationChecker() : /lustre/container_cache/reimei_engine =~ /lustre/container_cache/
+[2025/09/05 12:40:22] DEBUG : fDestinationChecker() : FLG = OK
+[2025/09/05 12:40:22] DEBUG : fDestinationChecker() : RETURN 0
+[2025/09/05 12:40:22] DEBUG : fRsync() : IN
+[2025/09/05 12:40:22] DEBUG : fRsync() : 2025-09-05T12:40:22+09:00
+[2025/09/05 12:40:22] DEBUG : fRsync() : TARGET = /lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20250801-2.sqsh
+[2025/09/05 12:40:22] DEBUG : fRsync() : TARGET_ROOT = /lustre/container_cache/reimei_engine
+[2025/09/05 12:40:22] INFO : File : /lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20250801-2.sqsh
+[2025/09/05 12:43:01] INFO : Done!! : rsync /store/.sysonly_okeFBsTh/lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20250801-2.sqsh /lustre/container_cache/reimei_engine
+[2025/09/05 12:43:01] DEBUG : fImprovedRsync() : fRsync() returns 0
+[2025/09/05 12:43:01] DEBUG : fImprovedRsync() : 2025-09-05T12:43:01+09:00,/lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20250801-2.sqsh,4db8b6e59808b80de3654689ceb90e67,completed
+[2025/09/05 12:43:01] DEBUG : fImprovedRsync() : HISTORY updated
+[2025/09/05 12:43:01] DEBUG : *************************:*********************************
+[2025/09/05 12:43:01] DEBUG : fImprovedRsync() : RETURN 0
+[2025/09/05 12:43:01] DEBUG : fCleanup() : IN
+[2025/09/05 12:43:01] DEBUG : fCleanup() : rm -rf /lustre/tools/AdminTools/var/sync.lock
+[2025/09/05 12:43:01] DEBUG : END
+[2025/09/05 12:43:01] INFO :   End : Fri Sep  5 12:43:01 PM JST 2025
+[2025/09/05 15:03:01] INFO : Start : Fri Sep  5 03:03:01 PM JST 2025
+[2025/09/05 15:03:01] INFO :   End : Fri Sep  5 03:03:01 PM JST 2025
+[2025/09/05 16:03:01] INFO : Start : Fri Sep  5 04:03:01 PM JST 2025
+[2025/09/05 16:03:01] INFO :   End : Fri Sep  5 04:03:01 PM JST 2025
+[2025/09/05 17:03:01] INFO : Start : Fri Sep  5 05:03:01 PM JST 2025
+[2025/09/05 17:03:01] INFO :   End : Fri Sep  5 05:03:01 PM JST 2025
+[2025/09/05 18:03:01] INFO : Start : Fri Sep  5 06:03:01 PM JST 2025
+[2025/09/05 18:03:01] INFO :   End : Fri Sep  5 06:03:01 PM JST 2025
+[2025/09/05 19:03:01] INFO : Start : Fri Sep  5 07:03:01 PM JST 2025
+[2025/09/05 19:03:01] INFO :   End : Fri Sep  5 07:03:01 PM JST 2025
+[2025/09/05 20:03:01] INFO : Start : Fri Sep  5 08:03:01 PM JST 2025
+[2025/09/05 20:03:02] INFO :   End : Fri Sep  5 08:03:02 PM JST 2025
+[2025/09/05 21:03:01] INFO : Start : Fri Sep  5 09:03:01 PM JST 2025
+[2025/09/05 21:03:01] INFO :   End : Fri Sep  5 09:03:01 PM JST 2025
+[2025/09/05 22:03:01] INFO : Start : Fri Sep  5 10:03:01 PM JST 2025
+[2025/09/05 22:03:01] INFO :   End : Fri Sep  5 10:03:01 PM JST 2025
+[2025/09/05 23:03:01] INFO : Start : Fri Sep  5 11:03:01 PM JST 2025
+[2025/09/05 23:03:01] INFO :   End : Fri Sep  5 11:03:01 PM JST 2025
+[2025/09/06 00:03:01] INFO : Start : Sat Sep  6 12:03:01 AM JST 2025
+[2025/09/06 00:03:01] INFO :   End : Sat Sep  6 12:03:01 AM JST 2025
+[2025/09/06 01:03:01] INFO : Start : Sat Sep  6 01:03:01 AM JST 2025
+[2025/09/06 01:03:02] INFO :   End : Sat Sep  6 01:03:02 AM JST 2025
+[2025/09/06 02:03:02] INFO : Start : Sat Sep  6 02:03:02 AM JST 2025
+[2025/09/06 02:03:02] INFO :   End : Sat Sep  6 02:03:02 AM JST 2025
+[2025/09/06 03:03:01] INFO : Start : Sat Sep  6 03:03:01 AM JST 2025
+[2025/09/06 03:03:02] INFO :   End : Sat Sep  6 03:03:02 AM JST 2025
+[2025/09/06 04:03:01] INFO : Start : Sat Sep  6 04:03:01 AM JST 2025
+[2025/09/06 04:03:01] INFO :   End : Sat Sep  6 04:03:01 AM JST 2025
+[2025/09/06 05:03:01] INFO : Start : Sat Sep  6 05:03:01 AM JST 2025
+[2025/09/06 05:03:01] INFO :   End : Sat Sep  6 05:03:01 AM JST 2025
+[2025/09/06 06:03:01] INFO : Start : Sat Sep  6 06:03:01 AM JST 2025
+[2025/09/06 06:03:01] INFO :   End : Sat Sep  6 06:03:01 AM JST 2025
+[2025/09/06 07:03:01] INFO : Start : Sat Sep  6 07:03:01 AM JST 2025
+[2025/09/06 07:03:01] INFO :   End : Sat Sep  6 07:03:01 AM JST 2025
+[2025/09/06 08:03:01] INFO : Start : Sat Sep  6 08:03:01 AM JST 2025
+[2025/09/06 08:03:01] INFO :   End : Sat Sep  6 08:03:01 AM JST 2025
+[2025/09/06 09:03:01] INFO : Start : Sat Sep  6 09:03:01 AM JST 2025
+[2025/09/06 09:03:01] INFO :   End : Sat Sep  6 09:03:01 AM JST 2025
+[2025/09/06 10:03:01] INFO : Start : Sat Sep  6 10:03:01 AM JST 2025
+[2025/09/06 10:03:01] INFO :   End : Sat Sep  6 10:03:01 AM JST 2025
+[2025/09/06 11:03:01] INFO : Start : Sat Sep  6 11:03:01 AM JST 2025
+[2025/09/06 11:03:01] INFO :   End : Sat Sep  6 11:03:01 AM JST 2025
+[2025/09/06 12:03:01] INFO : Start : Sat Sep  6 12:03:01 PM JST 2025
+[2025/09/06 12:03:01] INFO :   End : Sat Sep  6 12:03:01 PM JST 2025
+[2025/09/06 13:03:01] INFO : Start : Sat Sep  6 01:03:01 PM JST 2025
+[2025/09/06 13:03:01] INFO :   End : Sat Sep  6 01:03:01 PM JST 2025
+[2025/09/06 14:03:01] INFO : Start : Sat Sep  6 02:03:01 PM JST 2025
+[2025/09/06 14:03:01] INFO :   End : Sat Sep  6 02:03:01 PM JST 2025
+[2025/09/06 15:03:01] INFO : Start : Sat Sep  6 03:03:01 PM JST 2025
+[2025/09/06 15:03:01] INFO :   End : Sat Sep  6 03:03:01 PM JST 2025
+[2025/09/06 16:03:01] INFO : Start : Sat Sep  6 04:03:01 PM JST 2025
+[2025/09/06 16:03:01] INFO :   End : Sat Sep  6 04:03:01 PM JST 2025
+[2025/09/06 17:03:01] INFO : Start : Sat Sep  6 05:03:01 PM JST 2025
+[2025/09/06 17:03:01] INFO :   End : Sat Sep  6 05:03:01 PM JST 2025
+[2025/09/06 18:03:01] INFO : Start : Sat Sep  6 06:03:01 PM JST 2025
+[2025/09/06 18:03:01] INFO :   End : Sat Sep  6 06:03:01 PM JST 2025
+[2025/09/06 19:03:01] INFO : Start : Sat Sep  6 07:03:01 PM JST 2025
+[2025/09/06 19:03:02] INFO :   End : Sat Sep  6 07:03:02 PM JST 2025
+[2025/09/06 20:03:01] INFO : Start : Sat Sep  6 08:03:01 PM JST 2025
+[2025/09/06 20:03:01] INFO :   End : Sat Sep  6 08:03:01 PM JST 2025
+[2025/09/06 21:03:01] INFO : Start : Sat Sep  6 09:03:01 PM JST 2025
+[2025/09/06 21:03:01] INFO :   End : Sat Sep  6 09:03:01 PM JST 2025
+[2025/09/06 22:03:01] INFO : Start : Sat Sep  6 10:03:01 PM JST 2025
+[2025/09/06 22:03:01] INFO :   End : Sat Sep  6 10:03:01 PM JST 2025
+[2025/09/06 23:03:01] INFO : Start : Sat Sep  6 11:03:01 PM JST 2025
+[2025/09/06 23:03:01] INFO :   End : Sat Sep  6 11:03:01 PM JST 2025
+[2025/09/07 00:03:01] INFO : Start : Sun Sep  7 12:03:01 AM JST 2025
+[2025/09/07 00:03:02] INFO :   End : Sun Sep  7 12:03:02 AM JST 2025
+[2025/09/07 01:03:02] INFO : Start : Sun Sep  7 01:03:02 AM JST 2025
+[2025/09/07 01:03:02] INFO :   End : Sun Sep  7 01:03:02 AM JST 2025
+[2025/09/07 02:03:01] INFO : Start : Sun Sep  7 02:03:01 AM JST 2025
+[2025/09/07 02:03:01] INFO :   End : Sun Sep  7 02:03:01 AM JST 2025
+[2025/09/07 03:03:01] INFO : Start : Sun Sep  7 03:03:01 AM JST 2025
+[2025/09/07 03:03:01] INFO :   End : Sun Sep  7 03:03:01 AM JST 2025
+[2025/09/07 04:03:01] INFO : Start : Sun Sep  7 04:03:01 AM JST 2025
+[2025/09/07 04:03:01] INFO :   End : Sun Sep  7 04:03:01 AM JST 2025
+[2025/09/07 05:03:01] INFO : Start : Sun Sep  7 05:03:01 AM JST 2025
+[2025/09/07 05:03:01] INFO :   End : Sun Sep  7 05:03:01 AM JST 2025
+[2025/09/07 06:03:01] INFO : Start : Sun Sep  7 06:03:01 AM JST 2025
+[2025/09/07 06:03:01] INFO :   End : Sun Sep  7 06:03:01 AM JST 2025
+[2025/09/07 07:03:01] INFO : Start : Sun Sep  7 07:03:01 AM JST 2025
+[2025/09/07 07:03:02] INFO :   End : Sun Sep  7 07:03:02 AM JST 2025
+[2025/09/07 08:03:01] INFO : Start : Sun Sep  7 08:03:01 AM JST 2025
+[2025/09/07 08:03:01] INFO :   End : Sun Sep  7 08:03:01 AM JST 2025
+[2025/09/07 09:03:01] INFO : Start : Sun Sep  7 09:03:01 AM JST 2025
+[2025/09/07 09:03:01] INFO :   End : Sun Sep  7 09:03:01 AM JST 2025
+[2025/09/07 10:03:01] INFO : Start : Sun Sep  7 10:03:01 AM JST 2025
+[2025/09/07 10:03:02] INFO :   End : Sun Sep  7 10:03:02 AM JST 2025
+[2025/09/07 11:03:01] INFO : Start : Sun Sep  7 11:03:01 AM JST 2025
+[2025/09/07 11:03:02] INFO :   End : Sun Sep  7 11:03:02 AM JST 2025
+[2025/09/07 12:03:01] INFO : Start : Sun Sep  7 12:03:01 PM JST 2025
+[2025/09/07 12:03:01] INFO :   End : Sun Sep  7 12:03:01 PM JST 2025
+[2025/09/07 13:03:01] INFO : Start : Sun Sep  7 01:03:01 PM JST 2025
+[2025/09/07 13:03:01] INFO :   End : Sun Sep  7 01:03:01 PM JST 2025
+[2025/09/07 14:03:01] INFO : Start : Sun Sep  7 02:03:01 PM JST 2025
+[2025/09/07 14:03:01] INFO :   End : Sun Sep  7 02:03:01 PM JST 2025
+[2025/09/07 15:03:01] INFO : Start : Sun Sep  7 03:03:01 PM JST 2025
+[2025/09/07 15:03:01] INFO :   End : Sun Sep  7 03:03:01 PM JST 2025
+[2025/09/07 16:03:01] INFO : Start : Sun Sep  7 04:03:01 PM JST 2025
+[2025/09/07 16:03:02] INFO :   End : Sun Sep  7 04:03:02 PM JST 2025
+[2025/09/07 17:03:01] INFO : Start : Sun Sep  7 05:03:01 PM JST 2025
+[2025/09/07 17:03:01] INFO :   End : Sun Sep  7 05:03:01 PM JST 2025
+[2025/09/07 18:03:01] INFO : Start : Sun Sep  7 06:03:01 PM JST 2025
+[2025/09/07 18:03:01] INFO :   End : Sun Sep  7 06:03:01 PM JST 2025
+[2025/09/07 19:03:01] INFO : Start : Sun Sep  7 07:03:01 PM JST 2025
+[2025/09/07 19:03:01] INFO :   End : Sun Sep  7 07:03:01 PM JST 2025
+[2025/09/07 20:03:01] INFO : Start : Sun Sep  7 08:03:01 PM JST 2025
+[2025/09/07 20:03:01] INFO :   End : Sun Sep  7 08:03:01 PM JST 2025
+[2025/09/07 21:03:01] INFO : Start : Sun Sep  7 09:03:01 PM JST 2025
+[2025/09/07 21:03:01] INFO :   End : Sun Sep  7 09:03:01 PM JST 2025
+[2025/09/07 22:03:01] INFO : Start : Sun Sep  7 10:03:01 PM JST 2025
+[2025/09/07 22:03:01] INFO :   End : Sun Sep  7 10:03:01 PM JST 2025
+[2025/09/07 23:03:01] INFO : Start : Sun Sep  7 11:03:01 PM JST 2025
+[2025/09/07 23:03:01] INFO :   End : Sun Sep  7 11:03:01 PM JST 2025
+[2025/09/08 00:03:01] INFO : Start : Mon Sep  8 12:03:01 AM JST 2025
+[2025/09/08 00:03:01] INFO :   End : Mon Sep  8 12:03:01 AM JST 2025
+[2025/09/08 01:03:01] INFO : Start : Mon Sep  8 01:03:01 AM JST 2025
+[2025/09/08 01:03:01] INFO :   End : Mon Sep  8 01:03:01 AM JST 2025
+[2025/09/08 02:03:01] INFO : Start : Mon Sep  8 02:03:01 AM JST 2025
+[2025/09/08 02:03:01] INFO :   End : Mon Sep  8 02:03:01 AM JST 2025
+[2025/09/08 03:03:01] INFO : Start : Mon Sep  8 03:03:01 AM JST 2025
+[2025/09/08 03:03:02] INFO :   End : Mon Sep  8 03:03:02 AM JST 2025
+[2025/09/08 04:03:01] INFO : Start : Mon Sep  8 04:03:01 AM JST 2025
+[2025/09/08 04:03:01] INFO :   End : Mon Sep  8 04:03:01 AM JST 2025
+[2025/09/08 05:03:01] INFO : Start : Mon Sep  8 05:03:01 AM JST 2025
+[2025/09/08 05:03:01] INFO :   End : Mon Sep  8 05:03:01 AM JST 2025
+[2025/09/08 06:03:01] INFO : Start : Mon Sep  8 06:03:01 AM JST 2025
+[2025/09/08 06:03:01] INFO :   End : Mon Sep  8 06:03:01 AM JST 2025
+[2025/09/08 07:03:01] INFO : Start : Mon Sep  8 07:03:01 AM JST 2025
+[2025/09/08 07:03:01] INFO :   End : Mon Sep  8 07:03:01 AM JST 2025
+[2025/09/08 08:03:01] INFO : Start : Mon Sep  8 08:03:01 AM JST 2025
+[2025/09/08 08:03:01] INFO :   End : Mon Sep  8 08:03:01 AM JST 2025
+[2025/09/08 09:03:02] INFO : Start : Mon Sep  8 09:03:02 AM JST 2025
+[2025/09/08 09:03:02] INFO :   End : Mon Sep  8 09:03:02 AM JST 2025
+[2025/09/08 10:03:01] INFO : Start : Mon Sep  8 10:03:01 AM JST 2025
+[2025/09/08 10:03:02] INFO :   End : Mon Sep  8 10:03:02 AM JST 2025
+[2025/09/08 11:03:01] INFO : Start : Mon Sep  8 11:03:01 AM JST 2025
+[2025/09/08 11:03:02] INFO :   End : Mon Sep  8 11:03:02 AM JST 2025
+[2025/09/08 12:03:01] INFO : Start : Mon Sep  8 12:03:01 PM JST 2025
+[2025/09/08 12:03:01] INFO :   End : Mon Sep  8 12:03:01 PM JST 2025
+[2025/09/08 13:03:01] INFO : Start : Mon Sep  8 01:03:01 PM JST 2025
+[2025/09/08 13:03:01] INFO :   End : Mon Sep  8 01:03:01 PM JST 2025
+[2025/09/08 14:03:01] INFO : Start : Mon Sep  8 02:03:01 PM JST 2025
+[2025/09/08 14:03:01] INFO :   End : Mon Sep  8 02:03:01 PM JST 2025
+[2025/09/08 15:03:01] INFO : Start : Mon Sep  8 03:03:01 PM JST 2025
+[2025/09/08 15:03:01] INFO :   End : Mon Sep  8 03:03:01 PM JST 2025
