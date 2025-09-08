@@ -65,3 +65,5 @@ rsync tool
 ls-l /lustre/tools/AdminTools/log/
 cat /lustre/tools/AdminTools/log/srpv01502_AutoCopy.sh.log
 ls -l /store/.sysonly_okeFBsTh/lustre/share/ReleaseCandidate/cksum_transfer/
+
+cat /lustre/applications/reimei-engine-llm-serve/run_worker.slurm
