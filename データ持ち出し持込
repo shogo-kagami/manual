@@ -75,3 +75,9 @@ cat /store/.sysonly_okeFBsTh/lustre/share/ReleaseCandidate/cksum_transfer/sbint_
 Ray
 https://ray-dashboard.sbintuitions.com/#/overview
 
+手順書直し
+デプロイ準備　日付は年月日
+
+　正常性確認
+me入らない squeuesqueue -p 021-partition
+
