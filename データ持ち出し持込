@@ -68,7 +68,10 @@ ls -l /store/.sysonly_okeFBsTh/lustre/share/ReleaseCandidate/cksum_transfer/
 
 cat /lustre/applications/reimei-engine-llm-serve/run_worker.slurm
 
-/lustre/tools/AdminTools/var/History.csv
+ログ確認
+cat /lustre/tools/AdminTools/var/History.csv
+cat /store/.sysonly_okeFBsTh/lustre/share/ReleaseCandidate/cksum_transfer/sbint_models.csv
 
+Ray
 https://ray-dashboard.sbintuitions.com/#/overview
 
