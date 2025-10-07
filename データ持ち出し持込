@@ -23,6 +23,11 @@ $	aws sso login
 
 $	aws s3 sync [コピー元(L4アクセスポイント)] [コピー先] --profile SBintVsocDataTransfer-060795933614
 
+[default]
+aws_access_key_id = AKIAEA854D42CC66C67F
+aws_secret_access_key = IDYOuCH3YHiRnN1BSl0InF3jnKvsOaSNvRrlBaC7
+region = sbint0001
+
 
 2006574a4e45b80d890451c1813de537
 
