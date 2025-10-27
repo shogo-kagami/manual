@@ -1,8 +1,8 @@
 　持込
-s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l2-upload-q8jv32/251027_shogo_kagami_q8jv32/
+
 
 　持出
-s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-q8jv32/251027_shogo_kagami_q8jv32/
+s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-upload-265cx4/251027_shogo_kagami_265cx4/
 
 モデル所在確認
 /lustre/share/sbint_models/translation/release/sbint-translation-2025-10-20/sbint-translation-2025-10-20-dpo/
