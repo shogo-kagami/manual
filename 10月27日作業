@@ -28,3 +28,6 @@ sed -i -e "s|$before|$after|" /lustre/applications/reimei-engine-llm-serve/run_w
 diff /lustre/applications/reimei-engine-llm-serve/run_worker.slurm /lustre/applications/reimei-engine-llm-serve/run_worker.slurm.20251027
 
 grep -e '--container-image' /lustre/applications/reimei-engine-llm-serve/run_worker.slurm | cut -f 2 -d "'" | xargs ls -l
+
+
+ /lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:90aaa01df293d761992757c0120d1d6cec8d5ce5.sqsh
