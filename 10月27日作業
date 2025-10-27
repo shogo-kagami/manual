@@ -31,3 +31,11 @@ grep -e '--container-image' /lustre/applications/reimei-engine-llm-serve/run_wor
 
 
  /lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:90aaa01df293d761992757c0120d1d6cec8d5ce5.sqsh
+
+
+タグ切り戻し
+cp -p /lustre/applications/reimei-engine-llm-serve/bkup/run_worker.slurm.20251026 /lustre/applications/reimei-engine-llm-serve/run_worker.slurm
+
+切り戻し確認
+diff /lustre/applications/reimei-engine-llm-serve/run_worker.slurm /lustre/applications/reimei-engine-llm-serve/run_worker.slurm.20251027
+grep -e '--container-image' /lustre/applications/reimei-engine-llm-serve/run_worker.slurm | cut -f 2 -d "'" | xargs ls -l
