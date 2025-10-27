@@ -1,11 +1,11 @@
 　持込
-
+s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l2-upload-q8jv32/251027_shogo_kagami_q8jv32/
 
 　持出
-s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-upload-8dyp9y/251022_shogo_kagami_8dyp9y/
+s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-q8jv32/251027_shogo_kagami_q8jv32/
 
-
-
+モデル所在確認
+/lustre/share/sbint_models/translation/release/sbint-translation-2025-10-20/sbint-translation-2025-10-20-dpo/
 
 
 $	aws configure sso	
