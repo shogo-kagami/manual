@@ -9,7 +9,7 @@ cat /lustre/applications/reimei-engine-llm-serve/run_worker.slurm
 
 ・イメージタグの編集
 バックアップ作成
-cp -p /lustre/applications/reimei-engine-llm-serve/run_worker.slurm /lustre/applications/reimei-engine-llm-serve/bkup/run_worker.slurm.20251027
+cp -p /lustre/applications/reimei-engine-llm-serve/run_worker.slurm /lustre/applications/reimei-engine-llm-serve/run_worker.slurm.20251027
 確認
 ls -l /lustre/applications/reimei-engine-llm-serve/bkup/run_worker.slurm.20251027
 
