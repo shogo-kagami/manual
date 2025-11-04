@@ -86,3 +86,6 @@ https://ray-dashboard.sbintuitions.com/#/overview
 　正常性確認
 me入らない squeuesqueue -p 021-partition
 
+ロードバランサーのセキュリティグループのID
+alb-lambda01
+nlb-serviceprod-monitoring01
