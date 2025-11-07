@@ -90,4 +90,4 @@ me入らない squeuesqueue -p 021-partition
 alb-lambda01:sg-0880b2dad9975ee2d
 nlb-serviceprod-monitoring01:sg-0c397970a1630eb41
 
-internal-alb-lambda01-1338168919.ap-northeast-1.elb.amazonaws.com
+internal-reimei-engine-ray-prd-sbkk-1895678098.ap-northeast-1.elb.amazonaws.com
