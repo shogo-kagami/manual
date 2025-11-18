@@ -103,3 +103,9 @@ i-0d008ec703791264a
 
 user45006
 6P~}AfNS#B^+g6
+
+$ ssh user45006@10.120.169.4
+user45006@10.120.169.4's password:
+You are required to change your password immediately (password expired).
+Connection closed by 10.120.169.4 port 22
+
