@@ -1,0 +1,89 @@
+user45006@srpv01504:/$ nc -zv 10.121.129.100 10080
+Connection to 10.121.129.100 10080 port [tcp/amanda] succeeded!
+user45006@srpv01504:/$ nc -zv 10.121.129.100 10081
+Connection to 10.121.129.100 10081 port [tcp/kamanda] succeeded!
+user45006@srpv01504:/$ nc -zv 10.121.129.100 10082
+^C
+user45006@srpv01504:/$ nc -zv 10.121.129.100 10083
+^C
+user45006@srpv01504:/$ nc -zv 10.121.129.100 10084
+^C
+user45006@srpv01504:/$ nc -zv 10.121.129.100 10085
+Connection to 10.121.129.100 10085 port [tcp/*] succeeded!
+user45006@srpv01504:/$
+user45006@srpv01504:/$
+user45006@srpv01504:/$ nc -zv 10.121.128.101 10080
+^C
+user45006@srpv01504:/$ nc -zv 10.121.128.101 10081
+^C
+user45006@srpv01504:/$
+user45006@srpv01504:/$
+user45006@srpv01504:/$ nc -zv 10.121.132.101 10080
+^C
+user45006@srpv01504:/$ nc -zv 10.121.128.101 10082
+^C
+user45006@srpv01504:/$ nc -zv 10.121.128.101 10083
+^C
+user45006@srpv01504:/$ nc -zv 10.121.128.101 10084
+^C
+user45006@srpv01504:/$ nc -zv 10.121.128.101 10085
+Connection to 10.121.128.101 10085 port [tcp/*] succeeded!
+user45006@srpv01504:/$
+user45006@srpv01504:/$
+user45006@srpv01504:/$ nc -zv 10.121.132.101 10080
+^C
+user45006@srpv01504:/$ nc -zv 10.121.132.101 10081
+^C
+user45006@srpv01504:/$ nc -zv 10.121.132.101 10082
+^C
+user45006@srpv01504:/$ nc -zv 10.121.132.101 10083
+^C
+user45006@srpv01504:/$ nc -zv 10.121.132.101 10084
+^C
+user45006@srpv01504:/$ nc -zv 10.121.132.101 10085
+Connection to 10.121.132.101 10085 port [tcp/*] succeeded!
+
+
+ーーーーーーーーー
+user45006@srpv01505:/$ nc -zv 10.121.129.100 10080
+Connection to 10.121.129.100 10080 port [tcp/amanda] succeeded!
+user45006@srpv01505:/$ nc -zv 10.121.129.100 10081
+Connection to 10.121.129.100 10081 port [tcp/kamanda] succeeded!
+user45006@srpv01505:/$ nc -zv 10.121.129.100 10082
+^C
+user45006@srpv01505:/$ nc -zv 10.121.129.100 10083
+^C
+user45006@srpv01505:/$ nc -zv 10.121.129.100 10084
+^C
+user45006@srpv01505:/$ nc -zv 10.121.129.100 10085
+Connection to 10.121.129.100 10085 port [tcp/*] succeeded!
+user45006@srpv01505:/$
+user45006@srpv01505:/$
+user45006@srpv01505:/$ nc -zv 10.121.128.101 10080
+^C
+user45006@srpv01505:/$ nc -zv 10.121.128.101 10081
+^C
+user45006@srpv01505:/$ nc -zv 10.121.128.101 10082
+^C
+user45006@srpv01505:/$ nc -zv 10.121.128.101 10083
+^C
+user45006@srpv01505:/$ nc -zv 10.121.128.101 10084
+^C
+user45006@srpv01505:/$ nc -zv 10.121.128.101 10085
+Connection to 10.121.128.101 10085 port [tcp/*] succeeded!
+user45006@srpv01505:/$
+user45006@srpv01505:/$
+user45006@srpv01505:/$ nc -zv 10.121.132.101 10080
+^C
+user45006@srpv01505:/$ nc -zv 10.121.132.101 10081
+^C
+user45006@srpv01505:/$ nc -zv 10.121.132.101 10081
+^C
+user45006@srpv01505:/$ nc -zv 10.121.132.101 10082
+^C
+user45006@srpv01505:/$ nc -zv 10.121.132.101 10083
+^C
+user45006@srpv01505:/$ nc -zv 10.121.132.101 10084
+^C
+user45006@srpv01505:/$ nc -zv 10.121.132.101 10085
+Connection to 10.121.132.101 10085 port [tcp/*] succeeded!
