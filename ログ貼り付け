@@ -188,3 +188,44 @@ DIVISION_INFO = [
 ###----------------------------------------------------------------###
 ### << End >>
 ###----------------------------------------------------------------###
+
+
+user45020@srpv01504:/cm/shared/apps/slurm/var/cm/statesave/slurm$ ls -l
+total 3880
+-rw-------  1 slurm slurm   97893 Nov 19 13:07 assoc_mgr_state
+-rw-------  1 slurm slurm   97893 Nov 19 13:02 assoc_mgr_state.old
+-rw-------  1 slurm slurm   11109 Nov 19 13:07 assoc_usage
+-rw-------  1 slurm slurm   11109 Nov 19 13:02 assoc_usage.old
+-rw-r--r--  1 slurm slurm       5 Jul 19  2024 clustername
+-rw-------  1 slurm slurm       0 Nov 18 10:37 dbd.messages
+-rw-------  1 slurm slurm      19 Nov 19 13:07 fed_mgr_state
+-rw-------  1 slurm slurm      19 Nov 19 13:02 fed_mgr_state.old
+drwx------  9 slurm slurm     203 Nov 19 13:00 hash.0
+drwx------ 15 slurm slurm     377 Nov 19 13:02 hash.1
+drwx------ 15 slurm slurm     377 Nov 19 13:04 hash.2
+drwx------ 12 slurm slurm     290 Nov 19 13:04 hash.3
+drwx------ 11 slurm slurm     261 Nov 19 12:59 hash.4
+drwx------ 12 slurm slurm     290 Nov 19 13:08 hash.5
+drwx------ 13 slurm slurm     319 Nov 19 13:08 hash.6
+drwx------ 13 slurm slurm     319 Nov 19 13:06 hash.7
+drwx------ 12 slurm slurm     290 Nov 19 13:06 hash.8
+drwx------ 12 slurm slurm     290 Nov 19 12:59 hash.9
+-rw-------  1 slurm slurm      16 Nov 19 13:11 heartbeat
+-rw-------  1 slurm slurm 1164780 Nov 19 13:09 job_state
+-rw-------  1 slurm slurm 1164854 Nov 19 13:09 job_state.old
+-rw-------  1 slurm slurm      42 Nov 18 10:37 last_config_lite
+-rw-------  1 slurm slurm      42 Oct 21 09:03 last_config_lite.old
+-rw-------  1 slurm slurm     407 Nov 19 13:07 last_tres
+-rw-------  1 slurm slurm     407 Nov 19 13:02 last_tres.old
+-rw-------  1 slurm slurm  148499 Nov 19 13:09 node_state
+-rw-------  1 slurm slurm  148499 Nov 19 13:09 node_state.old
+-rw-------  1 slurm slurm    1170 Nov 19 13:07 part_state
+-rw-------  1 slurm slurm    1170 Nov 19 13:02 part_state.old
+-rw-------  1 slurm slurm      16 Nov 19 13:07 priority_last_decay_ran
+-rw-------  1 slurm slurm      16 Nov 19 13:02 priority_last_decay_ran.old
+-rw-------  1 slurm slurm      44 Nov 19 13:07 qos_usage
+-rw-------  1 slurm slurm      44 Nov 19 13:02 qos_usage.old
+-rw-------  1 slurm slurm      35 Nov 19 13:07 resv_state
+-rw-------  1 slurm slurm      35 Nov 19 13:02 resv_state.old
+-rw-------  1 slurm slurm      31 Nov 19 13:07 trigger_state
+-rw-------  1 slurm slurm      31 Nov 19 13:02 trigger_state.old
