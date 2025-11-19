@@ -128,3 +128,8 @@ drwxr-x--- 3 user45017 group045 102 Nov 13 16:06 user45017
 drwxr-x--- 3 user45018 group045 102 Nov 13 16:06 user45018
 drwxr-x--- 3 user45019 group045 102 Nov 13 16:06 user45019
 drwxr-x--- 6 user45020 group045 255 Nov 18 18:33 user45020
+
+
+user45020@srpv01504:~$ ls -l /home/user45020
+total 32
+drwxrwx--- 2 user45020 group045 27 Nov 18 18:00 backup
