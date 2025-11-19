@@ -87,3 +87,19 @@ user45006@srpv01505:/$ nc -zv 10.121.132.101 10084
 ^C
 user45006@srpv01505:/$ nc -zv 10.121.132.101 10085
 Connection to 10.121.132.101 10085 port [tcp/*] succeeded!
+
+------
+user45020@srpv01504:~$ df
+Filesystem                                      1K-blocks        Used    Available Use% Mounted on
+tmpfs                                             8185856        1240      8184616   1% /run
+/dev/sda2                                       104700980    12995160     91705820  13% /
+tmpfs                                             8185856          44      8185812   1% /dev/shm
+tmpfs                                                5120           0         5120   0% /run/lock
+/dev/sda1                                          102156           0       102156   0% /boot/efi
+10.120.112.86:/sbint-share                    10737418240  1285838336   9451579904  12% /store/.sysonly_okeFBsTh
+srhome-fs1.cm.cluster:/ifs/nfs/home/group045 183897490432 26986285568 148982710272  16% /home
+10.120.112.82:/lustre/tenant045              107374182400   166448128 107207734272   1% /lustre
+srhome-fs1.cm.cluster:/ifs/nfs/cm_shared     183897490432 26986285568 148982710272  16% /cm/shared
+srhome-fs1.cm.cluster:/ifs/nfs/infragroup    183897490432 26986285568 148982710272  16% /infragroup
+tmpfs                                             1637168           4      1637164   1% /run/user/14399
+tmpfs                                             1637168           4      1637164   1% /run/user/1351
