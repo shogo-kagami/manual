@@ -103,3 +103,28 @@ srhome-fs1.cm.cluster:/ifs/nfs/cm_shared     183897490432 26986285568 1489827102
 srhome-fs1.cm.cluster:/ifs/nfs/infragroup    183897490432 26986285568 148982710272  16% /infragroup
 tmpfs                                             1637168           4      1637164   1% /run/user/14399
 tmpfs                                             1637168           4      1637164   1% /run/user/1351
+
+
+user45020@srpv01504:~$ ls -l /home
+total 672
+drwxr-x--- 3 user45000 group045 102 Nov 13 16:06 user45000
+drwxr-x--- 5 user45001 group045 179 Nov 18 15:22 user45001
+drwxr-x--- 3 user45002 group045 102 Nov 13 16:06 user45002
+drwxr-x--- 3 user45003 group045 102 Nov 13 16:06 user45003
+drwxr-x--- 3 user45004 group045 102 Nov 13 16:06 user45004
+drwxr-x--- 5 user45005 group045 179 Nov 18 14:55 user45005
+drwxr-x--- 3 user45006 group045 102 Nov 13 16:06 user45006
+drwxr-x--- 3 user45007 group045 102 Nov 13 16:06 user45007
+drwxr-x--- 3 user45008 group045 102 Nov 13 16:06 user45008
+drwxr-x--- 3 user45009 group045 102 Nov 13 16:06 user45009
+drwxr-x--- 3 user45010 group045 102 Nov 13 16:06 user45010
+drwxr-x--- 3 user45011 group045 102 Nov 13 16:06 user45011
+drwxr-x--- 3 user45012 group045 102 Nov 13 16:06 user45012
+drwxr-x--- 3 user45013 group045 102 Nov 13 16:06 user45013
+drwxr-x--- 3 user45014 group045 102 Nov 13 16:06 user45014
+drwxr-x--- 3 user45015 group045 102 Nov 13 16:06 user45015
+drwxr-x--- 3 user45016 group045 102 Nov 13 16:06 user45016
+drwxr-x--- 3 user45017 group045 102 Nov 13 16:06 user45017
+drwxr-x--- 3 user45018 group045 102 Nov 13 16:06 user45018
+drwxr-x--- 3 user45019 group045 102 Nov 13 16:06 user45019
+drwxr-x--- 6 user45020 group045 255 Nov 18 18:33 user45020
