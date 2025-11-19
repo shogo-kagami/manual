@@ -133,3 +133,58 @@ drwxr-x--- 6 user45020 group045 255 Nov 18 18:33 user45020
 user45020@srpv01504:~$ ls -l /home/user45020
 total 32
 drwxrwx--- 2 user45020 group045 27 Nov 18 18:00 backup
+
+user45020@srpv01504:/lustre/tools/AdminTools/config$ cat run_worker_conf.py
+#!/usr/bin/env python3
+###----------------------------------------------------------------###
+### シングルRayHead （冗長化未対応）
+### 移行作業用設定
+### メトリクス送信用 NLB を使用
+### JSON 情報取得用の NLB のURL
+###----------------------------------------------------------------###
+#PROD_SBKK_RELAY01  = 'http://10.121.129.100:10085/get_info'
+#PROD_SBKK_RELAY02  = 'http://10.121.129.100:10085/get_info'
+#PROD_B2B_RELAY01 = 'http://10.121.129.100:10085/get_info'
+#PROD_B2B_RELAY02 = 'http://10.121.129.100:10085/get_info'
+
+###----------------------------------------------------------------###
+### マルチテナント & 冗長化対応
+### JSON 情報取得用の NLB のURL
+###----------------------------------------------------------------###
+#PROD_SBKK_RELAY01  = 'http://10.121.128.101:10085/get_info'
+#PROD_SBKK_RELAY02  = 'http://10.121.132.101:10085/get_info'
+
+PROD_B2B_RELAY01 = 'http://10.121.128.101:10085/get_info'
+PROD_B2B_RELAY02 = 'http://10.121.132.101:10085/get_info'
+
+###----------------------------------------------------------------###
+DIVISION_INFO = [
+    {'Node': 'srdgx00009', 'URL': PROD_B2B_RELAY01 },
+    {'Node': 'srdgx00010', 'URL': PROD_B2B_RELAY02 },
+    {'Node': 'srdgx00011', 'URL': PROD_B2B_RELAY01 },
+    {'Node': 'srdgx00012', 'URL': PROD_B2B_RELAY02 },
+    {'Node': 'srdgx00013', 'URL': PROD_B2B_RELAY01 },
+    {'Node': 'srdgx00014', 'URL': PROD_B2B_RELAY02 },
+    {'Node': 'srdgx00015', 'URL': PROD_B2B_RELAY01 },
+    {'Node': 'srdgx00016', 'URL': PROD_B2B_RELAY02 },
+    {'Node': 'srdgx00017', 'URL': PROD_B2B_RELAY01 },
+    {'Node': 'srdgx00018', 'URL': PROD_B2B_RELAY02 },
+    {'Node': 'srdgx00019', 'URL': PROD_B2B_RELAY01 },
+    {'Node': 'srdgx00020', 'URL': PROD_B2B_RELAY02 },
+    {'Node': 'srdgx00021', 'URL': PROD_B2B_RELAY01 },
+    {'Node': 'srdgx00022', 'URL': PROD_B2B_RELAY02 },
+    {'Node': 'srdgx00023', 'URL': PROD_B2B_RELAY01 },
+    {'Node': 'srdgx00024', 'URL': PROD_B2B_RELAY02 },
+    {'Node': 'srdgx00025', 'URL': PROD_B2B_RELAY01 },
+    {'Node': 'srdgx00026', 'URL': PROD_B2B_RELAY02 },
+    {'Node': 'srdgx00027', 'URL': PROD_B2B_RELAY01 },
+    {'Node': 'srdgx00028', 'URL': PROD_B2B_RELAY02 },
+    {'Node': 'srdgx00029', 'URL': PROD_B2B_RELAY01 },
+    {'Node': 'srdgx00030', 'URL': PROD_B2B_RELAY02 },
+    {'Node': 'srdgx00031', 'URL': PROD_B2B_RELAY01 },
+    {'Node': 'srdgx00032', 'URL': PROD_B2B_RELAY02 },
+]
+
+###----------------------------------------------------------------###
+### << End >>
+###----------------------------------------------------------------###
