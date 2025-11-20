@@ -235,3 +235,8 @@ user45020@srpv01504:/cm/shared/apps/slurm/var/cm/statesave/slurm$  srun -p 045-p
 srun: error: Task launch for StepId=2398791.0 failed on node srdgx00009: Communication connection failure
 srun: error: Application launch failed: Communication connection failure
 srun: Job step aborted
+
+2025-11-18T17:08:23+09:00,/lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-70b-sft,417193831941dba748b69f9622d5963e,immediately
+2025-11-18T17:08:23+09:00,/lustre/share/sbint_models/guardrail/sarashinaguard-7b-20250508,586865eba73f8f71ebcf4b55bc3d8584,immediately
+2025-11-18T17:08:23+09:00,/lustre/share/sbint_models/guardrail/sarashinaguard3-7b-20250822,54937af5e04a3c6547a27c84c9dffafa,immediately
+2025-11-18T17:08:23+09:00,/lustre/teams/text_embeddings/experiments/msmd_cse/sarashina2.2-3b/PROTO_sarashina2.2-3B__multistage_20250710_stg2_mix_gecko-recipe-filtered_RRF1_RRF_20_all_forbes_cl_classsification__stg2/hf_checkpoints/checkpoint-770,e08fb6756d04a5394771c7c102c40a1b,immediately
