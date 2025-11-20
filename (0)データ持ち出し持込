@@ -109,8 +109,3 @@ user45006@srpv01504:/$ srun -p 045-partition --pty bash
 srun: error: Task launch for StepId=2397062.0 failed on node srdgx00009: Communication connection failure
 srun: error: Application launch failed: Communication connection failure
 srun: Job step aborted
-
-https://trial-01.ray-dashboard.sbintuitions.com/#/overview
-https://trial-02.ray-dashboard.sbintuitions.com/#/overview
-
-PROMPT_COMMAND='history -a >> ~/.bash_history_file'
