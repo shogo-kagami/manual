@@ -321,3 +321,24 @@ INFO :      NFSマウントのcksum = e08fb6756d04a5394771c7c102c40a1b
 INFO :             実機のcksum = e08fb6756d04a5394771c7c102c40a1b
 
 INFO :   End : Thu Nov 20 04:54:09 PM JST 2025
+
+
+user45020@srpv01505:/lustre/tools/AdminTools/sbin$ ./CksumChecker.sh
+
+INFO : Start : Thu Nov 20 05:30:04 PM JST 2025
+
+INFO :  << /lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20251119-2.sqsh >>
+INFO :       CSVファイルのDate = 2025-11-19T15:53:29+09:00
+INFO :      CSVファイルのcksum = 502a3a310cc9b5e456362f0fe9e3c305
+INFO :  HISTORYファイルのcksum = 502a3a310cc9b5e456362f0fe9e3c305
+INFO :      NFSマウントのcksum = 502a3a310cc9b5e456362f0fe9e3c305
+INFO :             実機のcksum = 502a3a310cc9b5e456362f0fe9e3c305
+
+INFO :  << /lustre/share/sbint_models/guardrail/sarashinaguard-7b-20250508 >>
+INFO :       CSVファイルのDate = 2025-11-20T17:21:03+09:00
+INFO :      CSVファイルのcksum = 586865eba73f8f71ebcf4b55bc3d8584
+INFO :  HISTORYファイルのcksum = 586865eba73f8f71ebcf4b55bc3d8584
+INFO :      NFSマウントのcksum = 586865eba73f8f71ebcf4b55bc3d8584
+INFO :             実機のcksum = 586865eba73f8f71ebcf4b55bc3d8584
+
+INFO :   End : Thu Nov 20 05:32:15 PM JST 2025
