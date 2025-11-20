@@ -240,3 +240,47 @@ srun: Job step aborted
 2025-11-18T17:08:23+09:00,/lustre/share/sbint_models/guardrail/sarashinaguard-7b-20250508,586865eba73f8f71ebcf4b55bc3d8584,immediately
 2025-11-18T17:08:23+09:00,/lustre/share/sbint_models/guardrail/sarashinaguard3-7b-20250822,54937af5e04a3c6547a27c84c9dffafa,immediately
 2025-11-18T17:08:23+09:00,/lustre/teams/text_embeddings/experiments/msmd_cse/sarashina2.2-3b/PROTO_sarashina2.2-3B__multistage_20250710_stg2_mix_gecko-recipe-filtered_RRF1_RRF_20_all_forbes_cl_classsification__stg2/hf_checkpoints/checkpoint-770,e08fb6756d04a5394771c7c102c40a1b,immediately
+
+
+user45020@srpv01505:/lustre/tools/AdminTools/sbin$ ./CksumChecker.sh
+
+INFO : Start : Thu Nov 20 03:03:37 PM JST 2025
+
+INFO :  << /lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20251119-2.sqsh >>
+INFO :       CSVファイルのDate = 2025-11-19T15:53:29+09:00
+INFO :      CSVファイルのcksum = 502a3a310cc9b5e456362f0fe9e3c305
+INFO :  HISTORYファイルのcksum = 502a3a310cc9b5e456362f0fe9e3c305
+INFO :      NFSマウントのcksum = 502a3a310cc9b5e456362f0fe9e3c305
+INFO :             実機のcksum = 502a3a310cc9b5e456362f0fe9e3c305
+
+INFO :  << /lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-70b-sft >>
+INFO :       CSVファイルのDate = 2025-11-18T17:08:23+09:00
+INFO :      CSVファイルのcksum = 417193831941dba748b69f9622d5963e
+INFO :  HISTORYファイルのcksum = 417193831941dba748b69f9622d5963e
+INFO :      NFSマウントのcksum = 417193831941dba748b69f9622d5963e
+INFO :             実機のcksum = 417193831941dba748b69f9622d5963e
+
+INFO :  << /lustre/share/sbint_models/guardrail/sarashinaguard-7b-20250508 >>
+INFO :       CSVファイルのDate = 2025-11-18T17:08:23+09:00
+INFO :      CSVファイルのcksum = 586865eba73f8f71ebcf4b55bc3d8584
+INFO : HISTORYファイルにcksumが存在しません : 586865eba73f8f71ebcf4b55bc3d8584
+error: not a file or directory: /store/.sysonly_okeFBsTh//lustre/share/sbint_models/guardrail/sarashinaguard-7b-20250508
+INFO :      NFSマウントのcksum = --
+INFO :             実機のcksum = 227bc609651f929e367c3b2b79e09d5b
+
+INFO :  << /lustre/share/sbint_models/guardrail/sarashinaguard3-7b-20250822 >>
+INFO :       CSVファイルのDate = 2025-11-18T17:08:23+09:00
+INFO :      CSVファイルのcksum = 54937af5e04a3c6547a27c84c9dffafa
+INFO :  HISTORYファイルのcksum = 54937af5e04a3c6547a27c84c9dffafa
+INFO :      NFSマウントのcksum = 54937af5e04a3c6547a27c84c9dffafa
+INFO :             実機のcksum = 54937af5e04a3c6547a27c84c9dffafa
+
+INFO :  << /lustre/teams/text_embeddings/experiments/msmd_cse/sarashina2.2-3b/PROTO_sarashina2.2-3B__multistage_20250710_stg2_mix_gecko-recipe-filtered_RRF1_RRF_20_all_forbes_cl_classsification__stg2/hf_checkpoints/checkpoint-770 >>
+INFO :       CSVファイルのDate = 2025-11-18T17:08:23+09:00
+INFO :      CSVファイルのcksum = e08fb6756d04a5394771c7c102c40a1b
+INFO : HISTORYファイルにcksumが存在しません : e08fb6756d04a5394771c7c102c40a1b
+error: not a file or directory: /lustre/teams/text_embeddings/experiments/msmd_cse/sarashina2.2-3b/PROTO_sarashina2.2-3B__multistage_20250710_stg2_mix_gecko-recipe-filtered_RRF1_RRF_20_all_forbes_cl_classsification__stg2/hf_checkpoints/checkpoint-770
+INFO :      NFSマウントのcksum = e08fb6756d04a5394771c7c102c40a1b
+INFO :             実機のcksum = --
+
+INFO :   End : Thu Nov 20 03:09:03 PM JST 2025
