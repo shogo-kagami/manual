@@ -236,6 +236,8 @@ srun: error: Task launch for StepId=2398791.0 failed on node srdgx00009: Communi
 srun: error: Application launch failed: Communication connection failure
 srun: Job step aborted
 
+
+user45020@srpv01505:/store/.sysonly_okeFBsTh/lustre/share/ReleaseCandidate/cksum_transfer$ cat sbint_models.csv
 2025-11-18T17:08:23+09:00,/lustre/share/sbint_models/finetuned/release/sbint-2025-08-25/sbint-2025-08-25-70b-sft,417193831941dba748b69f9622d5963e,immediately
 2025-11-18T17:08:23+09:00,/lustre/share/sbint_models/guardrail/sarashinaguard-7b-20250508,586865eba73f8f71ebcf4b55bc3d8584,immediately
 2025-11-18T17:08:23+09:00,/lustre/share/sbint_models/guardrail/sarashinaguard3-7b-20250822,54937af5e04a3c6547a27c84c9dffafa,immediately
