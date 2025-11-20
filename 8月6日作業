@@ -22,3 +22,4 @@ https://ray-dashboard.sbintuitions.com/#/cluster を観察すると、現在上�
 新ログインノード　作業用
 user: user45020
 pass: F2ns!gk5sjv?E)Jh
+./srun_test.sh で実行、後ろにホスト名で個別に実行できる
