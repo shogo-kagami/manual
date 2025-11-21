@@ -342,3 +342,14 @@ INFO :      NFSマウントのcksum = 586865eba73f8f71ebcf4b55bc3d8584
 INFO :             実機のcksum = 586865eba73f8f71ebcf4b55bc3d8584
 
 INFO :   End : Thu Nov 20 05:32:15 PM JST 2025
+
+user45020@srpv01504:~$ sinfo -a | grep 00011
+defq                     up   infinite     19  drain srdgx[00011-00012,00039,00046,00055,00068,00116,00128-00129,00137,00144,00146,00158,00176,00189,00209,00236,00255],srpp00045
+user45020@srpv01504:~$
+user45020@srpv01504:~$
+user45020@srpv01504:~$ sinfo -a | grep 00025
+defq                     up   infinite      5 drain* srdgx[00025-00026,00239],srpp[00029,00046]
+
+user45020@srpv01504:~$ sinfo
+PARTITION     AVAIL  TIMELIMIT  NODES  STATE NODELIST
+045-partition    up   infinite     20    mix srdgx[00009-00010,00013-00024,00027-00032]
