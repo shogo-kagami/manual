@@ -40,3 +40,7 @@ curl -H "Content-Type: application/json" \
   ],
   "tool_choice": "required"
 }'
+
+
+
+{"id":"chatcmpl-c5702753baf24dad869965d1f46e4724","choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"","refusal":null,"role":"assistant","annotations":null,"audio":null,"function_call":null,"tool_calls":[{"id":"chatcmpl-tool-7ea3eab1d2b84e0a9cab7dde429aee67","function":{"arguments":"{\"city\": \"東京\", \"unit\": \"celsius\"}","name":"get_weather"},"type":"function"}],"reasoning_content":null},"stop_reason":null,"token_ids":null}],"created":1763690466,"model":"sbint-instruct-2025-08-25:70b-sft","object":"chat.completion","service_tier":null,"system_fingerprint":null,"usage":{"completion_tokens":44,"prompt_tokens":113,"total_tokens":157,"completion_tokens_details":null,"prompt_tokens_details":null},"prompt_logprobs":null,"prompt_token_ids":null,"kv_transfer_params":null}[ec2-user@ip-10-121-128-124 ~]$
