@@ -109,3 +109,5 @@ user45006@srpv01504:/$ srun -p 045-partition --pty bash
 srun: error: Task launch for StepId=2397062.0 failed on node srdgx00009: Communication connection failure
 srun: error: Application launch failed: Communication connection failure
 srun: Job step aborted
+
+user45020@srpv01504:/lustre/tools/AdminTools$ srun -p 045-partition -w srdgx00009 uname -a
