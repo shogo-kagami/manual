@@ -1,0 +1,42 @@
+BASE_URL=http://localhost:8008/v1
+MODEL_NAME=sarashina2-mini
+curl -H "Content-Type: application/json" \
+    "$BASE_URL/chat/completions" \
+    -d '{
+  "model": "'"$MODEL_NAME"'",
+  "messages": [
+    {
+      "role": "user",
+      "content": "東京の天気を教えて"
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "get_weather",
+        "description": "指定した都市の天気を取得する",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string"
+            },
+            "unit": {
+              "type": "string",
+              "enum": [
+                "celsius",
+                "fahrenheit"
+              ]
+            }
+          },
+          "required": [
+            "city",
+            "unit"
+          ]
+        }
+      }
+    }
+  ],
+  "tool_choice": "required"
+}'
