@@ -111,3 +111,8 @@ srun: error: Application launch failed: Communication connection failure
 srun: Job step aborted
 
 user45020@srpv01504:/lustre/tools/AdminTools$ srun -p 045-partition -w srdgx00009 uname -a
+
+
+
+9	変更内容のプレビュー
+terraform plan -no-color | tee ~/deploy_20251126/log/$(date +%Y%m%d)_tfplan-common.txt
