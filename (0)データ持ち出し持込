@@ -116,3 +116,21 @@ user45020@srpv01504:/lustre/tools/AdminTools$ srun -p 045-partition -w srdgx0000
 
 9	変更内容のプレビュー
 terraform plan -no-color | tee ~/deploy_20251126/log/$(date +%Y%m%d)_tfplan-common.txt
+
+5-3
+terraform plan -no-color | tee ~/deploy_20251126/log/$(date +%Y%m%d)_tfplan-b2b.txt
+
+6-2
+terraform -chdir=01 plan -no-color | tee ~/deploy_20251126/log/$(date +%Y%m%d)_tfplan-b2b-01.txt
+
+7-2
+terraform -chdir=02 plan -no-color | tee ~/deploy_20251126/log/$(date +%Y%m%d)_tfplan-b2b-02.txt
+
+8-3
+terraform plan -no-color | tee ~/deploy_20251126/log/$(date +%Y%m%d)_tfplan-sbkk.txt
+
+9-2
+terraform -chdir=01 plan -no-color | tee ~/deploy_20251126/log/$(date +%Y%m%d)_tfplan-sbkk-01.txt
+
+10-2
+terraform -chdir=02 plan -no-color | tee ~/deploy_20251126/log/$(date +%Y%m%d)_tfplan-sbkk-02.txt
