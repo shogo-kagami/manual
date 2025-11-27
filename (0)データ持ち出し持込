@@ -94,5 +94,6 @@ srun: Job step aborted
 user45020@srpv01504:/lustre/tools/AdminTools$ srun -p 045-partition -w srdgx00009 uname -a
 
 
-PROMPT_COMMAND='history -a >> ~/.bash_history_file'
-source ~/.bashrc
+# ログ設定
+LOG_FILE="~/gitbash_log.txt"
+PROMPT_COMMAND='history 1 | awk {print $2} | xargs -I {} echo "$(date +%Y-%m-%d\ %H:%M:%S) {} $(${LOG_CMD})" >> ${LOG_FILE}'
