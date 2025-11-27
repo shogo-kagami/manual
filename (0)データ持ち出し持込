@@ -94,6 +94,15 @@ srun: Job step aborted
 user45020@srpv01504:/lustre/tools/AdminTools$ srun -p 045-partition -w srdgx00009 uname -a
 
 
-# ログ設定
-LOG_FILE="~/gitbash_log.txt"
-PROMPT_COMMAND='history 1 | awk {print $2} | xargs -I {} echo "$(date +%Y-%m-%d\ %H:%M:%S) {} $(${LOG_CMD})" >> ${LOG_FILE}'
+SBKK側のシンボリックリンク張り直し
+rm sbkk/terraform.tfvars sbkk/variables.tf sbkk/01/sbkk.auto.tfvars sbkk/01/variables_sbkk.tf sbkk/01/terraform.tfvars sbkk/01/variables.tf sbkk/02/sbkk.auto.tfvars sbkk/02/variables_sbkk.tf sbkk/02/terraform.tfvars sbkk/02/variables.tf 
+ln terraform.tfvars sbkk/terraform.tfvars
+ln variables.tf sbkk/variables.tf
+ln sbkk/sbkk.auto.tfvars sbkk/01/sbkk.auto.tfvars
+ln sbkk/variables_sbkk.tf sbkk/01/variables_sbkk.tf
+ln sbkk/terraform.tfvars sbkk/01/terraform.tfvars
+ln sbkk/variables.tf sbkk/01/variables.tf
+ln sbkk/sbkk.auto.tfvars sbkk/02/sbkk.auto.tfvars
+ln sbkk/variables_sbkk.tf sbkk/02/variables_sbkk.tf
+ln sbkk/terraform.tfvars sbkk/02/terraform.tfvars
+ln sbkk/variables.tf sbkk/02/variables.tf
