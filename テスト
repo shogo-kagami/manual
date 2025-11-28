@@ -1,1 +1,1 @@
-git config --get core.symlinks
+git config --get core.symlinks true
