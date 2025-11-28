@@ -44,4 +44,7 @@ endlog
 LOG_FILE="$HOME/Documents/gitbash_session.log"
 
 bash: script: command not found
-
+# ~/.bashrc に追加
+if [ -x /usr/bin/script ]; then
+    alias script='script'
+fi
