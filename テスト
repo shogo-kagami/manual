@@ -32,3 +32,13 @@ function stop_logging() {
 # エイリアス設定（任意）
 alias startlog='start_logging'
 alias endlog='stop_logging'
+
+source ~/.bashrc
+
+# ログを開始する
+startlog
+
+# ログを停止する
+endlog
+
+LOG_FILE="$HOME/Documents/gitbash_session.log"
