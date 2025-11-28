@@ -8,3 +8,27 @@ git config --global core.symlinks true
 
 bashrcに追記
 export MSYS=winsymlinks:nativestrict
+
+
+GitBashログ
+bash
+# 現在のセッションの出力をログファイルに追加
+script -a /path/to/logfile.txt
+
+bashrc
+# ログファイルのパスを設定
+LOG_FILE="/path/to/gitbash_session.log"
+
+# セッション開始時にログを開始
+function start_logging() {
+    script -a "$LOG_FILE"
+}
+
+# セッション終了時にログを停止
+function stop_logging() {
+    exit
+}
+
+# エイリアス設定（任意）
+alias startlog='start_logging'
+alias endlog='stop_logging'
