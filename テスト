@@ -1,1 +1,10 @@
-git config --get core.symlinks true
+ln -s <ターゲットファイルまたはディレクトリ> <リンク名>
+
+gpedit.msc　起動
+Windowsの設定＞セキュリティの設定＞ローカルポリシー＞ユーザ権利の割り当て　シンボリックリンクの作成　←ユーザーに付与する必要あり
+
+シンボリックリンク有効化
+git config --global core.symlinks true
+
+bashrcに追記
+export MSYS=winsymlinks:nativestrict
