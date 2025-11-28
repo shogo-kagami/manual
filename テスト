@@ -42,3 +42,6 @@ startlog
 endlog
 
 LOG_FILE="$HOME/Documents/gitbash_session.log"
+
+bash: script: command not found
+
