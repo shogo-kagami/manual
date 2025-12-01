@@ -56,3 +56,4 @@ export TERM=msys
 Found xterm, while expecting a Windows console. Maybe try to run this program using "winpty" or run it in cmd.exe instead. Or otherwise, in case of Cygwin, use the Python executable that is compiled for Cygwin.
 
 No Windows console found. Are you running cmd.exe?
+export AWS_NO_CONSOLE_CHECK=true
