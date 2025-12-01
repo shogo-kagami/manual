@@ -141,13 +141,5 @@ function auto_start_log {
 # ログイン時に自動実行
 auto_start_log
 
-[?2004h]0;MINGW64:/c/Users/prod.shogo.kagami
-[32mprod.shogo.kagami@VSOC-DESKTOP01 [35mMINGW64 [33m~[36m (main)[0m
-$ ex[Kcho test
-[?2004l
-test
-[?2004h]0;MINGW64:/c/Users/prod.shogo.kagami
-[32mprod.shogo.kagami@VSOC-DESKTOP01 [35mMINGW64 [33m~[36m (main)[0m
-$ exit
-[?2004l
-logout
+
+export TERM=xterm-256color
