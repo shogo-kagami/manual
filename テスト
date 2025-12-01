@@ -1,87 +1,4 @@
-ln -s <ターゲットファイルまたはディレクトリ> <リンク名>
-
-gpedit.msc　起動
-Windowsの設定＞セキュリティの設定＞ローカルポリシー＞ユーザ権利の割り当て　シンボリックリンクの作成　←ユーザーに付与する必要あり
-
-シンボリックリンク有効化
-git config --global core.symlinks true
-
-bashrcに追記
-export MSYS=winsymlinks:nativestrict
-
-
-GitBashログ
-bash
-# 現在のセッションの出力をログファイルに追加
-script -a /path/to/logfile.txt
-
-bashrc
-# ログファイルのパスを設定
-LOG_FILE="/path/to/gitbash_session.log"
-
-# セッション開始時にログを開始
-function start_logging() {
-    script -a "$LOG_FILE"
-}
-
-# セッション終了時にログを停止
-function stop_logging() {
-    exit
-}
-
-# エイリアス設定（任意）
-alias startlog='start_logging'
-alias endlog='stop_logging'
-
-source ~/.bashrc
-
-# ログを開始する
-startlog
-
-# ログを停止する
-endlog
-
-LOG_FILE="$HOME/Documents/gitbash_session.log"
-
-bash: script: command not found
-# ~/.bashrc に追加
-if [ -x /usr/bin/script ]; then
-    alias script='script'
-fi
-
-
-which script
-type script
-script -h
-ーーーーーーーーーーーーーーーーーー↑スクリプトが有効な場合
-
-
-# ログファイルを作成（初回のみ）
-touch ~/Documents/gitbash_session.log
-
-# ログを開始（以降のすべての入力・出力が記録されます）
-exec > >(tee -a ~/Documents/gitbash_session.log) 2>&1
-
-
-nano ~/.bashrc
-# ログ用関数
-LOG_FILE="$HOME/Documents/gitbash_session.log"
-
-function start_log {
-    echo "ログを開始しました: $(date)" >> "$LOG_FILE"
-    exec > >(tee -a "$LOG_FILE") 2>&1
-}
-
-function stop_log {
-    echo "ログを停止しました: $(date)" >> "$LOG_FILE"
-    exec > >(cat) 2>&1
-}
-
-# ログ開始エイリアス
-alias startlog='start_log'
-alias stoplog='stop_log'
-
-
+~/.bashrc
 # ログ関連の設定
 LOG_DIR="$HOME/Documents/logs"
 LOG_BASENAME="gitbash_session"
@@ -102,25 +19,8 @@ function auto_start_log {
 # Git Bash 起動時に自動実行
 auto_start_log
 
-# すでにログが開始されていないか確認
-if [[ -z "$STARTED_LOG" ]]; then
-    STARTED_LOG=1
 
-    LOG_DIR="$HOME/Documents/logs"
-    LOG_BASENAME="gitbash_session"
-    mkdir -p "$LOG_DIR"
-
-    local DATE=$(date +%Y%m%d)
-    local TIME=$(date +%H%M%S)
-    local LOG_FILE="${LOG_DIR}/${LOG_BASENAME}_${DATE}_${TIME}.log"
-
-    echo "自動ログ開始: ${LOG_FILE}"
-    exec > >(tee -a "${LOG_FILE}") 2>&1
-fi
-
-ーーーー＜もしくはプロファイルに以下記載＞ーーーー
-# ~/.bash_profile
-
+~/.bash_profile
 # .bashrc を読み込む（既存の設定を活かす）
 [[ -f ~/.bashrc ]] && source ~/.bashrc
 
@@ -140,6 +40,3 @@ function auto_start_log {
 
 # ログイン時に自動実行
 auto_start_log
-
-
-export TERM=xterm-256color
