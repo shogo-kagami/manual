@@ -20,6 +20,10 @@ function auto_start_log {
 auto_start_log
 
 
+# TERM を "msys" に設定（Git Bash 向け）
+export TERM=msys
+
+
 ~/.bash_profile
 # .bashrc を読み込む（既存の設定を活かす）
 [[ -f ~/.bashrc ]] && source ~/.bashrc
@@ -40,6 +44,13 @@ function auto_start_log {
 
 # ログイン時に自動実行
 auto_start_log
+
+
+# TERM を "windows" または "msys" に設定（Git Bash 向け）
+export TERM=msys
+
+# .bashrc を読み込んで既存設定を維持
+[[ -f ~/.bashrc ]] && source ~/.bashrc
 
 
 Found xterm, while expecting a Windows console. Maybe try to run this program using "winpty" or run it in cmd.exe instead. Or otherwise, in case of Cygwin, use the Python executable that is compiled for Cygwin.
