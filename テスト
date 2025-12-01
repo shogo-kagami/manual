@@ -81,5 +81,23 @@ function stop_log {
 alias startlog='start_log'
 alias stoplog='stop_log'
 
-bash: ~/Documents/gitbash.log: No such file or directory
-tee: '~/Documents/gitbash.log': No such file or directory
+
+# ログ関連の設定
+LOG_DIR="$HOME/Documents/logs"
+LOG_BASENAME="gitbash_session"
+
+# ディレクトリがなければ作成
+mkdir -p "$LOG_DIR"
+
+# 起動時の自動ログ開始
+function auto_start_log {
+    local DATE=$(date +%Y%m%d)
+    local TIME=$(date +%H%M%S)
+    local LOG_FILE="${LOG_DIR}/${LOG_BASENAME}_${DATE}_${TIME}.log"
+
+    echo "自動ログ開始: ${LOG_FILE}"
+    exec > >(tee -a "${LOG_FILE}") 2>&1
+}
+
+# Git Bash 起動時に自動実行
+auto_start_log
