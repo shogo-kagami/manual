@@ -57,3 +57,4 @@ Found xterm, while expecting a Windows console. Maybe try to run this program us
 
 No Windows console found. Are you running cmd.exe?
 export AWS_NO_CONSOLE_CHECK=true
+alias aws='winpty aws'
