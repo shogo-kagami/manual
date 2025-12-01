@@ -79,3 +79,6 @@ function stop_log {
 # ログ開始エイリアス
 alias startlog='start_log'
 alias stoplog='stop_log'
+
+bash: ~/Documents/gitbash.log: No such file or directory
+tee: '~/Documents/gitbash.log': No such file or directory
