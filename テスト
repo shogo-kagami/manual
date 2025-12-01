@@ -101,3 +101,42 @@ function auto_start_log {
 
 # Git Bash 起動時に自動実行
 auto_start_log
+
+# すでにログが開始されていないか確認
+if [[ -z "$STARTED_LOG" ]]; then
+    STARTED_LOG=1
+
+    LOG_DIR="$HOME/Documents/logs"
+    LOG_BASENAME="gitbash_session"
+    mkdir -p "$LOG_DIR"
+
+    local DATE=$(date +%Y%m%d)
+    local TIME=$(date +%H%M%S)
+    local LOG_FILE="${LOG_DIR}/${LOG_BASENAME}_${DATE}_${TIME}.log"
+
+    echo "📝 自動ログ開始: ${LOG_FILE}"
+    exec > >(tee -a "${LOG_FILE}") 2>&1
+fi
+
+ーーーー＜もしくはプロファイルに以下記載＞ーーーー
+# ~/.bash_profile
+
+# .bashrc を読み込む（既存の設定を活かす）
+[[ -f ~/.bashrc ]] && source ~/.bashrc
+
+# 自動ログ開始関数
+function auto_start_log {
+    LOG_DIR="$HOME/Documents/logs"
+    LOG_BASENAME="gitbash_session"
+    mkdir -p "$LOG_DIR"
+
+    local DATE=$(date +%Y%m%d)
+    local TIME=$(date +%H%M%S)
+    local LOG_FILE="${LOG_DIR}/${LOG_BASENAME}_${DATE}_${TIME}.log"
+
+    echo "📝 自動ログ開始: ${LOG_FILE}"
+    exec > >(tee -a "${LOG_FILE}") 2>&1
+}
+
+# ログイン時に自動実行
+auto_start_log
