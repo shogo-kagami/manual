@@ -53,3 +53,29 @@ fi
 which script
 type script
 script -h
+ーーーーーーーーーーーーーーーーーー↑スクリプトが有効な場合
+
+
+# ログファイルを作成（初回のみ）
+touch ~/Documents/gitbash_session.log
+
+# ログを開始（以降のすべての入力・出力が記録されます）
+exec > >(tee -a ~/Documents/gitbash_session.log) 2>&1
+
+nano ~/.bashrc
+# ログ用関数
+LOG_FILE="~/Documents/gitbash_session.log"
+
+function start_log {
+    echo "ログを開始しました: $(date)" >> "$LOG_FILE"
+    exec > >(tee -a "$LOG_FILE") 2>&1
+}
+
+function stop_log {
+    echo "ログを停止しました: $(date)" >> "$LOG_FILE"
+    exec > >(cat) 2>&1
+}
+
+# ログ開始エイリアス
+alias startlog='start_log'
+alias stoplog='stop_log'
