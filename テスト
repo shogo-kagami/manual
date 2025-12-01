@@ -62,9 +62,10 @@ touch ~/Documents/gitbash_session.log
 # ログを開始（以降のすべての入力・出力が記録されます）
 exec > >(tee -a ~/Documents/gitbash_session.log) 2>&1
 
+
 nano ~/.bashrc
 # ログ用関数
-LOG_FILE="~/Documents/gitbash_session.log"
+LOG_FILE="$HOME/Documents/gitbash_session.log"
 
 function start_log {
     echo "ログを開始しました: $(date)" >> "$LOG_FILE"
