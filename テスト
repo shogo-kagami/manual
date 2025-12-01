@@ -48,3 +48,8 @@ bash: script: command not found
 if [ -x /usr/bin/script ]; then
     alias script='script'
 fi
+
+
+which script
+type script
+script -h
