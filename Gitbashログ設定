@@ -60,3 +60,4 @@ export AWS_NO_CONSOLE_CHECK=true
 alias aws='winpty aws'
 
 stdout is not a tty
+export TERM=win32
