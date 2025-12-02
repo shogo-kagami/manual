@@ -353,3 +353,33 @@ defq                     up   infinite      5 drain* srdgx[00025-00026,00239],sr
 user45020@srpv01504:~$ sinfo
 PARTITION     AVAIL  TIMELIMIT  NODES  STATE NODELIST
 045-partition    up   infinite     20    mix srdgx[00009-00010,00013-00024,00027-00032]
+
+
+user45020@srdgx00010:~$ df -h
+Filesystem                                                                   Size  Used Avail Use% Mounted on
+tmpfs                                                                       1008G  4.8M 1008G   1% /run
+/dev/md0                                                                     1.8T   15G  1.7T   1% /
+tmpfs                                                                       1008G   16K 1008G   1% /dev/shm
+tmpfs                                                                        5.0M     0  5.0M   0% /run/lock
+tmpfs                                                                        4.0M     0  4.0M   0% /sys/fs/cgroup
+/dev/nvme3n1p1                                                               511M   11M  501M   3% /boot/efi
+/dev/md1                                                                      28T   25G   27T   1% /raid
+srhome-fs1.cm.cluster:/ifs/nfs/cm_shared                                     172T   27T  138T  17% /cm/shared
+srhome-fs1.cm.cluster:/ifs/nfs/infragroup                                    172T   27T  138T  17% /infragroup
+srhome-fs1.cm.cluster:/ifs/nfs/home/group045                                 172T   27T  138T  17% /home
+100.127.5.1@o2ib:100.127.5.5@o2ib:100.127.5.2@o2ib:100.127.5.6@o2ib:/lustre  100T  1.1T   99T   2% /lustre
+tmpfs                                                                        202G  4.0K  202G   1% /run/user/14399
+
+user45020@srdgx00009:~$ df -h
+Filesystem                                                                   Size  Used Avail Use% Mounted on
+tmpfs                                                                       1008G  4.8M 1008G   1% /run
+/dev/md0                                                                     1.8T   15G  1.7T   1% /
+tmpfs                                                                       1008G  144M 1008G   1% /dev/shm
+tmpfs                                                                        5.0M     0  5.0M   0% /run/lock
+tmpfs                                                                        4.0M     0  4.0M   0% /sys/fs/cgroup
+/dev/nvme0n1p1                                                               511M   11M  501M   3% /boot/efi
+/dev/md1                                                                      28T   37G   27T   1% /raid
+srhome-fs1.cm.cluster:/ifs/nfs/infragroup                                    172T   27T  138T  17% /infragroup
+srhome-fs1.cm.cluster:/ifs/nfs/home/group045                                 172T   27T  138T  17% /home
+srhome-fs1.cm.cluster:/ifs/nfs/cm_shared                                     172T   27T  138T  17% /cm/shared
+100.127.5.1@o2ib:100.127.5.5@o2ib:100.127.5.2@o2ib:100.127.5.6@o2ib:/lustre  100T  1.1T   99T   2% /lustre
