@@ -394,3 +394,13 @@ tmpfs             1.6G  720K  1.6G   1% /run
 tmpfs             3.8G     0  3.8G   0% /tmp
 /dev/nvme0n1p128   10M  1.3M  8.7M  13% /boot/efi
 tmpfs             778M     0  778M   0% /run/user/1000
+
+[ec2-user@ip-10-121-132-114 ~]$ df -h
+Filesystem        Size  Used Avail Use% Mounted on
+devtmpfs          4.0M     0  4.0M   0% /dev
+tmpfs             3.8G     0  3.8G   0% /dev/shm
+tmpfs             1.6G  720K  1.6G   1% /run
+/dev/nvme0n1p1    100G  4.6G   96G   5% /
+tmpfs             3.8G     0  3.8G   0% /tmp
+/dev/nvme0n1p128   10M  1.3M  8.7M  13% /boot/efi
+tmpfs             778M     0  778M   0% /run/user/1000
