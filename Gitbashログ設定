@@ -23,7 +23,7 @@ auto_start_log
 # TERM を "msys" に設定（Git Bash 向け）
 export TERM=msys
 
-
+ーーーーー
 ~/.bash_profile
 # .bashrc を読み込む（既存の設定を活かす）
 [[ -f ~/.bashrc ]] && source ~/.bashrc
@@ -39,7 +39,7 @@ function auto_start_log {
     local LOG_FILE="${LOG_DIR}/${LOG_BASENAME}_${DATE}_${TIME}.log"
 
     echo "自動ログ開始: ${LOG_FILE}"
-    exec > >(tee -a "$LOG_FILE" | sed -E 's/\\e\[[^m]*m//g' | sed '/^[^[:print:]]*$/d') 2>&1
+    exec > >(tee -a "$LOG_FILE" </dev/null | sed -E 's/\\e\[[^m]*m//g' | sed '/^[^[:print:]]*$/d') 2>&1
 }
 
 # ログイン時に自動実行
@@ -53,6 +53,7 @@ export TERM=msys
 [[ -f ~/.bashrc ]] && source ~/.bashrc
 
 
+ーーーーー
 Found xterm, while expecting a Windows console. Maybe try to run this program using "winpty" or run it in cmd.exe instead. Or otherwise, in case of Cygwin, use the Python executable that is compiled for Cygwin.
 
 No Windows console found. Are you running cmd.exe?
@@ -61,3 +62,4 @@ alias aws='winpty aws'
 
 stdout is not a tty
 export TERM=win32
+export AWS_NO_TTY_WARNING=true
