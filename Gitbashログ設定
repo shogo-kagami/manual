@@ -12,7 +12,9 @@ function auto_start_log {
     local LOG_FILE="${LOG_DIR}/${LOG_BASENAME}_${DATE}_${TIME}.log"
 
     echo "自動ログ開始: ${LOG_FILE}"
-    exec > >(tee -a "$LOG_FILE" </dev/null | sed -E 's/\\e\[[^m]*m//g' | sed '/^[^[:print:]]*$/d') 2>&1
+    PROMPT_COMMAND='
+        tee -a "$LOG_FILE" | sed -E "s/\\e\[[^m]*m//g" | sed "/^[^[:print:]]*$/d" >&2
+    '
 }
 
 
