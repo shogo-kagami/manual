@@ -1,23 +1,23 @@
 ~/.bashrc
 LOG_DIR="$HOME/Documents/logs"
 LOG_BASENAME="gitbash_session"
-
-
 mkdir -p "$LOG_DIR"
 
-
-function auto_start_log {
+function start_log {
     local DATE=$(date +%Y%m%d)
     local TIME=$(date +%H%M%S)
     local LOG_FILE="${LOG_DIR}/${LOG_BASENAME}_${DATE}_${TIME}.log"
 
     echo "自動ログ開始: ${LOG_FILE}"
+
+    # PROMPT_COMMAND でプロンプト表示前にログ出力
     PROMPT_COMMAND='
         tee -a "$LOG_FILE" | sed -E "s/\\e\[[^m]*m//g" | sed "/^[^[:print:]]*$/d" >&2
     '
 }
 
-auto_start_log
+# ログイン時に自動実行
+start_log
 
 
 ーーーーー
