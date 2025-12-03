@@ -43,3 +43,16 @@ alias aws='winpty aws'
 stdout is not a tty
 export TERM=win32
 export AWS_NO_TTY_WARNING=true
+
+
+ーーーーー
+log.sh
+#!/bin/bash
+# ログファイル名
+LOG_FILE="~/gitbash.log"
+
+# tee で標準出力とログを同時に出力
+exec > >(tee "$LOG_FILE")
+exec 2>&1
+
+echo "Git Bash セッション開始"
