@@ -43,3 +43,4 @@ export TERM=win32
 export AWS_NO_TTY_WARNING=true
 
 tee: '': No such file or directory
+exec > >(tee -a "$LOG_FILE" </dev/null | sed -E 's/\\e\[[^m]*m//g' | sed '/^[^[:print:]]*$/d') 2>&1
