@@ -57,10 +57,16 @@ function start_log {
 
     echo "自動ログ開始: ${LOG_FILE}"
 
-    # exec を使わず、tee でログ出力をパイプ
+    # 実行履歴と出力を同じログファイルに記録
     {
         while read line; do
-            printf '%s\n' "$line" | tee -a "$LOG_FILE" | sed -E 's/\\e\[[^m]*m//g' | sed '/^[^[:print:]]*$/d'
+            # コマンド行の場合（履歴番号なし）
+            if [[ "$line" =~ ^[^[:space:]]+$ ]]; then
+                printf '%s\n' "[CMD] $line" >> "$LOG_FILE"
+            # 出力行の場合
+            else
+                printf '%s\n' "[OUT] $line" >> "$LOG_FILE"
+            fi
         done
     } <&0
 }
