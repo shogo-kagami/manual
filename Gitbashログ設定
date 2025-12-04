@@ -44,3 +44,26 @@ export AWS_NO_TTY_WARNING=true
 
 tee: '': No such file or directory
 exec > >(tee -a "$LOG_FILE" </dev/null | sed -E 's/\\e\[[^m]*m//g' | sed '/^[^[:print:]]*$/d') 2>&1
+
+ーーーーー
+LOG_DIR="$HOME/Documents/logs"
+LOG_BASENAME="gitbash_session"
+mkdir -p "$LOG_DIR"
+
+function start_log {
+    local DATE=$(date +%Y%m%d)
+    local TIME=$(date +%H%M%S)
+    local LOG_FILE="${LOG_DIR}/${LOG_BASENAME}_${DATE}_${TIME}.log"
+
+    echo "自動ログ開始: ${LOG_FILE}"
+
+    # exec を使わず、tee でログ出力をパイプ
+    {
+        while read line; do
+            printf '%s\n' "$line" | tee -a "$LOG_FILE" | sed -E 's/\\e\[[^m]*m//g' | sed '/^[^[:print:]]*$/d'
+        done
+    } <&0
+}
+
+# ログイン時に自動実行
+start_log
