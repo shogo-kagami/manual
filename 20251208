@@ -1,0 +1,1 @@
+terraform import module.ecr.module.ecr_repos_for_lambda["lambda/deploy-lambda"].aws_ecr_repository.this sbint-services/reimei-chat-prd/lambda/deploy-lambda
