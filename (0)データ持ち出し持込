@@ -109,7 +109,7 @@ ln sbkk/terraform.tfvars sbkk/02/terraform.tfvars
 ln sbkk/variables.tf sbkk/02/variables.tf
 
 
-tarファイル実行
+tarファイル配置後、実行
 cd /lustre
 tar xvf tools.tar
 
