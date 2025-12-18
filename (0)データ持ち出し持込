@@ -76,7 +76,7 @@ internal-reimei-engine-ray-prd-sbkk-1895678098.ap-northeast-1.elb.amazonaws.com
 
 sg-0c397970a1630eb41
 
-
+初期パスワード
 user45006
 6P~}AfNS#B^+g6
 
@@ -106,10 +106,3 @@ ln sbkk/sbkk.auto.tfvars sbkk/02/sbkk.auto.tfvars
 ln sbkk/variables_sbkk.tf sbkk/02/variables_sbkk.tf
 ln sbkk/terraform.tfvars sbkk/02/terraform.tfvars
 ln sbkk/variables.tf sbkk/02/variables.tf
-
-ターゲットグループ
-llmsrv20251107040950752000000003
-llmsrv20251107040950753100000004
-
-rllmsrv20251107040950752000000003
-llmsrv20251107040950753100000004
