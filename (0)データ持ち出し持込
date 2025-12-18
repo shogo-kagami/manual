@@ -107,3 +107,7 @@ ln sbkk/sbkk.auto.tfvars sbkk/02/sbkk.auto.tfvars
 ln sbkk/variables_sbkk.tf sbkk/02/variables_sbkk.tf
 ln sbkk/terraform.tfvars sbkk/02/terraform.tfvars
 ln sbkk/variables.tf sbkk/02/variables.tf
+
+
+cd /lustre
+tar xvf tools.tar
