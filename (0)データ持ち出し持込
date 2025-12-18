@@ -109,5 +109,9 @@ ln sbkk/terraform.tfvars sbkk/02/terraform.tfvars
 ln sbkk/variables.tf sbkk/02/variables.tf
 
 
+tarファイル実行
 cd /lustre
 tar xvf tools.tar
+
+tarファイル実行後、以下のディレクトリにrun_worker_conf.pyを配置
+/lustre/tools/AdminTools/config
