@@ -43,3 +43,26 @@ Linux fcdgx00077 5.15.0-1053-nvidia #54-Ubuntu SMP Sat Apr 20 01:13:45 UTC 2024 
 Linux fcdgx00078 5.15.0-1053-nvidia #54-Ubuntu SMP Sat Apr 20 01:13:45 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
 Linux fcdgx00079 5.15.0-1053-nvidia #54-Ubuntu SMP Sat Apr 20 01:13:45 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
 Linux fcdgx00080 5.15.0-1053-nvidia #54-Ubuntu SMP Sat Apr 20 01:13:45 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+
+
+user45020@fcpv00286:/lustre/tools/AdminTools/sbin$  ./AutoCopy.sh -f
+
+INFO : Start : ===
+ERROR : fMkTmpDstLists() : invalid file type : /lustre/teams
+INFO : fDestinationChecker() : rsync file ready : /lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20251211-1.sqsh
+INFO : does not exist : /lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20251211-1.sqsh
+rsync: [Receiver] change_dir#3 "/lustre/container_cache" failed: No such file or directory (2)
+rsync error: errors selecting input/output files, dirs (code 3) at main.c(825) [Receiver=3.2.3]
+ERROR : Failed!! : rsync -r /store/.sysonly_okeFBsTh/lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20251211-1.sqsh /lustre/container_cache/reimei_engine
+DEBUG : @@@ 1 @@@
+cat: /lustre/tools/AdminTools/tmp/fcpv00286_notify.tmp: No such file or directory
+DEBUG :              RET :
+DEBUG : @@@ 2 @@@
+DEBUG :           NOTIFY : /lustre/tools/AdminTools/sbin/notify_slack.sh
+DEBUG : SLACK_CHANNEL_ID : C08MYJM4ARK
+DEBUG :            N_TMP : /lustre/tools/AdminTools/tmp/fcpv00286_notify.tmp
+DEBUG :          MESSAGE : AutoCopy_sh_END
+DEBUG :              RET :
+DEBUG : END
+
+INFO :   End : ===
