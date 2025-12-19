@@ -66,3 +66,52 @@ DEBUG :              RET :
 DEBUG : END
 
 INFO :   End : ===
+
+
+user45020@fcdgx00041:/lustre/tools/AdminTools/sbin$ nc -zv 10.121.129.100 10080
+Connection to 10.121.129.100 10080 port [tcp/amanda] succeeded!
+user45020@fcdgx00041:/lustre/tools/AdminTools/sbin$
+user45020@fcdgx00041:/lustre/tools/AdminTools/sbin$
+user45020@fcdgx00041:/lustre/tools/AdminTools/sbin$ nc -zv 10.121.129.100 10081
+nc -zv 10.121.129.100 10082
+nc -zv 10.121.129.100 10083
+nc -zv 10.121.129.100 10084
+nc -zv 10.121.129.100 10085
+Connection to 10.121.129.100 10081 port [tcp/kamanda] succeeded!
+^C
+^C
+^C
+Connection to 10.121.129.100 10085 port [tcp/*] succeeded!
+user45020@fcdgx00041:/lustre/tools/AdminTools/sbin$
+user45020@fcdgx00041:/lustre/tools/AdminTools/sbin$
+user45020@fcdgx00041:/lustre/tools/AdminTools/sbin$ nc -zv 10.121.128.101 10080
+nc -zv 10.121.128.101 10081
+nc -zv 10.121.128.101 10082
+nc -zv 10.121.128.101 10083
+nc -zv 10.121.128.101 10084
+nc -zv 10.121.128.101 10085
+
+
+^C
+^C
+^C
+^C
+^C
+Connection to 10.121.128.101 10085 port [tcp/*] succeeded!
+user45020@fcdgx00041:/lustre/tools/AdminTools/sbin$
+user45020@fcdgx00041:/lustre/tools/AdminTools/sbin$
+user45020@fcdgx00041:/lustre/tools/AdminTools/sbin$
+user45020@fcdgx00041:/lustre/tools/AdminTools/sbin$ nc -zv 10.121.132.101 10080
+nc -zv 10.121.132.101 10081
+nc -zv 10.121.132.101 10082
+nc -zv 10.121.132.101 10083
+nc -zv 10.121.132.101 10084
+nc -zv 10.121.132.101 10085
+
+
+^C
+^C
+^C
+^C
+^C
+Connection to 10.121.132.101 10085 port [tcp/*] succeeded!
