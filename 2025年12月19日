@@ -119,3 +119,19 @@ Connection to 10.121.132.101 10085 port [tcp/*] succeeded!
 user45020@fcpv00286:~$ date;du -sh /lustre/container_cache/
 Mon Dec 22 09:56:18 AM JST 2025
 826G    /lustre/container_cache/
+
+user45020@fcpv00286:~$ /lustre/tools/AdminTools/sbin/AutoCopy.sh -f
+
+INFO : Start : ===
+ERROR : fMkTmpDstLists() : invalid file type : /lustre/share
+INFO : File : /lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20251211-1.sqsh
+INFO : Done!! : rsync /store/.sysonly_okeFBsTh/lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20251211-1.sqsh /lustre/container_cache/reimei_engine
+INFO : rsync_completed : 045-partition : /lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20251211-1.sqsh
+cat: /lustre/tools/AdminTools/tmp/fcpv00286_notify.tmp: No such file or directory
+DEBUG : fImprovedRsync() :           NOTIFY : /lustre/tools/AdminTools/sbin/notify_slack.sh
+DEBUG : fImprovedRsync() : SLACK_CHANNEL_ID : C08MYJM4ARK
+DEBUG : fImprovedRsync() :            N_TMP : /lustre/tools/AdminTools/tmp/fcpv00286_notify.tmp
+DEBUG : fImprovedRsync() :         MESSAGE2 : 2025-12-22T12:02:43+09:00,rsync_completed,045-partition,/lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu:20251211-1.sqsh
+ERROR : fMkTmpDstLists() : invalid file type : /lustre/share
+INFO : fDestinationChecker() : mkdir OK, rsync dir ready : /lustre/share/sbint_models/finetuned/release/sbint-2025-11-25/sbint-2025-11-25-70b-sft
+INFO : Directory : /lustre/share/sbint_models/finetuned/release/sbint-2025-11-25/sbint-2025-11-25-70b-sft
