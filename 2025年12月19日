@@ -115,3 +115,6 @@ nc -zv 10.121.132.101 10085
 ^C
 ^C
 Connection to 10.121.132.101 10085 port [tcp/*] succeeded!
+
+user45020@fcpv00286:~$ date;du -sh /lustre/container_cache/
+Mon Dec 22 09:56:18 AM JST 2025
