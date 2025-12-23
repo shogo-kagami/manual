@@ -120,3 +120,5 @@ tarファイル実行後、以下のディレクトリにrun_worker_conf.pyを�
 /lustre/share/sbint_models/finetuned/release/sbint-2025-11-25/sbint-2025-11-25-70b-sft/
 /lustre/share/sbint_models/guardrail/sarashinaguard-7b-20250508/
 /lustre/teams/text_embeddings/experiments/msmd_cse/sarashina2.2-3b/PROTO_sarashina2.2-3B__multistage_20250710_stg2_mix_gecko-recipe-filtered_RRF1_RRF_20_all_forbes_cl_classsification__stg2/hf_checkpoints/checkpoint-770/
+
+reimei-engine-ray-prd-b2b-fc1-raydsh-tg
