@@ -1,0 +1,3 @@
+cd reimei_RAG/terraform/environments_b2b/prod
+git switch -d b2b-prod-release-20251211-1
+terraform init
