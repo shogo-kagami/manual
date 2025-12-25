@@ -2,5 +2,11 @@ cd reimei_RAG/terraform/environments_b2b/prod
 git switch -d b2b-prod-release-20251225-1 
 terraform init
 
-
 ./deploy_prod_infra.sh --tag b2b-prod-release-20251225-1 
+
+
+cd reimei_RAG/terraform/environments_b2b/prod
+git switch -d b2b-prod-release-20251225-2
+terraform init
+
+./deploy_prod_infra.sh --tag b2b-prod-release-20251225-2
