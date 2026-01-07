@@ -1,0 +1,1032 @@
+data.terraform_remote_state.tfstate: Reading...
+data.terraform_remote_state.tfstate: Read complete after 1s
+data.aws_security_group.reimei_rag_sg_relay_subnet: Reading...
+data.aws_subnet.reimei_rag_vpc_subnet_relay01: Reading...
+data.aws_subnet.reimei_rag_vpc_subnet_relay03: Reading...
+data.aws_vpc.reimei_rag_main_vpc: Reading...
+data.aws_subnet.reimei_rag_vpc_subnet_relay02: Reading...
+data.aws_subnet.reimei_rag_vpc_subnet_relay03: Read complete after 0s [id=subnet-0a1d36335207cb4f4]
+data.aws_subnet.reimei_rag_vpc_subnet_relay02: Read complete after 0s [id=subnet-07eaa5c2b02e5b427]
+data.aws_subnet.reimei_rag_vpc_subnet_relay01: Read complete after 0s [id=subnet-069e61778a428e032]
+aws_s3_object.serve_config["b2b-02"]: Refreshing state... [id=b2b/ray-serve-config-b2b-02/latest.yaml]
+aws_s3_object.serve_config["b2b-01"]: Refreshing state... [id=b2b/ray-serve-config-b2b-01/latest.yaml]
+data.aws_security_group.reimei_rag_sg_relay_subnet: Read complete after 0s [id=sg-081ae7e5679bbb12f]
+aws_lb.app: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:loadbalancer/app/reimei-engine-ray-prd-b2b/7ca385e960c64703]
+aws_lb_listener.http["80"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:listener/app/reimei-engine-ray-prd-b2b/7ca385e960c64703/97615cbbb435f7a4]
+aws_lb_listener.http["8000"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:listener/app/reimei-engine-ray-prd-b2b/7ca385e960c64703/27691cbe6ee1c726]
+data.aws_vpc.reimei_rag_main_vpc: Read complete after 0s [id=vpc-07758e1658c4c2149]
+aws_lb_target_group.ray_dashboard["b2b-01"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/raydsh20251120102142535000000003/2a9dde545338d27c]
+aws_lb_target_group.ray_workers: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6]
+aws_lb_target_group.ray_dashboard["b2b-02"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/raydsh20251120102142535600000004/ddf9841386e3c544]
+aws_lb_listener.ray_dashboard["b2b-01"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:listener/net/reimei-engine-ray-prd-nlb4ext/f22c743e4d82e157/18ea4bbbf177bf7a]
+aws_lb_listener.ray_dashboard["b2b-02"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:listener/net/reimei-engine-ray-prd-nlb4ext/f22c743e4d82e157/e5a63c619f2fc02c]
+aws_lb_target_group_attachment.ray_workers["10.120.113.25"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060946694400000002]
+aws_lb_target_group_attachment.ray_workers["10.120.113.37"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060946747500000004]
+aws_lb_target_group_attachment.ray_workers["10.120.113.35"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060946772100000005]
+aws_lb_target_group_attachment.ray_workers["10.120.113.39"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060947031100000008]
+aws_lb_target_group_attachment.ray_workers["10.120.113.33"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060946945300000007]
+aws_lb_target_group_attachment.ray_workers["10.120.113.41"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-2025121506094981400000000c]
+aws_lb_target_group_attachment.ray_workers["10.120.113.38"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215063328801900000008]
+aws_lb_target_group_attachment.ray_workers["10.120.113.29"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060946665300000001]
+aws_lb_target_group_attachment.ray_workers["10.120.113.30"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215063328475900000002]
+aws_lb_target_group_attachment.ray_workers["10.120.113.31"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060947380000000009]
+aws_lb_target_group_attachment.ray_workers["10.120.113.34"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215063328422800000001]
+aws_lb_target_group_attachment.ray_workers["10.120.113.23"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060946725500000003]
+aws_lb_target_group_attachment.ray_workers["10.120.113.42"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215063328742300000007]
+aws_lb_target_group_attachment.ray_workers["10.120.113.40"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215063328682400000006]
+aws_lb_target_group_attachment.ray_workers["10.120.113.24"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-2025121506333003350000000a]
+aws_lb_target_group_attachment.ray_workers["10.120.113.27"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060946887900000006]
+aws_lb_target_group_attachment.ray_workers["10.120.113.36"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215063328499400000003]
+aws_lb_target_group_attachment.ray_workers["10.120.113.20"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215063328522200000004]
+aws_lb_target_group_attachment.ray_workers["10.120.113.26"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-2025121506333028870000000c]
+aws_lb_target_group_attachment.ray_workers["10.120.113.32"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215063328840800000009]
+aws_lb_target_group_attachment.ray_workers["10.120.113.19"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-2025121506094834320000000a]
+aws_lb_target_group_attachment.ray_workers["10.120.113.21"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-2025121506094840670000000b]
+aws_lb_target_group_attachment.ray_workers["10.120.113.28"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-2025121506333013380000000b]
+aws_lb_target_group_attachment.ray_workers["10.120.113.22"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215063328658700000005]
+aws_lb_listener_rule.ray_workers["80"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:listener-rule/app/reimei-engine-ray-prd-b2b/7ca385e960c64703/97615cbbb435f7a4/07cd5d5a0c290fee]
+aws_lb_listener_rule.ray_workers["8000"]: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:listener-rule/app/reimei-engine-ray-prd-b2b/7ca385e960c64703/27691cbe6ee1c726/c942d518c16cb22e]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+  ~ update in-place
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_lb_target_group_attachment.ray_workers["10.120.113.19"] will be destroyed
+  # (because key ["10.120.113.19"] is not in for_each map)
+  - resource "aws_lb_target_group_attachment" "ray_workers" {
+      - availability_zone = "all" -> null
+      - id                = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-2025121506094834320000000a" -> null
+      - port              = 8008 -> null
+      - target_group_arn  = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6" -> null
+      - target_id         = "10.120.113.19" -> null
+    }
+
+  # aws_lb_target_group_attachment.ray_workers["10.120.113.21"] will be destroyed
+  # (because key ["10.120.113.21"] is not in for_each map)
+  - resource "aws_lb_target_group_attachment" "ray_workers" {
+      - availability_zone = "all" -> null
+      - id                = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-2025121506094840670000000b" -> null
+      - port              = 8008 -> null
+      - target_group_arn  = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6" -> null
+      - target_id         = "10.120.113.21" -> null
+    }
+
+  # aws_lb_target_group_attachment.ray_workers["10.120.113.23"] will be destroyed
+  # (because key ["10.120.113.23"] is not in for_each map)
+  - resource "aws_lb_target_group_attachment" "ray_workers" {
+      - availability_zone = "all" -> null
+      - id                = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060946725500000003" -> null
+      - port              = 8008 -> null
+      - target_group_arn  = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6" -> null
+      - target_id         = "10.120.113.23" -> null
+    }
+
+  # aws_lb_target_group_attachment.ray_workers["10.120.113.25"] will be destroyed
+  # (because key ["10.120.113.25"] is not in for_each map)
+  - resource "aws_lb_target_group_attachment" "ray_workers" {
+      - availability_zone = "all" -> null
+      - id                = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060946694400000002" -> null
+      - port              = 8008 -> null
+      - target_group_arn  = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6" -> null
+      - target_id         = "10.120.113.25" -> null
+    }
+
+  # aws_lb_target_group_attachment.ray_workers["10.120.113.27"] will be destroyed
+  # (because key ["10.120.113.27"] is not in for_each map)
+  - resource "aws_lb_target_group_attachment" "ray_workers" {
+      - availability_zone = "all" -> null
+      - id                = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060946887900000006" -> null
+      - port              = 8008 -> null
+      - target_group_arn  = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6" -> null
+      - target_id         = "10.120.113.27" -> null
+    }
+
+  # aws_lb_target_group_attachment.ray_workers["10.120.113.29"] will be destroyed
+  # (because key ["10.120.113.29"] is not in for_each map)
+  - resource "aws_lb_target_group_attachment" "ray_workers" {
+      - availability_zone = "all" -> null
+      - id                = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060946665300000001" -> null
+      - port              = 8008 -> null
+      - target_group_arn  = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6" -> null
+      - target_id         = "10.120.113.29" -> null
+    }
+
+  # aws_lb_target_group_attachment.ray_workers["10.120.113.31"] will be destroyed
+  # (because key ["10.120.113.31"] is not in for_each map)
+  - resource "aws_lb_target_group_attachment" "ray_workers" {
+      - availability_zone = "all" -> null
+      - id                = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060947380000000009" -> null
+      - port              = 8008 -> null
+      - target_group_arn  = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6" -> null
+      - target_id         = "10.120.113.31" -> null
+    }
+
+  # aws_lb_target_group_attachment.ray_workers["10.120.113.33"] will be destroyed
+  # (because key ["10.120.113.33"] is not in for_each map)
+  - resource "aws_lb_target_group_attachment" "ray_workers" {
+      - availability_zone = "all" -> null
+      - id                = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060946945300000007" -> null
+      - port              = 8008 -> null
+      - target_group_arn  = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6" -> null
+      - target_id         = "10.120.113.33" -> null
+    }
+
+  # aws_lb_target_group_attachment.ray_workers["10.120.113.35"] will be destroyed
+  # (because key ["10.120.113.35"] is not in for_each map)
+  - resource "aws_lb_target_group_attachment" "ray_workers" {
+      - availability_zone = "all" -> null
+      - id                = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060946772100000005" -> null
+      - port              = 8008 -> null
+      - target_group_arn  = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6" -> null
+      - target_id         = "10.120.113.35" -> null
+    }
+
+  # aws_lb_target_group_attachment.ray_workers["10.120.113.37"] will be destroyed
+  # (because key ["10.120.113.37"] is not in for_each map)
+  - resource "aws_lb_target_group_attachment" "ray_workers" {
+      - availability_zone = "all" -> null
+      - id                = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060946747500000004" -> null
+      - port              = 8008 -> null
+      - target_group_arn  = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6" -> null
+      - target_id         = "10.120.113.37" -> null
+    }
+
+  # aws_lb_target_group_attachment.ray_workers["10.120.113.39"] will be destroyed
+  # (because key ["10.120.113.39"] is not in for_each map)
+  - resource "aws_lb_target_group_attachment" "ray_workers" {
+      - availability_zone = "all" -> null
+      - id                = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-20251215060947031100000008" -> null
+      - port              = 8008 -> null
+      - target_group_arn  = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6" -> null
+      - target_id         = "10.120.113.39" -> null
+    }
+
+  # aws_lb_target_group_attachment.ray_workers["10.120.113.41"] will be destroyed
+  # (because key ["10.120.113.41"] is not in for_each map)
+  - resource "aws_lb_target_group_attachment" "ray_workers" {
+      - availability_zone = "all" -> null
+      - id                = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6-2025121506094981400000000c" -> null
+      - port              = 8008 -> null
+      - target_group_arn  = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/llmsrv20251204021913558000000001/f23623bf763ad3f6" -> null
+      - target_id         = "10.120.113.41" -> null
+    }
+
+  # aws_s3_object.serve_config["b2b-01"] will be updated in-place
+  ~ resource "aws_s3_object" "serve_config" {
+      ~ content                       = <<-EOT
+            "applications":
+            - "args":
+                "deployment_options":
+          -       "autoscaling_config":
+          -         "max_replicas": 26
+          -         "min_replicas": 26
+          -         "target_ongoing_requests": 16
+                  "max_ongoing_requests": 256
+          -       "max_replicas_per_node": 4
+          -       "name": "llm_inference_app"
+          -       "num_replicas": "auto"
+          +       "max_replicas_per_node": 9
+          +       "name": "llm-server-router"
+          +       "num_replicas": 26
+                  "ray_actor_options":
+                    "accelerator_type": "H100"
+                    "num_cpus": 1
+                "llm_server_configs":
+                - "deployment_options":
+          -         "autoscaling_config":
+          -           "max_replicas": 5
+          -           "min_replicas": 5
+          -           "target_ongoing_requests": 2
+                    "max_ongoing_requests": 512
+                    "name": "sarashina2-mini"
+          -         "num_replicas": "auto"
+          +         "num_replicas": 5
+          +         "placement_group_bundles":
+          +         - "CPU": 1
+          +           "GPU": 1
+          +         - "CPU": 1
+          +           "GPU": 1
+          +         - "CPU": 1
+          +           "GPU": 1
+          +         - "CPU": 1
+          +           "GPU": 1
+          +         - "CPU": 1
+          +           "accelerator_type:H100": 0.001
+          +         "placement_group_strategy": "PACK"
+                    "ray_actor_options":
+                      "accelerator_type": "H100"
+          -           "num_cpus": 4
+          -           "num_gpus": 0
+          +           "num_cpus": 1
+                  "engine": "vllm"
+                  "engine_kwargs":
+                    "distributed_executor_backend": "ray"
+                    "model": "/lustre/share/sbint_models/finetuned/release/sbint-2025-11-25/sbint-2025-11-25-70b-sft/"
+                    "override_generation_config":
+                      "repetition_penalty": 1.05
+                      "temperature": 0.7
+                      "top_p": 0.9
+                    "served_model_name":
+                    - "sarashina2-mini"
+                    - "sarashina-mini"
+                    "tensor_parallel_size": 4
+                  "server_kwargs":
+                    "enable_auto_tool_choice": true
+                    "tool_call_parser": "sarashina2_json"
+                - "deployment_options":
+          -         "autoscaling_config":
+          -           "max_replicas": 4
+          -           "min_replicas": 4
+          -           "target_ongoing_requests": 2
+                    "max_ongoing_requests": 512
+                    "name": "sarashina2-guard"
+          -         "num_replicas": "auto"
+          +         "num_replicas": 4
+          +         "placement_group_bundles":
+          +         - "CPU": 1
+          +           "GPU": 0.5
+          +           "accelerator_type:H100": 0.001
+                    "ray_actor_options":
+          -           "num_cpus": 8
+          +           "accelerator_type": "H100"
+          +           "num_cpus": 1
+                      "num_gpus": 0.5
+                  "engine": "vllm"
+                  "engine_kwargs":
+                    "gpu_memory_utilization": 0.45
+                    "model": "/lustre/share/sbint_models/guardrail/sarashinaguard-7b-20250508/"
+                    "served_model_name":
+                    - "sarashina2-guard"
+                  "server_kwargs": {}
+                - "deployment_options":
+          -         "autoscaling_config":
+          -           "max_replicas": 4
+          -           "min_replicas": 4
+          -           "target_ongoing_requests": 4
+                    "max_ongoing_requests": 512
+                    "name": "sarashina2-embedding"
+          -         "num_replicas": "auto"
+          +         "num_replicas": 4
+          +         "placement_group_bundles":
+          +         - "CPU": 1
+          +           "GPU": 0.5
+          +           "accelerator_type:H100": 0.001
+                    "ray_actor_options":
+          -           "num_cpus": 8
+          +           "accelerator_type": "H100"
+          +           "num_cpus": 1
+                      "num_gpus": 0.5
+                  "engine": "vllm"
+                  "engine_kwargs":
+                    "gpu_memory_utilization": 0.45
+                    "model": "/lustre/teams/text_embeddings/experiments/msmd_cse/sarashina2.2-3b/PROTO_sarashina2.2-3B__multistage_20250710_stg2_mix_gecko-recipe-filtered_RRF1_RRF_20_all_forbes_cl_classsification__stg2/hf_checkpoints/checkpoint-770/"
+                    "served_model_name":
+                    - "sarashina2-embedding"
+                  "server_kwargs": {}
+              "import_path": "llm_serve.app.builder:build_openai_app"
+              "name": "llm-inference-app"
+              "route_prefix": "/"
+              "runtime_env":
+                "env_vars":
+                  "RAY_LOG_TO_DRIVER": "1"
+                  "RAY_LOG_TO_DRIVER_EVENT_LEVEL": "INFO"
+                  "VLLM_CACHE_ROOT": "/lustre/applications/reimei-engine-llm-serve/.cache/vllm"
+                  "VLLM_NO_USAGE_STATS": "1"
+            "http_options":
+              "host": "0.0.0.0"
+              "keep_alive_timeout_s": 200
+              "port": 8008
+              "request_timeout_s": null
+            "logging_config":
+              "enable_access_log": true
+              "encoding": "JSON"
+              "log_level": "INFO"
+              "logs_dir": null
+            "proxy_location": "EveryNode"
+        EOT
+      ~ etag                          = "65219916619bed2351c06290a5daf841" -> "75c96276b8452cd4c6a9c77ff7196e55"
+        id                            = "b2b/ray-serve-config-b2b-01/latest.yaml"
+        tags                          = {}
+      ~ version_id                    = "IPl0UE7L1uGDJuXQa6qlka8Lx2YLs2_k" -> (known after apply)
+        # (23 unchanged attributes hidden)
+    }
+
+  # aws_s3_object.serve_config["b2b-02"] will be updated in-place
+  ~ resource "aws_s3_object" "serve_config" {
+      ~ content                       = <<-EOT
+            "applications":
+            - "args":
+                "deployment_options":
+          -       "autoscaling_config":
+          -         "max_replicas": 26
+          -         "min_replicas": 26
+          -         "target_ongoing_requests": 16
+                  "max_ongoing_requests": 256
+          -       "max_replicas_per_node": 4
+          -       "name": "llm_inference_app"
+          -       "num_replicas": "auto"
+          +       "max_replicas_per_node": 9
+          +       "name": "llm-server-router"
+          +       "num_replicas": 26
+                  "ray_actor_options":
+                    "accelerator_type": "H100"
+                    "num_cpus": 1
+                "llm_server_configs":
+                - "deployment_options":
+          -         "autoscaling_config":
+          -           "max_replicas": 5
+          -           "min_replicas": 5
+          -           "target_ongoing_requests": 2
+                    "max_ongoing_requests": 512
+                    "name": "sarashina2-mini"
+          -         "num_replicas": "auto"
+          +         "num_replicas": 5
+          +         "placement_group_bundles":
+          +         - "CPU": 1
+          +           "GPU": 1
+          +         - "CPU": 1
+          +           "GPU": 1
+          +         - "CPU": 1
+          +           "GPU": 1
+          +         - "CPU": 1
+          +           "GPU": 1
+          +         - "CPU": 1
+          +           "accelerator_type:H100": 0.001
+          +         "placement_group_strategy": "PACK"
+                    "ray_actor_options":
+                      "accelerator_type": "H100"
+          -           "num_cpus": 4
+          -           "num_gpus": 0
+          +           "num_cpus": 1
+                  "engine": "vllm"
+                  "engine_kwargs":
+                    "distributed_executor_backend": "ray"
+                    "model": "/lustre/share/sbint_models/finetuned/release/sbint-2025-11-25/sbint-2025-11-25-70b-sft/"
+                    "override_generation_config":
+                      "repetition_penalty": 1.05
+                      "temperature": 0.7
+                      "top_p": 0.9
+                    "served_model_name":
+                    - "sarashina2-mini"
+                    - "sarashina-mini"
+                    "tensor_parallel_size": 4
+                  "server_kwargs":
+                    "enable_auto_tool_choice": true
+                    "tool_call_parser": "sarashina2_json"
+                - "deployment_options":
+          -         "autoscaling_config":
+          -           "max_replicas": 4
+          -           "min_replicas": 4
+          -           "target_ongoing_requests": 2
+                    "max_ongoing_requests": 512
+                    "name": "sarashina2-guard"
+          -         "num_replicas": "auto"
+          +         "num_replicas": 4
+          +         "placement_group_bundles":
+          +         - "CPU": 1
+          +           "GPU": 0.5
+          +           "accelerator_type:H100": 0.001
+                    "ray_actor_options":
+          -           "num_cpus": 8
+          +           "accelerator_type": "H100"
+          +           "num_cpus": 1
+                      "num_gpus": 0.5
+                  "engine": "vllm"
+                  "engine_kwargs":
+                    "gpu_memory_utilization": 0.45
+                    "model": "/lustre/share/sbint_models/guardrail/sarashinaguard-7b-20250508/"
+                    "served_model_name":
+                    - "sarashina2-guard"
+                  "server_kwargs": {}
+                - "deployment_options":
+          -         "autoscaling_config":
+          -           "max_replicas": 4
+          -           "min_replicas": 4
+          -           "target_ongoing_requests": 4
+                    "max_ongoing_requests": 512
+                    "name": "sarashina2-embedding"
+          -         "num_replicas": "auto"
+          +         "num_replicas": 4
+          +         "placement_group_bundles":
+          +         - "CPU": 1
+          +           "GPU": 0.5
+          +           "accelerator_type:H100": 0.001
+                    "ray_actor_options":
+          -           "num_cpus": 8
+          +           "accelerator_type": "H100"
+          +           "num_cpus": 1
+                      "num_gpus": 0.5
+                  "engine": "vllm"
+                  "engine_kwargs":
+                    "gpu_memory_utilization": 0.45
+                    "model": "/lustre/teams/text_embeddings/experiments/msmd_cse/sarashina2.2-3b/PROTO_sarashina2.2-3B__multistage_20250710_stg2_mix_gecko-recipe-filtered_RRF1_RRF_20_all_forbes_cl_classsification__stg2/hf_checkpoints/checkpoint-770/"
+                    "served_model_name":
+                    - "sarashina2-embedding"
+                  "server_kwargs": {}
+              "import_path": "llm_serve.app.builder:build_openai_app"
+              "name": "llm-inference-app"
+              "route_prefix": "/"
+              "runtime_env":
+                "env_vars":
+                  "RAY_LOG_TO_DRIVER": "1"
+                  "RAY_LOG_TO_DRIVER_EVENT_LEVEL": "INFO"
+                  "VLLM_CACHE_ROOT": "/lustre/applications/reimei-engine-llm-serve/.cache/vllm"
+                  "VLLM_NO_USAGE_STATS": "1"
+            "http_options":
+              "host": "0.0.0.0"
+              "keep_alive_timeout_s": 200
+              "port": 8008
+              "request_timeout_s": null
+            "logging_config":
+              "enable_access_log": true
+              "encoding": "JSON"
+              "log_level": "INFO"
+              "logs_dir": null
+            "proxy_location": "EveryNode"
+        EOT
+      ~ etag                          = "65219916619bed2351c06290a5daf841" -> "75c96276b8452cd4c6a9c77ff7196e55"
+        id                            = "b2b/ray-serve-config-b2b-02/latest.yaml"
+        tags                          = {}
+      ~ version_id                    = "MFZk5fZKxs7RlBTZKvjjoWClVSHpiEwy" -> (known after apply)
+        # (23 unchanged attributes hidden)
+    }
+
+  # module.llm_serve_nlb.aws_lb.this will be created
+  + resource "aws_lb" "this" {
+      + arn                                                          = (known after apply)
+      + arn_suffix                                                   = (known after apply)
+      + dns_name                                                     = (known after apply)
+      + dns_record_client_routing_policy                             = "any_availability_zone"
+      + enable_cross_zone_load_balancing                             = false
+      + enable_deletion_protection                                   = true
+      + enable_zonal_shift                                           = false
+      + enforce_security_group_inbound_rules_on_private_link_traffic = (known after apply)
+      + id                                                           = (known after apply)
+      + internal                                                     = true
+      + ip_address_type                                              = "ipv4"
+      + load_balancer_type                                           = "network"
+      + name                                                         = "reimei-engine-ray-prd-b2b-nlb"
+      + name_prefix                                                  = (known after apply)
+      + security_groups                                              = [
+          + "sg-081ae7e5679bbb12f",
+        ]
+      + subnets                                                      = [
+          + "subnet-069e61778a428e032",
+          + "subnet-07eaa5c2b02e5b427",
+          + "subnet-0a1d36335207cb4f4",
+        ]
+      + tags_all                                                     = {
+          + "Env"       = "prd"
+          + "Project"   = "reimei-engine-ray"
+          + "Terraform" = "true"
+        }
+      + vpc_id                                                       = (known after apply)
+      + zone_id                                                      = (known after apply)
+
+      + subnet_mapping (known after apply)
+    }
+
+  # module.llm_serve_nlb.aws_lb_listener.this["80"] will be created
+  + resource "aws_lb_listener" "this" {
+      + arn                                                                   = (known after apply)
+      + id                                                                    = (known after apply)
+      + load_balancer_arn                                                     = (known after apply)
+      + port                                                                  = 80
+      + protocol                                                              = "TCP"
+      + routing_http_request_x_amzn_mtls_clientcert_header_name               = (known after apply)
+      + routing_http_request_x_amzn_mtls_clientcert_issuer_header_name        = (known after apply)
+      + routing_http_request_x_amzn_mtls_clientcert_leaf_header_name          = (known after apply)
+      + routing_http_request_x_amzn_mtls_clientcert_serial_number_header_name = (known after apply)
+      + routing_http_request_x_amzn_mtls_clientcert_subject_header_name       = (known after apply)
+      + routing_http_request_x_amzn_mtls_clientcert_validity_header_name      = (known after apply)
+      + routing_http_request_x_amzn_tls_cipher_suite_header_name              = (known after apply)
+      + routing_http_request_x_amzn_tls_version_header_name                   = (known after apply)
+      + routing_http_response_access_control_allow_credentials_header_value   = (known after apply)
+      + routing_http_response_access_control_allow_headers_header_value       = (known after apply)
+      + routing_http_response_access_control_allow_methods_header_value       = (known after apply)
+      + routing_http_response_access_control_allow_origin_header_value        = (known after apply)
+      + routing_http_response_access_control_expose_headers_header_value      = (known after apply)
+      + routing_http_response_access_control_max_age_header_value             = (known after apply)
+      + routing_http_response_content_security_policy_header_value            = (known after apply)
+      + routing_http_response_server_enabled                                  = (known after apply)
+      + routing_http_response_strict_transport_security_header_value          = (known after apply)
+      + routing_http_response_x_content_type_options_header_value             = (known after apply)
+      + routing_http_response_x_frame_options_header_value                    = (known after apply)
+      + ssl_policy                                                            = (known after apply)
+      + tags_all                                                              = {
+          + "Env"       = "prd"
+          + "Project"   = "reimei-engine-ray"
+          + "Terraform" = "true"
+        }
+      + tcp_idle_timeout_seconds                                              = 350
+
+      + default_action {
+          + order            = (known after apply)
+          + target_group_arn = (known after apply)
+          + type             = "forward"
+        }
+
+      + mutual_authentication (known after apply)
+    }
+
+  # module.llm_serve_nlb.aws_lb_listener.this["8000"] will be created
+  + resource "aws_lb_listener" "this" {
+      + arn                                                                   = (known after apply)
+      + id                                                                    = (known after apply)
+      + load_balancer_arn                                                     = (known after apply)
+      + port                                                                  = 8000
+      + protocol                                                              = "TCP"
+      + routing_http_request_x_amzn_mtls_clientcert_header_name               = (known after apply)
+      + routing_http_request_x_amzn_mtls_clientcert_issuer_header_name        = (known after apply)
+      + routing_http_request_x_amzn_mtls_clientcert_leaf_header_name          = (known after apply)
+      + routing_http_request_x_amzn_mtls_clientcert_serial_number_header_name = (known after apply)
+      + routing_http_request_x_amzn_mtls_clientcert_subject_header_name       = (known after apply)
+      + routing_http_request_x_amzn_mtls_clientcert_validity_header_name      = (known after apply)
+      + routing_http_request_x_amzn_tls_cipher_suite_header_name              = (known after apply)
+      + routing_http_request_x_amzn_tls_version_header_name                   = (known after apply)
+      + routing_http_response_access_control_allow_credentials_header_value   = (known after apply)
+      + routing_http_response_access_control_allow_headers_header_value       = (known after apply)
+      + routing_http_response_access_control_allow_methods_header_value       = (known after apply)
+      + routing_http_response_access_control_allow_origin_header_value        = (known after apply)
+      + routing_http_response_access_control_expose_headers_header_value      = (known after apply)
+      + routing_http_response_access_control_max_age_header_value             = (known after apply)
+      + routing_http_response_content_security_policy_header_value            = (known after apply)
+      + routing_http_response_server_enabled                                  = (known after apply)
+      + routing_http_response_strict_transport_security_header_value          = (known after apply)
+      + routing_http_response_x_content_type_options_header_value             = (known after apply)
+      + routing_http_response_x_frame_options_header_value                    = (known after apply)
+      + ssl_policy                                                            = (known after apply)
+      + tags_all                                                              = {
+          + "Env"       = "prd"
+          + "Project"   = "reimei-engine-ray"
+          + "Terraform" = "true"
+        }
+      + tcp_idle_timeout_seconds                                              = 350
+
+      + default_action {
+          + order            = (known after apply)
+          + target_group_arn = (known after apply)
+          + type             = "forward"
+        }
+
+      + mutual_authentication (known after apply)
+    }
+
+  # module.llm_serve_nlb.aws_lb_target_group.this will be created
+  + resource "aws_lb_target_group" "this" {
+      + arn                                = (known after apply)
+      + arn_suffix                         = (known after apply)
+      + connection_termination             = (known after apply)
+      + deregistration_delay               = "620"
+      + id                                 = (known after apply)
+      + ip_address_type                    = (known after apply)
+      + lambda_multi_value_headers_enabled = false
+      + load_balancer_arns                 = (known after apply)
+      + load_balancing_algorithm_type      = (known after apply)
+      + load_balancing_anomaly_mitigation  = (known after apply)
+      + load_balancing_cross_zone_enabled  = (known after apply)
+      + name                               = (known after apply)
+      + name_prefix                        = "llmsrv"
+      + port                               = 8008
+      + preserve_client_ip                 = "false"
+      + protocol                           = "TCP"
+      + protocol_version                   = (known after apply)
+      + proxy_protocol_v2                  = false
+      + slow_start                         = 0
+      + tags                               = {
+          + "Name"   = "reimei-engine-ray-prd-b2b-llm-tg"
+          + "Tenant" = "b2b"
+        }
+      + tags_all                           = {
+          + "Env"       = "prd"
+          + "Name"      = "reimei-engine-ray-prd-b2b-llm-tg"
+          + "Project"   = "reimei-engine-ray"
+          + "Tenant"    = "b2b"
+          + "Terraform" = "true"
+        }
+      + target_type                        = "ip"
+      + vpc_id                             = "vpc-07758e1658c4c2149"
+
+      + health_check {
+          + enabled             = true
+          + healthy_threshold   = 2
+          + interval            = 30
+          + matcher             = "200"
+          + path                = "/health"
+          + port                = "traffic-port"
+          + protocol            = "HTTP"
+          + timeout             = 5
+          + unhealthy_threshold = 3
+        }
+
+      + stickiness (known after apply)
+
+      + target_failover (known after apply)
+
+      + target_group_health (known after apply)
+
+      + target_health_state (known after apply)
+    }
+
+  # module.llm_serve_nlb.aws_lb_target_group_attachment.this["10.120.113.20"] will be created
+  + resource "aws_lb_target_group_attachment" "this" {
+      + availability_zone = "all"
+      + id                = (known after apply)
+      + port              = 8008
+      + target_group_arn  = (known after apply)
+      + target_id         = "10.120.113.20"
+    }
+
+  # module.llm_serve_nlb.aws_lb_target_group_attachment.this["10.120.113.22"] will be created
+  + resource "aws_lb_target_group_attachment" "this" {
+      + availability_zone = "all"
+      + id                = (known after apply)
+      + port              = 8008
+      + target_group_arn  = (known after apply)
+      + target_id         = "10.120.113.22"
+    }
+
+  # module.llm_serve_nlb.aws_lb_target_group_attachment.this["10.120.113.24"] will be created
+  + resource "aws_lb_target_group_attachment" "this" {
+      + availability_zone = "all"
+      + id                = (known after apply)
+      + port              = 8008
+      + target_group_arn  = (known after apply)
+      + target_id         = "10.120.113.24"
+    }
+
+  # module.llm_serve_nlb.aws_lb_target_group_attachment.this["10.120.113.26"] will be created
+  + resource "aws_lb_target_group_attachment" "this" {
+      + availability_zone = "all"
+      + id                = (known after apply)
+      + port              = 8008
+      + target_group_arn  = (known after apply)
+      + target_id         = "10.120.113.26"
+    }
+
+  # module.llm_serve_nlb.aws_lb_target_group_attachment.this["10.120.113.28"] will be created
+  + resource "aws_lb_target_group_attachment" "this" {
+      + availability_zone = "all"
+      + id                = (known after apply)
+      + port              = 8008
+      + target_group_arn  = (known after apply)
+      + target_id         = "10.120.113.28"
+    }
+
+  # module.llm_serve_nlb.aws_lb_target_group_attachment.this["10.120.113.30"] will be created
+  + resource "aws_lb_target_group_attachment" "this" {
+      + availability_zone = "all"
+      + id                = (known after apply)
+      + port              = 8008
+      + target_group_arn  = (known after apply)
+      + target_id         = "10.120.113.30"
+    }
+
+  # module.llm_serve_nlb.aws_lb_target_group_attachment.this["10.120.113.32"] will be created
+  + resource "aws_lb_target_group_attachment" "this" {
+      + availability_zone = "all"
+      + id                = (known after apply)
+      + port              = 8008
+      + target_group_arn  = (known after apply)
+      + target_id         = "10.120.113.32"
+    }
+
+  # module.llm_serve_nlb.aws_lb_target_group_attachment.this["10.120.113.34"] will be created
+  + resource "aws_lb_target_group_attachment" "this" {
+      + availability_zone = "all"
+      + id                = (known after apply)
+      + port              = 8008
+      + target_group_arn  = (known after apply)
+      + target_id         = "10.120.113.34"
+    }
+
+  # module.llm_serve_nlb.aws_lb_target_group_attachment.this["10.120.113.36"] will be created
+  + resource "aws_lb_target_group_attachment" "this" {
+      + availability_zone = "all"
+      + id                = (known after apply)
+      + port              = 8008
+      + target_group_arn  = (known after apply)
+      + target_id         = "10.120.113.36"
+    }
+
+  # module.llm_serve_nlb.aws_lb_target_group_attachment.this["10.120.113.38"] will be created
+  + resource "aws_lb_target_group_attachment" "this" {
+      + availability_zone = "all"
+      + id                = (known after apply)
+      + port              = 8008
+      + target_group_arn  = (known after apply)
+      + target_id         = "10.120.113.38"
+    }
+
+  # module.llm_serve_nlb.aws_lb_target_group_attachment.this["10.120.113.40"] will be created
+  + resource "aws_lb_target_group_attachment" "this" {
+      + availability_zone = "all"
+      + id                = (known after apply)
+      + port              = 8008
+      + target_group_arn  = (known after apply)
+      + target_id         = "10.120.113.40"
+    }
+
+  # module.llm_serve_nlb.aws_lb_target_group_attachment.this["10.120.113.42"] will be created
+  + resource "aws_lb_target_group_attachment" "this" {
+      + availability_zone = "all"
+      + id                = (known after apply)
+      + port              = 8008
+      + target_group_arn  = (known after apply)
+      + target_id         = "10.120.113.42"
+    }
+
+Plan: 16 to add, 2 to change, 12 to destroy.
+
+Changes to Outputs:
+  ~ proxy                  = {
+      ~ no_proxy    = "localhost,localdomain,local,127.0.0.1,10.120.169.2/31,10.120.113.0/26,10.31.0.0/16,10.121.128.0/20,169.254.169.254,169.254.169.253" -> "localhost,localdomain,local,127.0.0.1,169.254.169.253,169.254.169.254,10.31.0.0/16,10.121.128.0/20,10.120.113.0/26"
+        # (2 unchanged attributes hidden)
+    }
+  ~ s3_object_serve_config = {
+      ~ b2b-01 = {
+          ~ content                       = <<-EOT
+                "applications":
+                - "args":
+                    "deployment_options":
+              -       "autoscaling_config":
+              -         "max_replicas": 26
+              -         "min_replicas": 26
+              -         "target_ongoing_requests": 16
+                      "max_ongoing_requests": 256
+              -       "max_replicas_per_node": 4
+              -       "name": "llm_inference_app"
+              -       "num_replicas": "auto"
+              +       "max_replicas_per_node": 9
+              +       "name": "llm-server-router"
+              +       "num_replicas": 26
+                      "ray_actor_options":
+                        "accelerator_type": "H100"
+                        "num_cpus": 1
+                    "llm_server_configs":
+                    - "deployment_options":
+              -         "autoscaling_config":
+              -           "max_replicas": 5
+              -           "min_replicas": 5
+              -           "target_ongoing_requests": 2
+                        "max_ongoing_requests": 512
+                        "name": "sarashina2-mini"
+              -         "num_replicas": "auto"
+              +         "num_replicas": 5
+              +         "placement_group_bundles":
+              +         - "CPU": 1
+              +           "GPU": 1
+              +         - "CPU": 1
+              +           "GPU": 1
+              +         - "CPU": 1
+              +           "GPU": 1
+              +         - "CPU": 1
+              +           "GPU": 1
+              +         - "CPU": 1
+              +           "accelerator_type:H100": 0.001
+              +         "placement_group_strategy": "PACK"
+                        "ray_actor_options":
+                          "accelerator_type": "H100"
+              -           "num_cpus": 4
+              -           "num_gpus": 0
+              +           "num_cpus": 1
+                      "engine": "vllm"
+                      "engine_kwargs":
+                        "distributed_executor_backend": "ray"
+                        "model": "/lustre/share/sbint_models/finetuned/release/sbint-2025-11-25/sbint-2025-11-25-70b-sft/"
+                        "override_generation_config":
+                          "repetition_penalty": 1.05
+                          "temperature": 0.7
+                          "top_p": 0.9
+                        "served_model_name":
+                        - "sarashina2-mini"
+                        - "sarashina-mini"
+                        "tensor_parallel_size": 4
+                      "server_kwargs":
+                        "enable_auto_tool_choice": true
+                        "tool_call_parser": "sarashina2_json"
+                    - "deployment_options":
+              -         "autoscaling_config":
+              -           "max_replicas": 4
+              -           "min_replicas": 4
+              -           "target_ongoing_requests": 2
+                        "max_ongoing_requests": 512
+                        "name": "sarashina2-guard"
+              -         "num_replicas": "auto"
+              +         "num_replicas": 4
+              +         "placement_group_bundles":
+              +         - "CPU": 1
+              +           "GPU": 0.5
+              +           "accelerator_type:H100": 0.001
+                        "ray_actor_options":
+              -           "num_cpus": 8
+              +           "accelerator_type": "H100"
+              +           "num_cpus": 1
+                          "num_gpus": 0.5
+                      "engine": "vllm"
+                      "engine_kwargs":
+                        "gpu_memory_utilization": 0.45
+                        "model": "/lustre/share/sbint_models/guardrail/sarashinaguard-7b-20250508/"
+                        "served_model_name":
+                        - "sarashina2-guard"
+                      "server_kwargs": {}
+                    - "deployment_options":
+              -         "autoscaling_config":
+              -           "max_replicas": 4
+              -           "min_replicas": 4
+              -           "target_ongoing_requests": 4
+                        "max_ongoing_requests": 512
+                        "name": "sarashina2-embedding"
+              -         "num_replicas": "auto"
+              +         "num_replicas": 4
+              +         "placement_group_bundles":
+              +         - "CPU": 1
+              +           "GPU": 0.5
+              +           "accelerator_type:H100": 0.001
+                        "ray_actor_options":
+              -           "num_cpus": 8
+              +           "accelerator_type": "H100"
+              +           "num_cpus": 1
+                          "num_gpus": 0.5
+                      "engine": "vllm"
+                      "engine_kwargs":
+                        "gpu_memory_utilization": 0.45
+                        "model": "/lustre/teams/text_embeddings/experiments/msmd_cse/sarashina2.2-3b/PROTO_sarashina2.2-3B__multistage_20250710_stg2_mix_gecko-recipe-filtered_RRF1_RRF_20_all_forbes_cl_classsification__stg2/hf_checkpoints/checkpoint-770/"
+                        "served_model_name":
+                        - "sarashina2-embedding"
+                      "server_kwargs": {}
+                  "import_path": "llm_serve.app.builder:build_openai_app"
+                  "name": "llm-inference-app"
+                  "route_prefix": "/"
+                  "runtime_env":
+                    "env_vars":
+                      "RAY_LOG_TO_DRIVER": "1"
+                      "RAY_LOG_TO_DRIVER_EVENT_LEVEL": "INFO"
+                      "VLLM_CACHE_ROOT": "/lustre/applications/reimei-engine-llm-serve/.cache/vllm"
+                      "VLLM_NO_USAGE_STATS": "1"
+                "http_options":
+                  "host": "0.0.0.0"
+                  "keep_alive_timeout_s": 200
+                  "port": 8008
+                  "request_timeout_s": null
+                "logging_config":
+                  "enable_access_log": true
+                  "encoding": "JSON"
+                  "log_level": "INFO"
+                  "logs_dir": null
+                "proxy_location": "EveryNode"
+            EOT
+          ~ etag                          = "65219916619bed2351c06290a5daf841" -> "75c96276b8452cd4c6a9c77ff7196e55"
+            id                            = "b2b/ray-serve-config-b2b-01/latest.yaml"
+            tags                          = {}
+          ~ version_id                    = "IPl0UE7L1uGDJuXQa6qlka8Lx2YLs2_k" -> (known after apply)
+            # (30 unchanged attributes hidden)
+        }
+      ~ b2b-02 = {
+          ~ content                       = <<-EOT
+                "applications":
+                - "args":
+                    "deployment_options":
+              -       "autoscaling_config":
+              -         "max_replicas": 26
+              -         "min_replicas": 26
+              -         "target_ongoing_requests": 16
+                      "max_ongoing_requests": 256
+              -       "max_replicas_per_node": 4
+              -       "name": "llm_inference_app"
+              -       "num_replicas": "auto"
+              +       "max_replicas_per_node": 9
+              +       "name": "llm-server-router"
+              +       "num_replicas": 26
+                      "ray_actor_options":
+                        "accelerator_type": "H100"
+                        "num_cpus": 1
+                    "llm_server_configs":
+                    - "deployment_options":
+              -         "autoscaling_config":
+              -           "max_replicas": 5
+              -           "min_replicas": 5
+              -           "target_ongoing_requests": 2
+                        "max_ongoing_requests": 512
+                        "name": "sarashina2-mini"
+              -         "num_replicas": "auto"
+              +         "num_replicas": 5
+              +         "placement_group_bundles":
+              +         - "CPU": 1
+              +           "GPU": 1
+              +         - "CPU": 1
+              +           "GPU": 1
+              +         - "CPU": 1
+              +           "GPU": 1
+              +         - "CPU": 1
+              +           "GPU": 1
+              +         - "CPU": 1
+              +           "accelerator_type:H100": 0.001
+              +         "placement_group_strategy": "PACK"
+                        "ray_actor_options":
+                          "accelerator_type": "H100"
+              -           "num_cpus": 4
+              -           "num_gpus": 0
+              +           "num_cpus": 1
+                      "engine": "vllm"
+                      "engine_kwargs":
+                        "distributed_executor_backend": "ray"
+                        "model": "/lustre/share/sbint_models/finetuned/release/sbint-2025-11-25/sbint-2025-11-25-70b-sft/"
+                        "override_generation_config":
+                          "repetition_penalty": 1.05
+                          "temperature": 0.7
+                          "top_p": 0.9
+                        "served_model_name":
+                        - "sarashina2-mini"
+                        - "sarashina-mini"
+                        "tensor_parallel_size": 4
+                      "server_kwargs":
+                        "enable_auto_tool_choice": true
+                        "tool_call_parser": "sarashina2_json"
+                    - "deployment_options":
+              -         "autoscaling_config":
+              -           "max_replicas": 4
+              -           "min_replicas": 4
+              -           "target_ongoing_requests": 2
+                        "max_ongoing_requests": 512
+                        "name": "sarashina2-guard"
+              -         "num_replicas": "auto"
+              +         "num_replicas": 4
+              +         "placement_group_bundles":
+              +         - "CPU": 1
+              +           "GPU": 0.5
+              +           "accelerator_type:H100": 0.001
+                        "ray_actor_options":
+              -           "num_cpus": 8
+              +           "accelerator_type": "H100"
+              +           "num_cpus": 1
+                          "num_gpus": 0.5
+                      "engine": "vllm"
+                      "engine_kwargs":
+                        "gpu_memory_utilization": 0.45
+                        "model": "/lustre/share/sbint_models/guardrail/sarashinaguard-7b-20250508/"
+                        "served_model_name":
+                        - "sarashina2-guard"
+                      "server_kwargs": {}
+                    - "deployment_options":
+              -         "autoscaling_config":
+              -           "max_replicas": 4
+              -           "min_replicas": 4
+              -           "target_ongoing_requests": 4
+                        "max_ongoing_requests": 512
+                        "name": "sarashina2-embedding"
+              -         "num_replicas": "auto"
+              +         "num_replicas": 4
+              +         "placement_group_bundles":
+              +         - "CPU": 1
+              +           "GPU": 0.5
+              +           "accelerator_type:H100": 0.001
+                        "ray_actor_options":
+              -           "num_cpus": 8
+              +           "accelerator_type": "H100"
+              +           "num_cpus": 1
+                          "num_gpus": 0.5
+                      "engine": "vllm"
+                      "engine_kwargs":
+                        "gpu_memory_utilization": 0.45
+                        "model": "/lustre/teams/text_embeddings/experiments/msmd_cse/sarashina2.2-3b/PROTO_sarashina2.2-3B__multistage_20250710_stg2_mix_gecko-recipe-filtered_RRF1_RRF_20_all_forbes_cl_classsification__stg2/hf_checkpoints/checkpoint-770/"
+                        "served_model_name":
+                        - "sarashina2-embedding"
+                      "server_kwargs": {}
+                  "import_path": "llm_serve.app.builder:build_openai_app"
+                  "name": "llm-inference-app"
+                  "route_prefix": "/"
+                  "runtime_env":
+                    "env_vars":
+                      "RAY_LOG_TO_DRIVER": "1"
+                      "RAY_LOG_TO_DRIVER_EVENT_LEVEL": "INFO"
+                      "VLLM_CACHE_ROOT": "/lustre/applications/reimei-engine-llm-serve/.cache/vllm"
+                      "VLLM_NO_USAGE_STATS": "1"
+                "http_options":
+                  "host": "0.0.0.0"
+                  "keep_alive_timeout_s": 200
+                  "port": 8008
+                  "request_timeout_s": null
+                "logging_config":
+                  "enable_access_log": true
+                  "encoding": "JSON"
+                  "log_level": "INFO"
+                  "logs_dir": null
+                "proxy_location": "EveryNode"
+            EOT
+          ~ etag                          = "65219916619bed2351c06290a5daf841" -> "75c96276b8452cd4c6a9c77ff7196e55"
+            id                            = "b2b/ray-serve-config-b2b-02/latest.yaml"
+            tags                          = {}
+          ~ version_id                    = "MFZk5fZKxs7RlBTZKvjjoWClVSHpiEwy" -> (known after apply)
+            # (30 unchanged attributes hidden)
+        }
+    }
+
+─────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
