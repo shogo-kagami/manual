@@ -1,7 +1,4 @@
-reimei-engine-ray-prd-b2bfc1-nlb
-
-ARN
-arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:loadbalancer/net/reimei-engine-ray-prd-b2bfc1-nlb/fc47bc84b1660efc
-
-DNS
-reimei-engine-ray-prd-b2bfc1-nlb-fc47bc84b1660efc.elb.ap-northeast-1.amazonaws.com
+user21020@srpv01502:~$ sinfo
+PARTITION     AVAIL  TIMELIMIT  NODES  STATE NODELIST
+021-partition    up   infinite      1  drain srdgx00006
+021-partition    up   infinite      7    mix srdgx[00001-00005,00007-00008]
