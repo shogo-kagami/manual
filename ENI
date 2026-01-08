@@ -1,0 +1,76 @@
+aws ec2 describe-network-interfaces --filters "Name=private-ip-address,Values=10.121.128.123" --output table
+aws ec2 describe-network-interfaces --filters "Name=private-ip-address,Values=10.121.128.123" --query 'NetworkInterfaces[].{Description:Description,InstanceId:Attachment.InstanceId,PrivateIpAddress:PrivateIpAddress}' --output table
+
+aws ec2 describe-network-interfaces --filters "Name=subnet-id,Values=subnet-069e61778a428e032,subnet-07eaa5c2b02e5b427,subnet-0a1d36335207cb4f4" --query 'sort_by(NetworkInterfaces[].{Description:Description,InstanceId:Attachment.InstanceId,PrivateIpAddress:PrivateIpAddress}, &PrivateIpAddress)' --output table | tee ~/log/$(date +%Y%m%d)_ENI_log.txt
+
+----------------------------------------------------------------------------------------------------------
+|                                        DescribeNetworkInterfaces                                       |
++------------------------------------------------------------+----------------------+--------------------+
+|                         Description                        |     InstanceId       | PrivateIpAddress   |
++------------------------------------------------------------+----------------------+--------------------+
+|  ELB net/reimei-engine-ray-prd-nlbmon01/9aa01b320393bbe7   |  None                |  10.121.128.101    |
+|                                                            |  i-0a71a6c21e7ce73d9 |  10.121.128.123    |
+|                                                            |  i-0958f2ad01fd2392f |  10.121.128.124    |
+|                                                            |  i-0bb6715a9daddf7aa |  10.121.128.125    |
+|                                                            |  i-07c815a9ce2cacf22 |  10.121.128.19     |
+|  ELB app/reimei-engine-ray-prd-albmon01/fbcccdb09afc17c8   |  None                |  10.121.128.191    |
+|  VPC Endpoint Interface vpce-083632065dba5095b             |  None                |  10.121.128.250    |
+|  ELB app/reimei-engine-ray-prd-b2b/7ca385e960c64703        |  None                |  10.121.128.26     |
+|  ELB net/nlb-serviceprod-monitoring01/de2567621569b0f2     |  None                |  10.121.129.100    |
+|  VPC Endpoint Interface vpce-040329663f7f736fe             |  None                |  10.121.129.124    |
+|  VPC Endpoint Interface vpce-0b29bbb3de59f1440             |  None                |  10.121.129.152    |
+|  VPC Endpoint Interface vpce-0765b94f42cdecca5             |  None                |  10.121.129.173    |
+|  ELB app/reimei-engine-ray-prd-b2bfc1/4b122dc32b036d4f     |  None                |  10.121.129.186    |
+|  ELB net/reimei-engine-ray-prd-b2bfc1-nlb/fc47bc84b1660efc |  None                |  10.121.129.235    |
+|  VPC Endpoint Interface vpce-04c7df1330003620d             |  None                |  10.121.129.34     |
+|  VPC Endpoint Interface vpce-05b9e90faf3246129             |  None                |  10.121.130.230    |
+|  VPC Endpoint Interface vpce-07b9b3253f25f19ab             |  None                |  10.121.130.244    |
+|  ELB app/reimei-engine-ray-prd-sbkk/75ad91a3e5ed54c0       |  None                |  10.121.130.246    |
+|                                                            |  i-025bbc7508b9208b3 |  10.121.130.78     |
+|  VPC Endpoint Interface vpce-0fee51c8aba262233             |  None                |  10.121.130.93     |
+|  VPC Endpoint Interface vpce-063471be0d49fc039             |  None                |  10.121.131.103    |
+|  ELB net/reimei-engine-ray-prd-b2b-nlb/db767796ecca30e4    |  None                |  10.121.131.114    |
+|  VPC Endpoint Interface vpce-0b30727c7d6c6c9ab             |  None                |  10.121.131.217    |
+|                                                            |  i-019dbc727d32a21f2 |  10.121.131.231    |
+|                                                            |  i-0d008ec703791264a |  10.121.131.251    |
+|  VPC Endpoint Interface vpce-097c4736d101a16d6             |  None                |  10.121.131.98     |
+|  ELB net/reimei-engine-ray-prd-nlbmon01/9aa01b320393bbe7   |  None                |  10.121.132.101    |
+|                                                            |  i-0e1028becbcf53ceb |  10.121.132.113    |
+|                                                            |  i-08b673496fceab32f |  10.121.132.114    |
+|                                                            |  i-05ff1a716e10f5443 |  10.121.132.115    |
+|  ELB app/reimei-engine-ray-prd-albmon01/fbcccdb09afc17c8   |  None                |  10.121.132.128    |
+|  VPC Endpoint Interface vpce-04c7df1330003620d             |  None                |  10.121.132.138    |
+|  VPC Endpoint Interface vpce-0765b94f42cdecca5             |  None                |  10.121.132.198    |
+|  ELB net/reimei-engine-ray-prd-b2bfc1-nlb/fc47bc84b1660efc |  None                |  10.121.132.227    |
+|  VPC Endpoint Interface vpce-083632065dba5095b             |  None                |  10.121.132.250    |
+|  ELB net/nlb-serviceprod-monitoring01/de2567621569b0f2     |  None                |  10.121.133.100    |
+|  VPC Endpoint Interface vpce-07b9b3253f25f19ab             |  None                |  10.121.133.122    |
+|  VPC Endpoint Interface vpce-05b9e90faf3246129             |  None                |  10.121.133.137    |
+|  VPC Endpoint Interface vpce-040329663f7f736fe             |  None                |  10.121.133.210    |
+|  VPC Endpoint Interface vpce-0fee51c8aba262233             |  None                |  10.121.133.217    |
+|  VPC Endpoint Interface vpce-0b30727c7d6c6c9ab             |  None                |  10.121.134.206    |
+|  VPC Endpoint Interface vpce-097c4736d101a16d6             |  None                |  10.121.134.234    |
+|  ELB net/reimei-engine-ray-prd-b2b-nlb/db767796ecca30e4    |  None                |  10.121.134.89     |
+|  VPC Endpoint Interface vpce-0b29bbb3de59f1440             |  None                |  10.121.135.16     |
+|  ELB app/reimei-engine-ray-prd-b2b/7ca385e960c64703        |  None                |  10.121.135.2      |
+|  VPC Endpoint Interface vpce-063471be0d49fc039             |  None                |  10.121.135.32     |
+|  ELB app/reimei-engine-ray-prd-b2bfc1/4b122dc32b036d4f     |  None                |  10.121.135.4      |
+|  ELB app/reimei-engine-ray-prd-sbkk/75ad91a3e5ed54c0       |  None                |  10.121.135.60     |
+|  VPC Endpoint Interface vpce-05b9e90faf3246129             |  None                |  10.121.136.14     |
+|  ELB app/reimei-engine-ray-prd-albmon01/fbcccdb09afc17c8   |  None                |  10.121.136.172    |
+|  ELB app/reimei-engine-ray-prd-b2bfc1/4b122dc32b036d4f     |  None                |  10.121.136.227    |
+|  VPC Endpoint Interface vpce-083632065dba5095b             |  None                |  10.121.136.250    |
+|  ELB net/reimei-engine-ray-prd-b2b-nlb/db767796ecca30e4    |  None                |  10.121.136.35     |
+|  VPC Endpoint Interface vpce-0b29bbb3de59f1440             |  None                |  10.121.136.86     |
+|  VPC Endpoint Interface vpce-07b9b3253f25f19ab             |  None                |  10.121.137.207    |
+|  ELB app/reimei-engine-ray-prd-sbkk/75ad91a3e5ed54c0       |  None                |  10.121.137.32     |
+|  VPC Endpoint Interface vpce-0fee51c8aba262233             |  None                |  10.121.137.41     |
+|  VPC Endpoint Interface vpce-063471be0d49fc039             |  None                |  10.121.138.186    |
+|  VPC Endpoint Interface vpce-097c4736d101a16d6             |  None                |  10.121.138.36     |
+|  ELB app/reimei-engine-ray-prd-b2b/7ca385e960c64703        |  None                |  10.121.138.80     |
+|  VPC Endpoint Interface vpce-040329663f7f736fe             |  None                |  10.121.139.247    |
+|  VPC Endpoint Interface vpce-04c7df1330003620d             |  None                |  10.121.139.252    |
+|  ELB net/reimei-engine-ray-prd-b2bfc1-nlb/fc47bc84b1660efc |  None                |  10.121.139.34     |
+|  VPC Endpoint Interface vpce-0765b94f42cdecca5             |  None                |  10.121.139.4      |
+|  VPC Endpoint Interface vpce-0b30727c7d6c6c9ab             |  None                |  10.121.139.59     |
++------------------------------------------------------------+----------------------+--------------------+
