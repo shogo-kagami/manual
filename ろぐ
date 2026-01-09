@@ -8,3 +8,5 @@ drwxr-xr-x. 4 root     root        39 Jan  9 01:45 metrics
 -rw-r--r--. 1 ec2-user ec2-user     0 Jan  9 01:45 ports_by_node.json.lock
 drwxrwxrwx. 8 ec2-user ec2-user   112 Jan  9 01:45 runtime_resources
 drwxrwxrwx. 2 ec2-user ec2-user   149 Jan  9 01:45 sockets
+
+https://github.com/sbintuitions/reimei_RAG/blob/main/terraform/environments_ray/templates/setup_ec2.sh.tftpl#L152-L180
