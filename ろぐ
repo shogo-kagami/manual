@@ -1,0 +1,10 @@
+[ec2-user@ip-10-121-132-114 ~]$ ls -l /var/tmp/ray/session_latest/
+total 24
+drwxrwxrwx. 8 ec2-user ec2-user 16384 Jan  9 01:45 logs
+drwxr-xr-x. 4 root     root        39 Jan  9 01:45 metrics
+-rw-r--r--. 1 ec2-user ec2-user    37 Jan  9 01:45 node_ip_address.json
+-rw-r--r--. 1 ec2-user ec2-user     0 Jan  9 01:45 node_ip_address.json.lock
+-rw-r--r--. 1 ec2-user ec2-user   221 Jan  9 01:45 ports_by_node.json
+-rw-r--r--. 1 ec2-user ec2-user     0 Jan  9 01:45 ports_by_node.json.lock
+drwxrwxrwx. 8 ec2-user ec2-user   112 Jan  9 01:45 runtime_resources
+drwxrwxrwx. 2 ec2-user ec2-user   149 Jan  9 01:45 sockets
