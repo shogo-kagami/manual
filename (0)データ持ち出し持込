@@ -125,3 +125,6 @@ reimei-engine-ray-prd-b2b-fc1-raydsh-tg
 
 arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:loadbalancer/app/reimei-engine-ray-prd-b2b-fc1/5e280c93f3a1a9cb
 internal-reimei-engine-ray-prd-b2b-fc1-1185184183.ap-northeast-1.elb.amazonaws.com
+
+
+sudo chown -R ec2-user:ec2-user /var/tmp/ray/session_latest/metrics
