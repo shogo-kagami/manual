@@ -1,4 +1,0 @@
-user21020@srpv01502:~$ sinfo
-PARTITION     AVAIL  TIMELIMIT  NODES  STATE NODELIST
-021-partition    up   infinite      1  drain srdgx00006
-021-partition    up   infinite      7    mix srdgx[00001-00005,00007-00008]
