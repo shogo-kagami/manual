@@ -128,3 +128,7 @@ internal-reimei-engine-ray-prd-b2b-fc1-1185184183.ap-northeast-1.elb.amazonaws.c
 
 
 sudo chown -R ec2-user:ec2-user /var/tmp/ray/session_latest/metrics
+
+stg
+https://d-95675fea1b.awsapps.com/start/#
+
