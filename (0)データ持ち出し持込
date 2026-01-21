@@ -131,3 +131,6 @@ sudo chown -R ec2-user:ec2-user /var/tmp/ray/session_latest/metrics
 
 stg
 [699475943535_AWSAdministratorAccess]
+
+nlb_dns_name = 
+reimei-b2b-demo-gpu-prd-nlb-070877994bd3af97.elb.ap-northeast-1.amazonaws.com
