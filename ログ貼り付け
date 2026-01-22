@@ -411,3 +411,8 @@ Last login: Thu Dec 18 11:25:17 2025 from 10.120.64.252
 WARNING: Your password has expired.
 You must change your password now and login again!
 (current) LDAP Password:
+
+
+user45020@fcpv00286:/lustre/tools/PutDataToAWS/SBintTools/Operations$ squeue
+             JOBID          PARTITION                   NAME           USER ST       TIME  NODES NODELIST(REASON)
+           1155438      045-partition manual-drain_fcdgx0006      user45020 PD       0:00      1 (ReqNodeNotAvail, UnavailableNodes:fcdgx00067)
