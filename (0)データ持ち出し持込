@@ -2,7 +2,7 @@
 s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-download-xvp46x/260202_shogo_kagami_xvp46x/
 
 　持出
-
+s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-upload-3kmjgg/260202_shogo_kagami_3kmjgg/
 
 モデル所在確認
 /lustre/share/sbint_models/translation/release/sbint-translation-2025-10-20/sbint-translation-2025-10-20-dpo/
