@@ -1,0 +1,29 @@
+{
+    "TENANT": "sbkk",
+    "NAME": "reimei-engine-ray-prd-llm-serve-sbkk-01",
+    "HEAD_IP": "10.121.128.123",
+    "HEAD_PORT": "10000",
+    "HEAD_GT_PORT": "20080",
+    "RAY_NUM_CPUS": "222",
+    "RAY_LOGGING_CONFIG_ENCODING": "JSON",
+    "IMAGE_PREFIX": "/lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu",
+    "IMAGE_SUFFIX": "sqsh",
+    "CONTAINER_MOUNTS":"/lustre:/lustre",
+    "START_SCRIPT": "/app/scripts/start_ray_worker.sh",
+    "IM_TAG": "20251211-1"
+}
+
+{
+    "TENANT": "sbkk",
+    "NAME": "reimei-engine-ray-prd-llm-serve-sbkk-02",
+    "HEAD_IP": "10.121.132.113",
+    "HEAD_PORT": "10000",
+    "HEAD_GT_PORT": "20080",
+    "RAY_NUM_CPUS": "222",
+    "RAY_LOGGING_CONFIG_ENCODING": "JSON",
+    "IMAGE_PREFIX": "/lustre/container_cache/reimei_engine/reimei-engine-llm-serve-gpu",
+    "IMAGE_SUFFIX": "sqsh",
+    "CONTAINER_MOUNTS":"/lustre:/lustre",
+    "START_SCRIPT": "/app/scripts/start_ray_worker.sh",
+    "IM_TAG": "20251211-1"
+}
