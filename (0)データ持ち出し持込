@@ -136,3 +136,29 @@ nlb_dns_name =
 reimei-b2b-demo-gpu-prd-nlb-070877994bd3af97.elb.ap-northeast-1.amazonaws.com
 
 curl -v https://www.yahoo.co.jp  -x http://10.120.60.24:10080
+user45020@fcpv00286:/lustre/tools/AdminTools/config$ curl -v https://www.yahoo.co.jp  -x http://10.120.60.24:10080
+* Uses proxy env variable no_proxy == 'localhost.localdomain,localhost,localhost4.localdomain4,localhost4,localhost,fcpp00001,fcpp00002,fcpp00003,fcpp00004,fcpp00005,master,master.cm.cluster,localmaster.cm.cluster,localmaster,eth.cluster,cm.dgx,cm.cpu,cm.login,cm.ipmi,cm.cluster,ib.cluster,ib.storage,127.0.0.1,10.120.42.75,10.120.42.76,10.120.42.77,10.120.42.78,10.120.42.79,10.120.42.80,10.120.42.0/22,100.64.0.0/16,100.65.0.0/16,10.120.32.0/22,10.120.58.0/27,10.120.74.0/24'
+*   Trying 10.120.60.24:10080...
+* Connected to 10.120.60.24 (10.120.60.24) port 10080 (#0)
+* allocate connect buffer!
+* Establish HTTP proxy tunnel to www.yahoo.co.jp:443
+> CONNECT www.yahoo.co.jp:443 HTTP/1.1
+> Host: www.yahoo.co.jp:443
+> User-Agent: curl/7.81.0
+> Proxy-Connection: Keep-Alive
+>
+< HTTP/1.1 403 Forbidden
+< Server: squid/4.15
+< Mime-Version: 1.0
+< Date: Mon, 02 Feb 2026 06:03:39 GMT
+< Content-Type: text/html;charset=utf-8
+< Content-Length: 3577
+< X-Squid-Error: ERR_ACCESS_DENIED 0
+< X-Cache: MISS from FDC108PR603
+< X-Cache-Lookup: NONE from FDC108PR603:8080
+< Connection: keep-alive
+<
+* Received HTTP code 403 from proxy after CONNECT
+* CONNECT phase completed!
+* Closing connection 0
+curl: (56) Received HTTP code 403 from proxy after CONNECT
