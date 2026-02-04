@@ -138,7 +138,9 @@ reimei-b2b-demo-gpu-prd-nlb-070877994bd3af97.elb.ap-northeast-1.amazonaws.com
 http_proxy  = "http://10.121.131.251:10000"
 https_proxy = "http://10.121.131.251:10000"
 
-user21006@srpv01502:~$ sinfo
-PARTITION     AVAIL  TIMELIMIT  NODES  STATE NODELIST
-021-partition    up   infinite      1  drain srdgx00006
-021-partition    up   infinite      7    mix srdgx[00001-00005,00007-00008]
+
+reimei-engine-ray-prd-sbkk-nlb
+ARN
+arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:loadbalancer/net/reimei-engine-ray-prd-sbkk-nlb/6619da9751839d8b
+DNS
+reimei-engine-ray-prd-sbkk-nlb-6619da9751839d8b.elb.ap-northeast-1.amazonaws.com
