@@ -404,15 +404,3 @@ tmpfs             1.6G  720K  1.6G   1% /run
 tmpfs             3.8G     0  3.8G   0% /tmp
 /dev/nvme0n1p128   10M  1.3M  8.7M  13% /boot/efi
 tmpfs             778M     0  778M   0% /run/user/1000
-
-
-You are required to change your password immediately (password expired).
-Last login: Thu Dec 18 11:25:17 2025 from 10.120.64.252
-WARNING: Your password has expired.
-You must change your password now and login again!
-(current) LDAP Password:
-
-
-user45020@fcpv00286:/lustre/tools/PutDataToAWS/SBintTools/Operations$ squeue
-             JOBID          PARTITION                   NAME           USER ST       TIME  NODES NODELIST(REASON)
-           1155438      045-partition manual-drain_fcdgx0006      user45020 PD       0:00      1 (ReqNodeNotAvail, UnavailableNodes:fcdgx00067)
