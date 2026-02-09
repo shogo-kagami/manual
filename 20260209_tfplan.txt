@@ -1,0 +1,1190 @@
+module.gpu_instance.aws_iam_role_policy_attachment.ssm_managed: Refreshing state... [id=reimei-b2b-demo-gpu-prd-gpu-inference-role/arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore]
+module.gpu_instance.aws_iam_role_policy_attachment.custom_policies["arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"]: Refreshing state... [id=reimei-b2b-demo-gpu-prd-gpu-inference-role/arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess]
+module.gpu_instance.aws_iam_role_policy_attachment.custom_policies["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPullOnly"]: Refreshing state... [id=reimei-b2b-demo-gpu-prd-gpu-inference-role/arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPullOnly]
+module.gpu_instance.aws_iam_instance_profile.ec2_profile: Refreshing state... [id=reimei-b2b-demo-gpu-prd-gpu-inference-instance-profile]
+module.gpu_instance.aws_iam_role_policy_attachment.cw_agent_managed: Refreshing state... [id=reimei-b2b-demo-gpu-prd-gpu-inference-role/arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy]
+aws_lb_target_group_attachment.nlb: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/reimei-b2b-demo-gpu-prd-tg/6e2df432a4add948-20260121041818969400000002]
+module.gpu_instance.aws_cloudwatch_log_group.ec2_logs: Refreshing state... [id=/ec2/reimei-b2b-demo-gpu-prd/gpu-inference]
+module.gpu_instance.aws_iam_role.ec2_role: Refreshing state... [id=reimei-b2b-demo-gpu-prd-gpu-inference-role]
+module.gpu_instance.aws_instance.this: Refreshing state... [id=i-041be5eed07d17f8f]
+aws_s3_bucket.model_storage: Refreshing state... [id=reimei-b2b-demo-gpu-prd-model-storage]
+data.aws_subnet.reimei_rag_vpc_subnet_private03: Reading...
+data.aws_ecr_repository.gpu: Reading...
+data.aws_subnet.reimei_rag_vpc_subnet_private03: Read complete after 0s [id=subnet-0f36d0c08cda116c4]
+data.aws_subnet.reimei_rag_vpc_subnet_private01: Reading...
+module.s3_tfstate.aws_s3_bucket.tfstate_bucket: Refreshing state... [id=reimei-b2b-demo-gpu-prd-tfstate]
+data.aws_subnet.reimei_rag_vpc_subnet_private01: Read complete after 0s [id=subnet-0fcce540a819b1bb3]
+data.aws_subnet.reimei_rag_vpc_subnet_private02: Reading...
+data.aws_ecr_repository.gpu: Read complete after 0s [id=sbint-services/reimei-engine-ray-stg/llm-serve-gpu]
+data.aws_vpc.reimei_rag_main_vpc: Reading...
+data.aws_subnet.reimei_rag_vpc_subnet_private02: Read complete after 0s [id=subnet-07c0c0990467fe98d]
+module.s3_tfstate.data.aws_caller_identity.current: Reading...
+module.s3_tfstate.data.aws_caller_identity.current: Read complete after 0s [id=050451382758]
+data.cloudinit_config.worker_init: Reading...
+data.cloudinit_config.head_init: Reading...
+data.cloudinit_config.worker_init: Read complete after 0s [id=3387254284]
+data.cloudinit_config.head_init: Read complete after 0s [id=388659144]
+aws_lb.nlb: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:loadbalancer/net/reimei-b2b-demo-gpu-prd-nlb/070877994bd3af97]
+module.s3_tfstate.aws_s3_bucket_versioning.versioning_tfstate_bucket: Refreshing state... [id=reimei-b2b-demo-gpu-prd-tfstate]
+module.s3_tfstate.local_file.backend: Refreshing state... [id=693e750e973ef8158dc4ef584341188cc4c3f2d6]
+data.aws_vpc.reimei_rag_main_vpc: Read complete after 1s [id=vpc-07758e1658c4c2149]
+aws_security_group.gpu_instance: Refreshing state... [id=sg-020d5c933c9a4f4ac]
+aws_lb_target_group.nlb: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/reimei-b2b-demo-gpu-prd-tg/6e2df432a4add948]
+aws_lb_listener.nlb: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:listener/net/reimei-b2b-demo-gpu-prd-nlb/070877994bd3af97/e138aa077ab18099]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+  ~ update in-place
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_lb_target_group_attachment.nlb will be destroyed
+  # (because aws_lb_target_group_attachment.nlb is not in configuration)
+  - resource "aws_lb_target_group_attachment" "nlb" {
+      - id               = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/reimei-b2b-demo-gpu-prd-tg/6e2df432a4add948-20260121041818969400000002" -> null
+      - port             = 8000 -> null
+      - region           = "ap-northeast-1" -> null
+      - target_group_arn = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/reimei-b2b-demo-gpu-prd-tg/6e2df432a4add948" -> null
+      - target_id        = "i-041be5eed07d17f8f" -> null
+    }
+
+  # aws_lb_target_group_attachment.nlb2_workers[0] will be created
+  + resource "aws_lb_target_group_attachment" "nlb2_workers" {
+      + id               = (known after apply)
+      + port             = 8000
+      + region           = "ap-northeast-1"
+      + target_group_arn = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/reimei-b2b-demo-gpu-prd-tg/6e2df432a4add948"
+      + target_id        = (known after apply)
+    }
+
+  # aws_lb_target_group_attachment.nlb_head will be created
+  + resource "aws_lb_target_group_attachment" "nlb_head" {
+      + id               = (known after apply)
+      + port             = 8000
+      + region           = "ap-northeast-1"
+      + target_group_arn = "arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:targetgroup/reimei-b2b-demo-gpu-prd-tg/6e2df432a4add948"
+      + target_id        = (known after apply)
+    }
+
+  # aws_security_group.gpu_instance will be updated in-place
+  ~ resource "aws_security_group" "gpu_instance" {
+        id                     = "sg-020d5c933c9a4f4ac"
+      ~ ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "10.31.140.0/22",
+                  - "10.31.144.0/22",
+                  - "10.31.148.0/22",
+                ]
+              - from_port        = 8000
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 8000
+                # (1 unchanged attribute hidden)
+            },
+          + {
+              + cidr_blocks      = [
+                  + "10.31.140.0/22",
+                  + "10.31.144.0/22",
+                  + "10.31.148.0/22",
+                ]
+              + from_port        = 8000
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "tcp"
+              + security_groups  = []
+              + self             = false
+              + to_port          = 8000
+            },
+          + {
+              + cidr_blocks      = []
+              + from_port        = 0
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "-1"
+              + security_groups  = []
+              + self             = true
+              + to_port          = 0
+                # (1 unchanged attribute hidden)
+            },
+        ]
+        name                   = "reimei-b2b-demo-gpu-prd-gpu-instance-sg"
+        tags                   = {
+            "Name" = "reimei-b2b-demo-gpu-prd-gpu-instance-sg"
+        }
+        # (9 unchanged attributes hidden)
+    }
+
+  # module.gpu_instance.aws_cloudwatch_log_group.ec2_logs will be destroyed
+  # (because aws_cloudwatch_log_group.ec2_logs is not in configuration)
+  - resource "aws_cloudwatch_log_group" "ec2_logs" {
+      - arn               = "arn:aws:logs:ap-northeast-1:050451382758:log-group:/ec2/reimei-b2b-demo-gpu-prd/gpu-inference" -> null
+      - id                = "/ec2/reimei-b2b-demo-gpu-prd/gpu-inference" -> null
+      - log_group_class   = "STANDARD" -> null
+      - name              = "/ec2/reimei-b2b-demo-gpu-prd/gpu-inference" -> null
+      - region            = "ap-northeast-1" -> null
+      - retention_in_days = 30 -> null
+      - skip_destroy      = false -> null
+      - tags              = {} -> null
+      - tags_all          = {
+          - "Env"         = "prd"
+          - "Project"     = "reimei-b2b-demo"
+          - "Terraform"   = "true"
+          - "component"   = "gpu-inference"
+          - "environment" = "prod"
+          - "product"     = "reimei-b2b-demo"
+        } -> null
+        # (2 unchanged attributes hidden)
+    }
+
+  # module.gpu_instance.aws_iam_instance_profile.ec2_profile will be destroyed
+  # (because aws_iam_instance_profile.ec2_profile is not in configuration)
+  - resource "aws_iam_instance_profile" "ec2_profile" {
+      - arn         = "arn:aws:iam::050451382758:instance-profile/reimei-b2b-demo-gpu-prd-gpu-inference-instance-profile" -> null
+      - create_date = "2026-01-21T04:17:56Z" -> null
+      - id          = "reimei-b2b-demo-gpu-prd-gpu-inference-instance-profile" -> null
+      - name        = "reimei-b2b-demo-gpu-prd-gpu-inference-instance-profile" -> null
+      - path        = "/" -> null
+      - role        = "reimei-b2b-demo-gpu-prd-gpu-inference-role" -> null
+      - tags        = {} -> null
+      - tags_all    = {
+          - "Env"         = "prd"
+          - "Project"     = "reimei-b2b-demo"
+          - "Terraform"   = "true"
+          - "component"   = "gpu-inference"
+          - "environment" = "prod"
+          - "product"     = "reimei-b2b-demo"
+        } -> null
+      - unique_id   = "AIPAQXPZDAHTL33VTY72L" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.gpu_instance.aws_iam_role.ec2_role will be destroyed
+  # (because aws_iam_role.ec2_role is not in configuration)
+  - resource "aws_iam_role" "ec2_role" {
+      - arn                   = "arn:aws:iam::050451382758:role/reimei-b2b-demo-gpu-prd-gpu-inference-role" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "ec2.amazonaws.com"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2026-01-21T04:17:55Z" -> null
+      - force_detach_policies = false -> null
+      - id                    = "reimei-b2b-demo-gpu-prd-gpu-inference-role" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPullOnly",
+          - "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess",
+          - "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore",
+          - "arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "reimei-b2b-demo-gpu-prd-gpu-inference-role" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {
+          - "Env"         = "prd"
+          - "Project"     = "reimei-b2b-demo"
+          - "Terraform"   = "true"
+          - "component"   = "gpu-inference"
+          - "environment" = "prod"
+          - "product"     = "reimei-b2b-demo"
+        } -> null
+      - unique_id             = "AROAQXPZDAHTOFM5N5IXZ" -> null
+        # (3 unchanged attributes hidden)
+    }
+
+  # module.gpu_instance.aws_iam_role_policy_attachment.custom_policies["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPullOnly"] will be destroyed
+  # (because aws_iam_role_policy_attachment.custom_policies is not in configuration)
+  - resource "aws_iam_role_policy_attachment" "custom_policies" {
+      - id         = "reimei-b2b-demo-gpu-prd-gpu-inference-role/arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPullOnly" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPullOnly" -> null
+      - role       = "reimei-b2b-demo-gpu-prd-gpu-inference-role" -> null
+    }
+
+  # module.gpu_instance.aws_iam_role_policy_attachment.custom_policies["arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"] will be destroyed
+  # (because aws_iam_role_policy_attachment.custom_policies is not in configuration)
+  - resource "aws_iam_role_policy_attachment" "custom_policies" {
+      - id         = "reimei-b2b-demo-gpu-prd-gpu-inference-role/arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess" -> null
+      - role       = "reimei-b2b-demo-gpu-prd-gpu-inference-role" -> null
+    }
+
+  # module.gpu_instance.aws_iam_role_policy_attachment.cw_agent_managed will be destroyed
+  # (because aws_iam_role_policy_attachment.cw_agent_managed is not in configuration)
+  - resource "aws_iam_role_policy_attachment" "cw_agent_managed" {
+      - id         = "reimei-b2b-demo-gpu-prd-gpu-inference-role/arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy" -> null
+      - role       = "reimei-b2b-demo-gpu-prd-gpu-inference-role" -> null
+    }
+
+  # module.gpu_instance.aws_iam_role_policy_attachment.ssm_managed will be destroyed
+  # (because aws_iam_role_policy_attachment.ssm_managed is not in configuration)
+  - resource "aws_iam_role_policy_attachment" "ssm_managed" {
+      - id         = "reimei-b2b-demo-gpu-prd-gpu-inference-role/arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore" -> null
+      - role       = "reimei-b2b-demo-gpu-prd-gpu-inference-role" -> null
+    }
+
+  # module.gpu_instance.aws_instance.this will be destroyed
+  # (because aws_instance.this is not in configuration)
+  - resource "aws_instance" "this" {
+      - ami                                  = "ami-0591d1602f530f886" -> null
+      - arn                                  = "arn:aws:ec2:ap-northeast-1:050451382758:instance/i-041be5eed07d17f8f" -> null
+      - associate_public_ip_address          = false -> null
+      - availability_zone                    = "ap-northeast-1a" -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - force_destroy                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - iam_instance_profile                 = "reimei-b2b-demo-gpu-prd-gpu-inference-instance-profile" -> null
+      - id                                   = "i-041be5eed07d17f8f" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "g6e.xlarge" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-02a26c0945642cbf2" -> null
+      - private_dns                          = "ip-10-31-140-50.ap-northeast-1.compute.internal" -> null
+      - private_ip                           = "10.31.140.50" -> null
+      - region                               = "ap-northeast-1" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-0fcce540a819b1bb3" -> null
+      - tags                                 = {
+          - "Name" = "reimei-b2b-demo-gpu-prd-gpu-inference"
+        } -> null
+      - tags_all                             = {
+          - "Env"         = "prd"
+          - "Name"        = "reimei-b2b-demo-gpu-prd-gpu-inference"
+          - "Project"     = "reimei-b2b-demo"
+          - "Terraform"   = "true"
+          - "component"   = "gpu-inference"
+          - "environment" = "prod"
+          - "product"     = "reimei-b2b-demo"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data                            = <<-EOT
+            Content-Type: multipart/mixed; boundary="MIMEBOUNDARY"
+            MIME-Version: 1.0
+            
+            --MIMEBOUNDARY
+            Content-Transfer-Encoding: 7bit
+            Content-Type: text/cloud-config
+            Mime-Version: 1.0
+            
+            #cloud-config
+            cloud_final_modules:
+            - [ scripts-user, always ]
+            
+            --MIMEBOUNDARY
+            Content-Disposition: attachment; filename="setup_ec2.sh"
+            Content-Transfer-Encoding: 7bit
+            Content-Type: text/x-shellscript
+            Mime-Version: 1.0
+            
+            #!/bin/bash
+            set -eux -o pipefail
+            
+            # Create config.yaml
+            cat > /home/ec2-user/config.yaml << YAML
+            http_options:
+              host: 0.0.0.0
+              port: 8000
+              keep_alive_timeout_s: 200
+            
+            # https://docs.ray.io/en/latest/serve/monitoring.html#configure-serve-logging
+            logging_config:
+              log_level: DEBUG
+              logs_dir: null # defaults to ray temp dir
+              encoding: JSON
+              enable_access_log: true
+            
+            applications:
+              - name: llm-inference-app
+                route_prefix: /
+                import_path: llm_serve.app.builder:build_openai_app
+                runtime_env:
+                  env_vars:
+                    RAY_LOG_TO_DRIVER: '1'
+                    RAY_LOG_TO_DRIVER_EVENT_LEVEL: INFO
+                    VLLM_NO_USAGE_STATS: '1'
+                args:
+                  deployment_options:
+                    max_ongoing_requests: 64
+                    name: llm-server-router
+                    num_replicas: 8
+                    ray_actor_options:
+                      num_cpus: 0.1
+                  llm_server_configs:
+                    - deployment_options:
+                        max_ongoing_requests: 128
+                        name: sarashinachat-7b
+                        num_replicas: 1
+                        ray_actor_options:
+                          num_cpus: 0.1
+                          num_gpus: 0.4
+                      engine: vllm
+                      engine_kwargs:
+                        model: /config/models/7b-2512-sft-dpo
+                        override_generation_config:
+                          repetition_penalty: 1.05
+                          temperature: 0.7
+                          top_p: 0.9
+                        served_model_name:
+                          - sbint-instruct-2025-11-25:70b-sft
+                          - sarashina2-mini
+                          - sarashina-mini
+                          - tmp-new-70b-sft-safety
+                        gpu_memory_utilization: 0.4
+                        max_model_len: 16384
+                        num_gpu_blocks_override: 1024
+                        enforce_eager: true
+                      server_kwargs:
+                        enable_auto_tool_choice: true
+                        tool_call_parser: sarashina2_json
+                    - deployment_options:
+                        max_ongoing_requests: 128
+                        name: sarashinaguard-7b
+                        num_replicas: 1
+                        ray_actor_options:
+                          num_cpus: 0.1
+                          num_gpus: 0.4
+                      engine: vllm
+                      engine_kwargs:
+                        model: /config/models/sarashinaguard-7b-20250508
+                        served_model_name:
+                          - sarashinaguard-7b-20250508
+                          - sarashinaguard-v2.0.1
+                        gpu_memory_utilization: 0.4
+                        max_model_len: 16384
+                        num_gpu_blocks_override: 1024
+                        enforce_eager: true
+                    - deployment_options:
+                        max_ongoing_requests: 128
+                        name: sarashinaembedding-1b
+                        num_replicas: 1
+                        ray_actor_options:
+                          num_cpus: 0.1
+                          num_gpus: 0.1
+                      engine: vllm
+                      engine_kwargs:
+                        model: /config/models/sarashina-embedding-v2-1b
+                        served_model_name:
+                          - sarashina-embedding-v2-1b
+                        gpu_memory_utilization: 0.1
+                        max_model_len: 8192
+                        num_gpu_blocks_override: 512
+                        enforce_eager: true
+                    - deployment_options:
+                        max_ongoing_requests: 128
+                        name: sarashinareranker-0.5b
+                        num_replicas: 1
+                        ray_actor_options:
+                          num_cpus: 0.1
+                          num_gpus: 0.1
+                      engine: vllm
+                      engine_kwargs:
+                        model: /config/models/sarashina2.2-0.5b-reranker-toy-0523
+                        served_model_name:
+                          - sarashina2.2-0.5b-reranker-toy-0523
+                        gpu_memory_utilization: 0.1
+                        max_model_len: 8192
+                        num_gpu_blocks_override: 512
+                        enforce_eager: true
+            
+            YAML
+            
+            aws s3 cp --recursive s3://reimei-b2b-demo-gpu-prd-model-storage /home/ec2-user/models
+            ls -la /home/ec2-user/models
+            aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 050451382758.dkr.ecr.ap-northeast-1.amazonaws.com/sbint-services/reimei-engine-ray-stg/llm-serve-gpu
+            docker run --gpus all --rm --entrypoint '' -v /home/ec2-user:/config --network host -e MAX_PER_REPLICA_RETRY_COUNT=100 -e MAX_DEPLOYMENT_CONSTRUCTOR_RETRY_COUNT=100 -e TZ=UTC \
+              050451382758.dkr.ecr.ap-northeast-1.amazonaws.com/sbint-services/reimei-engine-ray-stg/llm-serve-gpu:20251224-1 serve run /config/config.yaml
+            
+            --MIMEBOUNDARY--
+        EOT -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-020d5c933c9a4f4ac",
+        ] -> null
+        # (10 unchanged attributes hidden)
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count       = 2 -> null
+          - threads_per_core = 2 -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - primary_network_interface {
+          - delete_on_termination = true -> null
+          - network_interface_id  = "eni-02a26c0945642cbf2" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/xvda" -> null
+          - encrypted             = false -> null
+          - iops                  = 3000 -> null
+          - tags                  = {} -> null
+          - tags_all              = {
+              - "Env"         = "prd"
+              - "Project"     = "reimei-b2b-demo"
+              - "Terraform"   = "true"
+              - "component"   = "gpu-inference"
+              - "environment" = "prod"
+              - "product"     = "reimei-b2b-demo"
+            } -> null
+          - throughput            = 125 -> null
+          - volume_id             = "vol-0109874554d13a324" -> null
+          - volume_size           = 120 -> null
+          - volume_type           = "gp3" -> null
+            # (1 unchanged attribute hidden)
+        }
+    }
+
+  # module.gpu_instance_head.aws_cloudwatch_log_group.ec2_logs will be created
+  + resource "aws_cloudwatch_log_group" "ec2_logs" {
+      + arn               = (known after apply)
+      + id                = (known after apply)
+      + log_group_class   = (known after apply)
+      + name              = "/ec2/reimei-b2b-demo-gpu-prd/gpu-inference-head"
+      + name_prefix       = (known after apply)
+      + region            = "ap-northeast-1"
+      + retention_in_days = 30
+      + skip_destroy      = false
+      + tags_all          = {
+          + "Env"         = "prd"
+          + "Project"     = "reimei-b2b-demo"
+          + "Terraform"   = "true"
+          + "component"   = "gpu-inference"
+          + "environment" = "prod"
+          + "product"     = "reimei-b2b-demo"
+        }
+    }
+
+  # module.gpu_instance_head.aws_iam_instance_profile.ec2_profile will be created
+  + resource "aws_iam_instance_profile" "ec2_profile" {
+      + arn         = (known after apply)
+      + create_date = (known after apply)
+      + id          = (known after apply)
+      + name        = "reimei-b2b-demo-gpu-prd-gpu-inference-instance-profile-head"
+      + name_prefix = (known after apply)
+      + path        = "/"
+      + role        = "reimei-b2b-demo-gpu-prd-gpu-inference-role-head"
+      + tags_all    = {
+          + "Env"         = "prd"
+          + "Project"     = "reimei-b2b-demo"
+          + "Terraform"   = "true"
+          + "component"   = "gpu-inference"
+          + "environment" = "prod"
+          + "product"     = "reimei-b2b-demo"
+        }
+      + unique_id   = (known after apply)
+    }
+
+  # module.gpu_instance_head.aws_iam_role.ec2_role will be created
+  + resource "aws_iam_role" "ec2_role" {
+      + arn                   = (known after apply)
+      + assume_role_policy    = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = "sts:AssumeRole"
+                      + Effect    = "Allow"
+                      + Principal = {
+                          + Service = "ec2.amazonaws.com"
+                        }
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + create_date           = (known after apply)
+      + force_detach_policies = false
+      + id                    = (known after apply)
+      + managed_policy_arns   = (known after apply)
+      + max_session_duration  = 3600
+      + name                  = "reimei-b2b-demo-gpu-prd-gpu-inference-role-head"
+      + name_prefix           = (known after apply)
+      + path                  = "/"
+      + tags_all              = {
+          + "Env"         = "prd"
+          + "Project"     = "reimei-b2b-demo"
+          + "Terraform"   = "true"
+          + "component"   = "gpu-inference"
+          + "environment" = "prod"
+          + "product"     = "reimei-b2b-demo"
+        }
+      + unique_id             = (known after apply)
+
+      + inline_policy (known after apply)
+    }
+
+  # module.gpu_instance_head.aws_iam_role_policy_attachment.custom_policies["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPullOnly"] will be created
+  + resource "aws_iam_role_policy_attachment" "custom_policies" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPullOnly"
+      + role       = "reimei-b2b-demo-gpu-prd-gpu-inference-role-head"
+    }
+
+  # module.gpu_instance_head.aws_iam_role_policy_attachment.custom_policies["arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"] will be created
+  + resource "aws_iam_role_policy_attachment" "custom_policies" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
+      + role       = "reimei-b2b-demo-gpu-prd-gpu-inference-role-head"
+    }
+
+  # module.gpu_instance_head.aws_iam_role_policy_attachment.cw_agent_managed will be created
+  + resource "aws_iam_role_policy_attachment" "cw_agent_managed" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy"
+      + role       = "reimei-b2b-demo-gpu-prd-gpu-inference-role-head"
+    }
+
+  # module.gpu_instance_head.aws_iam_role_policy_attachment.ssm_managed will be created
+  + resource "aws_iam_role_policy_attachment" "ssm_managed" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+      + role       = "reimei-b2b-demo-gpu-prd-gpu-inference-role-head"
+    }
+
+  # module.gpu_instance_head.aws_instance.this will be created
+  + resource "aws_instance" "this" {
+      + ami                                  = "ami-0591d1602f530f886"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = (known after apply)
+      + disable_api_stop                     = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + enable_primary_ipv6                  = (known after apply)
+      + force_destroy                        = false
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + host_resource_group_arn              = (known after apply)
+      + iam_instance_profile                 = "reimei-b2b-demo-gpu-prd-gpu-inference-instance-profile-head"
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_lifecycle                   = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "g6e.xlarge"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = (known after apply)
+      + monitoring                           = (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_group_id                   = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = "10.31.140.50"
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + region                               = "ap-northeast-1"
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + spot_instance_request_id             = (known after apply)
+      + subnet_id                            = "subnet-0fcce540a819b1bb3"
+      + tags                                 = {
+          + "Name" = "reimei-b2b-demo-gpu-prd-gpu-inference-head"
+        }
+      + tags_all                             = {
+          + "Env"         = "prd"
+          + "Name"        = "reimei-b2b-demo-gpu-prd-gpu-inference-head"
+          + "Project"     = "reimei-b2b-demo"
+          + "Terraform"   = "true"
+          + "component"   = "gpu-inference"
+          + "environment" = "prod"
+          + "product"     = "reimei-b2b-demo"
+        }
+      + tenancy                              = (known after apply)
+      + user_data                            = <<-EOT
+            Content-Type: multipart/mixed; boundary="MIMEBOUNDARY"
+            MIME-Version: 1.0
+            
+            --MIMEBOUNDARY
+            Content-Transfer-Encoding: 7bit
+            Content-Type: text/cloud-config
+            Mime-Version: 1.0
+            
+            #cloud-config
+            cloud_final_modules:
+            - [ scripts-user, always ]
+            
+            --MIMEBOUNDARY
+            Content-Disposition: attachment; filename="setup_ec2.sh"
+            Content-Transfer-Encoding: 7bit
+            Content-Type: text/x-shellscript
+            Mime-Version: 1.0
+            
+            #!/bin/bash
+            set -eux -o pipefail
+            
+            mkdir -p /home/ec2-user/app/
+            chown ec2-user:ec2-user /home/ec2-user/app
+            
+            # Create config.yaml
+            cat > /home/ec2-user/app/config.yaml << YAML
+            http_options:
+              host: 0.0.0.0
+              port: 8000
+              keep_alive_timeout_s: 200
+            
+            # https://docs.ray.io/en/latest/serve/monitoring.html#configure-serve-logging
+            logging_config:
+              log_level: DEBUG
+              logs_dir: null # defaults to ray temp dir
+              encoding: JSON
+              enable_access_log: true
+            
+            applications:
+              - name: llm-inference-app
+                route_prefix: /
+                import_path: llm_serve.app.builder:build_openai_app
+                runtime_env:
+                  env_vars:
+                    RAY_LOG_TO_DRIVER: '1'
+                    RAY_LOG_TO_DRIVER_EVENT_LEVEL: INFO
+                    VLLM_NO_USAGE_STATS: '1'
+                args:
+                  deployment_options:
+                    max_ongoing_requests: 64
+                    name: llm-server-router
+                    num_replicas: 10
+                    ray_actor_options:
+                      num_cpus: 0.1
+                  llm_server_configs:
+                    - deployment_options:
+                        max_ongoing_requests: 128
+                        name: sarashinachat-7b
+                        num_replicas: 1
+                        ray_actor_options:
+                          num_cpus: 0.1
+                          num_gpus: 0.4
+                      engine: vllm
+                      engine_kwargs:
+                        model: /config/models/7b-2512-sft-dpo
+                        override_generation_config:
+                          repetition_penalty: 1.05
+                          temperature: 0.7
+                          top_p: 0.9
+                        served_model_name:
+                          - sbint-instruct-2025-11-25:70b-sft
+                          - sarashina2-mini
+                          - sarashina-mini
+                          - tmp-new-70b-sft-safety
+                        gpu_memory_utilization: 0.4
+                        max_model_len: 16384
+                        num_gpu_blocks_override: 1024
+                        enforce_eager: true
+                      server_kwargs:
+                        enable_auto_tool_choice: true
+                        tool_call_parser: sarashina2_json
+                    - deployment_options:
+                        max_ongoing_requests: 128
+                        name: sarashinaguard-7b
+                        num_replicas: 1
+                        ray_actor_options:
+                          num_cpus: 0.1
+                          num_gpus: 0.4
+                      engine: vllm
+                      engine_kwargs:
+                        model: /config/models/sarashinaguard-7b-20250508
+                        served_model_name:
+                          - sarashinaguard-7b-20250508
+                          - sarashinaguard-v2.0.1
+                        gpu_memory_utilization: 0.4
+                        max_model_len: 16384
+                        num_gpu_blocks_override: 1024
+                        enforce_eager: true
+                    - deployment_options:
+                        max_ongoing_requests: 128
+                        name: sarashinaembedding-1b
+                        num_replicas: 1
+                        ray_actor_options:
+                          num_cpus: 0.1
+                          num_gpus: 0.1
+                      engine: vllm
+                      engine_kwargs:
+                        model: /config/models/sarashina-embedding-v2-1b
+                        served_model_name:
+                          - sarashina-embedding-v2-1b
+                        gpu_memory_utilization: 0.1
+                        max_model_len: 8192
+                        num_gpu_blocks_override: 512
+                        enforce_eager: true
+                    - deployment_options:
+                        max_ongoing_requests: 128
+                        name: sarashinareranker-0.5b
+                        num_replicas: 1
+                        ray_actor_options:
+                          num_cpus: 0.1
+                          num_gpus: 0.1
+                      engine: vllm
+                      engine_kwargs:
+                        model: /config/models/sarashina2.2-0.5b-reranker-toy-0523
+                        served_model_name:
+                          - sarashina2.2-0.5b-reranker-toy-0523
+                        gpu_memory_utilization: 0.1
+                        max_model_len: 8192
+                        num_gpu_blocks_override: 512
+                        enforce_eager: true
+                    - deployment_options:
+                        max_ongoing_requests: 128
+                        name: sbint-translation-2025-12-22:7b-dpo
+                        num_replicas: 1
+                        ray_actor_options:
+                          num_cpus: 0.1
+                          num_gpus: 0.4
+                      engine: vllm
+                      engine_kwargs:
+                        model: /config/models/sbint-translation-2025-12-22-dpo/
+                        override_generation_config:
+                          repetition_penalty: 1.05
+                          temperature: 0.7
+                          top_p: 0.9
+                        served_model_name:
+                          - sbint-translation-2025-12-22:7b-dpo
+                        gpu_memory_utilization: 0.4
+                        max_model_len: 16384
+                        num_gpu_blocks_override: 1024
+                        enforce_eager: true
+            
+            YAML
+            chown ec2-user:ec2-user /home/ec2-user/app/config.yaml
+            
+            # Create systemd service
+            cat > /home/ec2-user/app/auth_and_startup.sh << EOF
+            #!/bin/bash
+            set -eux -o pipefail
+            aws s3 sync s3://reimei-b2b-demo-gpu-prd-model-storage /home/ec2-user/app/models
+            ls -la /home/ec2-user/app/models
+            aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 050451382758.dkr.ecr.ap-northeast-1.amazonaws.com/sbint-services/reimei-engine-ray-stg/llm-serve-gpu
+            docker rm -f ray-head 2>/dev/null || true
+            docker run --name ray-head --gpus all --rm --entrypoint '' -v /home/ec2-user/app:/config --network host -e MAX_PER_REPLICA_RETRY_COUNT=100 -e MAX_DEPLOYMENT_CONSTRUCTOR_RETRY_COUNT=100 -e TZ=UTC -e RAY_PORT=10000 -e RAY_DASHBOARD_PORT=8265 \
+              050451382758.dkr.ecr.ap-northeast-1.amazonaws.com/sbint-services/reimei-engine-ray-stg/llm-serve-gpu:20251224-1 /app/scripts/start_ray_head.sh
+            EOF
+            chmod +x /home/ec2-user/app/auth_and_startup.sh
+            chown ec2-user:ec2-user /home/ec2-user/app/auth_and_startup.sh
+            
+            cat > /etc/systemd/system/ray-head.service << EOF
+            [Unit]
+            Description=Ray Head Service
+            After=docker.service
+            Requires=docker.service
+            
+            [Service]
+            Type=simple
+            User=ec2-user
+            Group=ec2-user
+            WorkingDirectory=/home/ec2-user/app
+            ExecStart=/home/ec2-user/app/auth_and_startup.sh
+            KillMode=control-group
+            Restart=always
+            RestartSec=10
+            
+            [Install]
+            WantedBy=multi-user.target
+            EOF
+            
+            chmod 644 /etc/systemd/system/ray-head.service
+            systemctl daemon-reload
+            systemctl enable ray-head
+            systemctl restart ray-head
+            
+            #-----------------------
+            # Wait Ray Head to start
+            #-----------------------
+            MAX_RETRIES=360 # considering model download time from s3
+            SLEEP_INTERVAL=10
+            SUCCESS=0
+            
+            for i in $(seq 1 $MAX_RETRIES); do
+              echo "Checking /api/version endpoint (attempt $i)..."
+              HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8265/api/version || echo "000")
+              if [ "$HTTP_STATUS" = "200" ]; then
+                echo "Healthcheck succeeded with status 200."
+                SUCCESS=1
+                break
+              fi
+              sleep $SLEEP_INTERVAL
+            done
+            
+            if [ "$SUCCESS" -eq 1 ]; then
+              echo "Ray head node has been started."
+            else
+              echo "Healthcheck failed or timed out. Final status: $HTTP_STATUS"
+              exit 1
+            fi
+            
+            #-----------------------------
+            # Deploy Ray Serve application
+            #-----------------------------
+            
+            docker exec ray-head serve deploy -a http://localhost:8265 /config/config.yaml
+            docker exec ray-head serve status -a http://localhost:8265
+            
+            --MIMEBOUNDARY--
+        EOT
+      + user_data_base64                     = (known after apply)
+      + user_data_replace_on_change          = true
+      + vpc_security_group_ids               = [
+          + "sg-020d5c933c9a4f4ac",
+        ]
+
+      + capacity_reservation_specification (known after apply)
+
+      + cpu_options (known after apply)
+
+      + ebs_block_device (known after apply)
+
+      + enclave_options (known after apply)
+
+      + ephemeral_block_device (known after apply)
+
+      + instance_market_options (known after apply)
+
+      + maintenance_options (known after apply)
+
+      + metadata_options (known after apply)
+
+      + network_interface (known after apply)
+
+      + primary_network_interface (known after apply)
+
+      + private_dns_name_options (known after apply)
+
+      + root_block_device {
+          + delete_on_termination = true
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = 3000
+          + kms_key_id            = (known after apply)
+          + tags_all              = (known after apply)
+          + throughput            = 125
+          + volume_id             = (known after apply)
+          + volume_size           = 120
+          + volume_type           = "gp3"
+        }
+    }
+
+  # module.gpu_instance_worker[0].aws_cloudwatch_log_group.ec2_logs will be created
+  + resource "aws_cloudwatch_log_group" "ec2_logs" {
+      + arn               = (known after apply)
+      + id                = (known after apply)
+      + log_group_class   = (known after apply)
+      + name              = "/ec2/reimei-b2b-demo-gpu-prd/gpu-inference-worker-0"
+      + name_prefix       = (known after apply)
+      + region            = "ap-northeast-1"
+      + retention_in_days = 30
+      + skip_destroy      = false
+      + tags_all          = {
+          + "Env"         = "prd"
+          + "Project"     = "reimei-b2b-demo"
+          + "Terraform"   = "true"
+          + "component"   = "gpu-inference"
+          + "environment" = "prod"
+          + "product"     = "reimei-b2b-demo"
+        }
+    }
+
+  # module.gpu_instance_worker[0].aws_iam_instance_profile.ec2_profile will be created
+  + resource "aws_iam_instance_profile" "ec2_profile" {
+      + arn         = (known after apply)
+      + create_date = (known after apply)
+      + id          = (known after apply)
+      + name        = "reimei-b2b-demo-gpu-prd-gpu-inference-instance-profile-worker-0"
+      + name_prefix = (known after apply)
+      + path        = "/"
+      + role        = "reimei-b2b-demo-gpu-prd-gpu-inference-role-worker-0"
+      + tags_all    = {
+          + "Env"         = "prd"
+          + "Project"     = "reimei-b2b-demo"
+          + "Terraform"   = "true"
+          + "component"   = "gpu-inference"
+          + "environment" = "prod"
+          + "product"     = "reimei-b2b-demo"
+        }
+      + unique_id   = (known after apply)
+    }
+
+  # module.gpu_instance_worker[0].aws_iam_role.ec2_role will be created
+  + resource "aws_iam_role" "ec2_role" {
+      + arn                   = (known after apply)
+      + assume_role_policy    = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = "sts:AssumeRole"
+                      + Effect    = "Allow"
+                      + Principal = {
+                          + Service = "ec2.amazonaws.com"
+                        }
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + create_date           = (known after apply)
+      + force_detach_policies = false
+      + id                    = (known after apply)
+      + managed_policy_arns   = (known after apply)
+      + max_session_duration  = 3600
+      + name                  = "reimei-b2b-demo-gpu-prd-gpu-inference-role-worker-0"
+      + name_prefix           = (known after apply)
+      + path                  = "/"
+      + tags_all              = {
+          + "Env"         = "prd"
+          + "Project"     = "reimei-b2b-demo"
+          + "Terraform"   = "true"
+          + "component"   = "gpu-inference"
+          + "environment" = "prod"
+          + "product"     = "reimei-b2b-demo"
+        }
+      + unique_id             = (known after apply)
+
+      + inline_policy (known after apply)
+    }
+
+  # module.gpu_instance_worker[0].aws_iam_role_policy_attachment.custom_policies["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPullOnly"] will be created
+  + resource "aws_iam_role_policy_attachment" "custom_policies" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPullOnly"
+      + role       = "reimei-b2b-demo-gpu-prd-gpu-inference-role-worker-0"
+    }
+
+  # module.gpu_instance_worker[0].aws_iam_role_policy_attachment.custom_policies["arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"] will be created
+  + resource "aws_iam_role_policy_attachment" "custom_policies" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
+      + role       = "reimei-b2b-demo-gpu-prd-gpu-inference-role-worker-0"
+    }
+
+  # module.gpu_instance_worker[0].aws_iam_role_policy_attachment.cw_agent_managed will be created
+  + resource "aws_iam_role_policy_attachment" "cw_agent_managed" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy"
+      + role       = "reimei-b2b-demo-gpu-prd-gpu-inference-role-worker-0"
+    }
+
+  # module.gpu_instance_worker[0].aws_iam_role_policy_attachment.ssm_managed will be created
+  + resource "aws_iam_role_policy_attachment" "ssm_managed" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+      + role       = "reimei-b2b-demo-gpu-prd-gpu-inference-role-worker-0"
+    }
+
+  # module.gpu_instance_worker[0].aws_instance.this will be created
+  + resource "aws_instance" "this" {
+      + ami                                  = "ami-0591d1602f530f886"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = (known after apply)
+      + disable_api_stop                     = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + enable_primary_ipv6                  = (known after apply)
+      + force_destroy                        = false
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + host_resource_group_arn              = (known after apply)
+      + iam_instance_profile                 = "reimei-b2b-demo-gpu-prd-gpu-inference-instance-profile-worker-0"
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_lifecycle                   = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "g6e.xlarge"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = (known after apply)
+      + monitoring                           = (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_group_id                   = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = "10.31.140.51"
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + region                               = "ap-northeast-1"
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + spot_instance_request_id             = (known after apply)
+      + subnet_id                            = "subnet-0fcce540a819b1bb3"
+      + tags                                 = {
+          + "Name" = "reimei-b2b-demo-gpu-prd-gpu-inference-worker-0"
+        }
+      + tags_all                             = {
+          + "Env"         = "prd"
+          + "Name"        = "reimei-b2b-demo-gpu-prd-gpu-inference-worker-0"
+          + "Project"     = "reimei-b2b-demo"
+          + "Terraform"   = "true"
+          + "component"   = "gpu-inference"
+          + "environment" = "prod"
+          + "product"     = "reimei-b2b-demo"
+        }
+      + tenancy                              = (known after apply)
+      + user_data                            = <<-EOT
+            Content-Type: multipart/mixed; boundary="MIMEBOUNDARY"
+            MIME-Version: 1.0
+            
+            --MIMEBOUNDARY
+            Content-Transfer-Encoding: 7bit
+            Content-Type: text/cloud-config
+            Mime-Version: 1.0
+            
+            #cloud-config
+            cloud_final_modules:
+            - [ scripts-user, always ]
+            
+            --MIMEBOUNDARY
+            Content-Disposition: attachment; filename="setup_ec2.sh"
+            Content-Transfer-Encoding: 7bit
+            Content-Type: text/x-shellscript
+            Mime-Version: 1.0
+            
+            #!/bin/bash
+            set -eux -o pipefail
+            
+            mkdir -p /home/ec2-user/app/
+            chown ec2-user:ec2-user /home/ec2-user/app
+            
+            # Create systemd service
+            cat > /home/ec2-user/app/auth_and_startup.sh << EOF
+            #!/bin/bash
+            set -eux -o pipefail
+            aws s3 sync s3://reimei-b2b-demo-gpu-prd-model-storage /home/ec2-user/app/models
+            ls -la /home/ec2-user/app/models
+            aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 050451382758.dkr.ecr.ap-northeast-1.amazonaws.com/sbint-services/reimei-engine-ray-stg/llm-serve-gpu
+            docker rm -f ray-worker 2>/dev/null || true
+            docker run --name ray-worker --gpus all --rm --entrypoint '' -v /home/ec2-user/app:/config --network host -e MAX_PER_REPLICA_RETRY_COUNT=100 -e MAX_DEPLOYMENT_CONSTRUCTOR_RETRY_COUNT=100 -e TZ=UTC -e HEAD_ADDRESS=10.31.140.50:10000 -e RAY_NUM_CPUS=4 -e RAY_NUM_GPUS=1 \
+              050451382758.dkr.ecr.ap-northeast-1.amazonaws.com/sbint-services/reimei-engine-ray-stg/llm-serve-gpu:20251224-1 /app/scripts/start_ray_worker.sh
+            EOF
+            chmod +x /home/ec2-user/app/auth_and_startup.sh
+            chown ec2-user:ec2-user /home/ec2-user/app/auth_and_startup.sh
+            
+            cat > /etc/systemd/system/ray-worker.service << EOF
+            [Unit]
+            Description=Ray Worker Service
+            After=docker.service
+            Requires=docker.service
+            
+            [Service]
+            Type=simple
+            User=ec2-user
+            Group=ec2-user
+            WorkingDirectory=/home/ec2-user/app
+            ExecStart=/home/ec2-user/app/auth_and_startup.sh
+            KillMode=control-group
+            Restart=always
+            RestartSec=10
+            
+            [Install]
+            WantedBy=multi-user.target
+            EOF
+            
+            chmod 644 /etc/systemd/system/ray-worker.service
+            systemctl daemon-reload
+            systemctl enable ray-worker
+            systemctl restart ray-worker
+            
+            --MIMEBOUNDARY--
+        EOT
+      + user_data_base64                     = (known after apply)
+      + user_data_replace_on_change          = true
+      + vpc_security_group_ids               = [
+          + "sg-020d5c933c9a4f4ac",
+        ]
+
+      + capacity_reservation_specification (known after apply)
+
+      + cpu_options (known after apply)
+
+      + ebs_block_device (known after apply)
+
+      + enclave_options (known after apply)
+
+      + ephemeral_block_device (known after apply)
+
+      + instance_market_options (known after apply)
+
+      + maintenance_options (known after apply)
+
+      + metadata_options (known after apply)
+
+      + network_interface (known after apply)
+
+      + primary_network_interface (known after apply)
+
+      + private_dns_name_options (known after apply)
+
+      + root_block_device {
+          + delete_on_termination = true
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = 3000
+          + kms_key_id            = (known after apply)
+          + tags_all              = (known after apply)
+          + throughput            = 125
+          + volume_id             = (known after apply)
+          + volume_size           = 120
+          + volume_type           = "gp3"
+        }
+    }
+
+Plan: 18 to add, 1 to change, 9 to destroy.
+
+─────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
