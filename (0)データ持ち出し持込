@@ -4,6 +4,8 @@ s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l2-upload-pg9w2c/260210_
 　持出
 s3://arn:aws:s3:ap-northeast-1:060795933614:accesspoint/l4-upload-3kmjgg/260202_shogo_kagami_3kmjgg/
 
+aws s3control list-access-points --account-id 060795933614 --query "AccessPointList[*].[Name, Alias]"
+
 モデル所在確認
 /lustre/share/sbint_models/translation/release/sbint-translation-2025-10-20/sbint-translation-2025-10-20-dpo/
 
