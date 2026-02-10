@@ -61,21 +61,6 @@ cat /store/.sysonly_okeFBsTh/lustre/share/ReleaseCandidate/cksum_transfer/sbint_
 Ray
 https://ray-dashboard.sbintuitions.com/#/overview
 
-手順書直し
-デプロイ準備　日付は年月日
-
-　正常性確認
-me入らない squeuesqueue -p 021-partition
-
-ロードバランサーのセキュリティグループのID
-alb-lambda01:sg-0880b2dad9975ee2d
-nlb-serviceprod-monitoring01:sg-0c397970a1630eb41
-
-internal-reimei-engine-ray-prd-sbkk-1895678098.ap-northeast-1.elb.amazonaws.com
-
-
-sg-0c397970a1630eb41
-
 初期パスワード
 user45006
 6P~}AfNS#B^+g6
@@ -92,8 +77,6 @@ srun: error: Application launch failed: Communication connection failure
 srun: Job step aborted
 
 user45020@srpv01504:/lustre/tools/AdminTools$ srun -p 045-partition -w srdgx00009 uname -a
-
-scancel -w srdgx00005
 
 SBKK側のシンボリックリンク張り直し
 rm sbkk/terraform.tfvars sbkk/variables.tf sbkk/01/sbkk.auto.tfvars sbkk/01/variables_sbkk.tf sbkk/01/terraform.tfvars sbkk/01/variables.tf sbkk/02/sbkk.auto.tfvars sbkk/02/variables_sbkk.tf sbkk/02/terraform.tfvars sbkk/02/variables.tf 
@@ -115,17 +98,6 @@ tar xvf tools.tar
 
 tarファイル実行後、以下のディレクトリにrun_worker_conf.pyを配置
 /lustre/tools/AdminTools/config
-
-
-/lustre/share/sbint_models/finetuned/release/sbint-2025-11-25/sbint-2025-11-25-70b-sft/
-/lustre/share/sbint_models/guardrail/sarashinaguard-7b-20250508/
-/lustre/teams/text_embeddings/experiments/msmd_cse/sarashina2.2-3b/PROTO_sarashina2.2-3B__multistage_20250710_stg2_mix_gecko-recipe-filtered_RRF1_RRF_20_all_forbes_cl_classsification__stg2/hf_checkpoints/checkpoint-770/
-
-reimei-engine-ray-prd-b2b-fc1-raydsh-tg
-
-arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:loadbalancer/app/reimei-engine-ray-prd-b2b-fc1/5e280c93f3a1a9cb
-internal-reimei-engine-ray-prd-b2b-fc1-1185184183.ap-northeast-1.elb.amazonaws.com
-
 
 sudo chown -R ec2-user:ec2-user /var/tmp/ray/session_latest/metrics
 
@@ -166,3 +138,13 @@ export AWS_PROFILE=SBintVsocDataTransfer-060795933614
 # 動作確認
 aws sts get-caller-identity --profile {profile_name}
 ## prod.xxxx.yyyy@sbintuitions.co.jp のユーザープロファイルが返る。
+
+
+$ aws configure sso --profile 060795933614_SBintVsocDataTransfer --use-device-code
+SSO session name (Recommended): shogo_kagami
+SSO start URL [None]: https://d-95675fea1b.awsapps.com/start/#
+SSO region [None]: ap-northeast-1
+SSO registration scopes [sso:account:access]:
+
+Connect timeout on endpoint URL: "https://oidc.ap-northeast-1.amazonaws.com/client/register"
+
