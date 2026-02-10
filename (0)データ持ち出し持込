@@ -132,15 +132,37 @@ sudo chown -R ec2-user:ec2-user /var/tmp/ray/session_latest/metrics
 stg
 [699475943535_AWSAdministratorAccess]
 
-nlb_dns_name = 
-reimei-b2b-demo-gpu-prd-nlb-070877994bd3af97.elb.ap-northeast-1.amazonaws.com
 
-http_proxy  = "http://10.121.131.251:10000"
-https_proxy = "http://10.121.131.251:10000"
+Production_VPC内のEC2インスタンスでの、認証情報の設定方法
+# プロキシの設定
+export HTTP_PROXY="http://10.121.131.251:10000"
+export HTTPS_PROXY="http://10.121.131.251:10000"
+## configuration
+aws configure sso --profile {profile_name} --use-device-code
+# ウィザードに従い設定する。
+## SSO Session Name → taro_yamada ##
+## There are 2 AWS accounts available to you. → VSOCを選択 ## 
+## Default client Region [ap-northeast-1]: ap-northeast-1
+## CLI default output format (json if not specified) [json]: json
+## 出てきたURLをクリックし、9桁のコードを入力 ## 
+# 動作確認
+aws sts get-caller-identity --profile {profile_name}
+## prod.xxxx.yyyy@sbintuitions.co.jp のユーザープロファイルが返る。
 
-
-reimei-engine-ray-prd-sbkk-nlb
-ARN
-arn:aws:elasticloadbalancing:ap-northeast-1:050451382758:loadbalancer/net/reimei-engine-ray-prd-sbkk-nlb/6619da9751839d8b
-DNS
-reimei-engine-ray-prd-sbkk-nlb-6619da9751839d8b.elb.ap-northeast-1.amazonaws.com
+Staging_VPC内のEC2インスタンスでの、認証情報の設定方法
+# プロキシの設定
+export HTTPS_PROXY=http://vpce-0f785440fa744af4f-c4qu3wkl.vpce-svc-0c84a7ed559a91160.ap-northeast-1.vpce.amazonaws.com:8080
+export NO_PROXY=169.254.169.254,169.254.170.2,ecs.ap-northeast-1.amazonaws.com,ecs-tasks.ap-northeast-1.amazonaws.com,logs.ap-northeast-1.amazonaws.com,monitoring.ap-northeast-1.amazonaws.com,ssm.ap-northeast-1.amazonaws.com,s3.ap-northeast-1.amazonaws.com,kinesis.ap-northeast-1.amazonaws.com,xray.ap-northeast-1.amazonaws.com,ec2.ap-northeast-1.amazonaws.com,tagging.ap-northeast-1.amazonaws.com,ecr.api.ap-northeast-1.amazonaws.com,ecr.dkr.ap-northeast-1.amazonaws.com
+## configuration
+aws configure sso --profile {profile_name} --use-device-code
+# ウィザードに従い設定する。
+## SSO Session Name → taro_yamada ##
+## There are 2 AWS accounts available to you. → VSOCを選択 ## 
+## Default client Region [ap-northeast-1]: ap-northeast-1
+## CLI default output format (json if not specified) [json]: json
+## 出てきたURLをクリックし、9桁のコードを入力 ## 
+###以下のように設定をすると便利
+export AWS_PROFILE=SBintVsocDataTransfer-060795933614
+# 動作確認
+aws sts get-caller-identity --profile {profile_name}
+## prod.xxxx.yyyy@sbintuitions.co.jp のユーザープロファイルが返る。
