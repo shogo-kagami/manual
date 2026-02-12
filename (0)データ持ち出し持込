@@ -19,7 +19,7 @@ $	aws configure sso
 		CLI default output format (json if not specified) [None]: json
 		Profile name [SBintVsocDataTransfer-060795933614]: 
 
-$	export AWS_PROFILE=VSOC
+$	export AWS_PROFILE=SBintVsocDataTransfer-060795933614
 
 $	aws sso login
 
